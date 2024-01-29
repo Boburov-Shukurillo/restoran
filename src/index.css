@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.containerb {
+  @apply w-full max-w-[1620px] px-5 mx-auto;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+nav .active {
+  display: flex;
+  transition: 0.4s all ease;
+  align-items: center;
+  flex-direction: column;
+  color: #d9782a;
+}
+
+nav .active {
+  @apply max-md:flex-row max-md:after:hidden before:hidden max-md:before:inline-block before:mr-3;
+}
+
+nav .active::after {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background-color: #d9782a;
+  border-radius: 50%;
+}
+
+nav .active::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background-color: #d9782a;
+  border-radius: 50%;
+}
+.bg {
+  background-size: contain 100%;
+  padding: 40px 0;
+  position: relative;
+  background-image: url(./assets/Vector1.svg);
+}
