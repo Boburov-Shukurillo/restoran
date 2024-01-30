@@ -1,18 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import tel from "../assets/Stroke 1.svg";
 import { Link, NavLink } from "react-router-dom";
 import headeLogo from "../assets/headerLogo.svg";
 import buy from "../assets/Buy 3.svg";
 import haburgerBtn from "../assets/hamburgerBtn.svg";
 import savatblack from "../assets/qoraSavat.svg";
-
+export let cartLength = 0;
 const Header = () => {
-  const [menu, setMenu] = useState("hidden");
+  const [birnima, Setbirnima] = useState([]);
 
+  const [menu, setMenu] = useState("hidden");
+  // menyuni ochish  funksiyasi
   const openMenu = () => {
     setMenu("block");
   };
 
+  // menyuni yopish funksiyasi
   const closeMenu = () => {
     setMenu("hidden");
   };
@@ -20,6 +23,7 @@ const Header = () => {
   return (
     <header className="bg-[#000000de]">
       <div className="containerb flex items-center justify-between py-1 max-my_screen:py-5 ">
+        <h1>{}</h1>
         {/* logo */}
         <Link to="/" className="bg-white inline-block ">
           <img
@@ -71,9 +75,7 @@ const Header = () => {
                   <img className=" inline-block" src={savatblack} alt="" />
                 </button>
                 <span> korzinka</span>{" "}
-                <span className="p-0.5 px-1.5 rounded-full absolute -bottom-2 bg-orange">
-                  0
-                </span>
+                <span className="p-0.5 px-1.5 rounded-full absolute -bottom-2 bg-orange"></span>
               </Link>
             </li>
           </ul>
@@ -88,7 +90,7 @@ const Header = () => {
             <img className="max-my_screen:w-5 w-5" src={buy} alt="buy btn" />
           </button>
           <span className="text-white bg-orange absolute -bottom-5 -right-4 p-1 px-2.5 rounded-full">
-            1
+            {cartLength}
           </span>
         </Link>
 

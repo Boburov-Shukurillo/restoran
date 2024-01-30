@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+// data ma'lumotlari
 import { foods } from "../data";
+import Header from "../Components/Header";
 
+export let cartLength = [];
 const Korzinka = () => {
-  const [nar, setNatx] = useState([]);
-
   // korzinkaga qo'shilgan malumotlarni saralsh
   let update = foods.filter((e) => e.isTru === true);
   const [cart, setCart] = useState(update);
@@ -18,20 +19,16 @@ const Korzinka = () => {
   // counter maxsulotni ko'pytirish
   const [counter, setCounter] = useState(1);
   const addProduct = (id) => {
-    const found = cart.find((product) => {
-      id !== product.id;
-    });
-    if (foods) {
-      setCounter(cart[id].productLength++);
-    }
+    setCounter(cart[id].productLength++);
   };
 
-  // counter maxsulotni kamaytirish
+  // countdown maxsulotni kamaytirish
   const removeProduct = (id) => {
-    setCounter(cart[id].productLength--);
     if (cart[id].productLength === 0) {
       let newArr = cart.slice(0, id).concat(cart.slice(id + 1));
       setCart(newArr);
+    } else {
+      setCounter(cart[id].productLength--);
     }
   };
 
@@ -40,21 +37,20 @@ const Korzinka = () => {
   cart.map((product) => {
     To.push(product.price * product.productLength);
   });
-
+  // buyurtma berish uchun oyna
   const [name, setName] = useState("");
   const [tel, setTel] = useState("");
   const [addres, setAdress] = useState("");
 
+  // buyurmani tekshiib bo'tga jonatuvchi joy
   const buyNow = (e) => {
     e.preventDefault();
-
     if (
       name.trim() === "" ||
       tel.trim() === "" ||
       addres.trim() === "" ||
       cart.length === 0
     ) {
-      setCart([]);
       alert(`O'ynalar va Korzinka bo'sh bo'lmasligi kerak`);
     } else {
       alert("Buyurtma Berildi");
@@ -65,18 +61,20 @@ const Korzinka = () => {
     }
   };
 
+  // foydalanuvchini ismini olish
   const getName = (e) => {
     setName(e.target.value);
   };
 
+  // foydalanuvchini telefon raqamini olish
   const getTel = (e) => {
     setTel(e.target.value);
   };
 
+  // foydalanuvchining manzilini olish
   const getAdress = (e) => {
     setAdress(e.target.value);
   };
-  console.log(name);
 
   return (
     <div className="h-full containerb pt-20">
@@ -101,8 +99,9 @@ const Korzinka = () => {
                     alt={e.name + " rasmi"}
                   />
 
-                  <div className="w-[400px] max-md:w-1/2 flex flex-col items-center justify-center">
-                    <h3 className="text-[35px] first-letter:uppercase max-md:text-xl">
+                  {/* mahsulot nomi va mahsuot vazni */}
+                  <div className="w-[400px] max-md:w-1/2 flex flex-col items-start justify-center ml-5">
+                    <h3 className="text-[35px] first-letter:uppercase flex-shrink-0 max-md:text-xl">
                       {e.name}
                     </h3>
                     <p className="text-[25px] text-[#DCDDDF] max-md:text-sm">
@@ -154,7 +153,7 @@ const Korzinka = () => {
 
       {/* buyurtma qilish joyi */}
 
-      <form action="" onSubmit={buyNow}>
+      <form action="http://localhost:5174/korzinka" onSubmit={buyNow}>
         <div className=" text-white flex justify-between items-center mb-20 max-md:flex-col">
           <p className="w-[400px] max-md:text-center">
             Оставьте свои данные и мы свяжемся с вами для уточнения деталей
