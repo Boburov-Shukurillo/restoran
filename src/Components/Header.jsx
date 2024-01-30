@@ -6,6 +6,8 @@ import buy from "../assets/Buy 3.svg";
 import haburgerBtn from "../assets/hamburgerBtn.svg";
 import savatblack from "../assets/qoraSavat.svg";
 import { foods } from "../data";
+import { cartNumber } from "../pages/Home";
+
 const Header = () => {
   let update = foods.filter((e) => e.isTru === true);
   const [cart, setCart] = useState(update);
@@ -20,11 +22,9 @@ const Header = () => {
   const closeMenu = () => {
     setMenu("hidden");
   };
-
   return (
     <header className="bg-[#000000de]">
       <div className="containerb flex items-center justify-between py-1 max-my_screen:py-5 ">
-        <h1>{}</h1>
         {/* logo */}
         <Link to="/" className="bg-white inline-block ">
           <img

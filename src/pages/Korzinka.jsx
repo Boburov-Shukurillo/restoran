@@ -25,23 +25,10 @@ const Korzinka = () => {
 
   // countdown maxsulotni kamaytirish
   const removeProduct = (id) => {
-    if (cart[id].productLength === 0) {
-      let newArr = cart.slice(0, id).concat(cart.slice(id + 1));
-      setCart(newArr);
-      cart[id].isTru = false;
-      cart[id].productLength = 1;
-    } else {
+    if (cart[id].productLength > 1) {
       setCounter(cart[id].productLength--);
     }
   };
-  cart.map((product) => {
-    if (product.productLength === 0) {
-      let newArr = cart
-        .slice(0, cart.indexOf(product))
-        .concat(cart.slice(cart.indexOf(product) + 1));
-      setCart(newArr);
-    }
-  });
 
   // sotib olngan Mahsulotning umumiy qiymati
   let To = [];

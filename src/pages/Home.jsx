@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-
+import pitsa from "../assets/homePitsa.png";
+import kokat from "../assets/kokat.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { foods } from "../data";
@@ -8,9 +9,12 @@ import pic1 from "../assets/pic (1).png";
 import pic2 from "../assets/pic (2).png";
 import pic3 from "../assets/pic (3).png";
 import pic4 from "../assets/pic (4).png";
+export let cartNumber = [];
 const Home = () => {
+  console.log(cartNumber);
   const addCart = (i) => {
     const found = foods[i].isTru === true;
+    cartNumber.push(found);
     if (!found) {
       toast.success("Kartga Qo'shildi", {
         position: "bottom-right",
@@ -26,6 +30,34 @@ const Home = () => {
   };
   return (
     <div className="containerb">
+      <div className="w-full flex flex-wrap h-full">
+        <div className="w-1/2  flex flex-col items-start justify-center gap-16 py-20">
+          <h1 className="text-[120px] font-normal uppercase text-white leading-[70px]">
+            Restoran <br />
+            <span className="text-[63px]">
+              <span className="text-[78px]">K</span>avkaz Oshxona
+            </span>
+          </h1>
+          <p className="text-[25px] text-white w-full">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel minima
+            maxime pariatur quisquam, cumque ex aliquid suscipit, quos iste qui
+            fugiat sed iusto doloribus magnam at velit ullam magni hic.
+          </p>
+          <button className="py-4 px-20 bg-orange rounded-xl text-white font-bold text-[25px] shadow-xl shadow-orange border-2">
+            Stol Band Qilish
+          </button>
+        </div>
+        <div className="w-1/2 relative">
+          <img src={pitsa} width="100%" alt="pitsa png" />
+          <img
+            src={kokat}
+            width="150px"
+            className="absolute right-1/2 bottom-1/3"
+            alt="ko'kat png"
+          />
+        </div>
+      </div>
+
       <div className="flex max-lg:flex-wrap space-x-20 items-center justify-center">
         <div className="w-1/2">
           <div className="mb-20">
