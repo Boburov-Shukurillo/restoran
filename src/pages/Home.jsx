@@ -1,45 +1,29 @@
 import React, { useEffect, useState } from "react";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { foods } from "../data";
 import Star from "../assets/Star.svg";
 import pic1 from "../assets/pic (1).png";
 import pic2 from "../assets/pic (2).png";
 import pic3 from "../assets/pic (3).png";
 import pic4 from "../assets/pic (4).png";
-import { cartLength } from "../Components/Header";
 const Home = () => {
-  const [cart, setCart] = useState([]);
-
   const addCart = (i) => {
-    const found = cart.find((product) => product.id === +i.id);
-    cartLength + 1;
+    const found = foods[i].isTru === true;
     if (!found) {
-      // toast.success(`Cartga qo'shildi`, {
-      //     position: "bottom-right",
-      //     autoClose: 1500,
-      //     hideProgressBar: true,
-      //     closeOnClick: true,
-      //     pauseOnHover: true,
-      //     draggable: true,
-      //     progress: undefined,
-      //     theme: "light",
-      // });
+      toast.success("Kartga Qo'shildi", {
+        position: "bottom-right",
+        autoClose: 500,
+      });
       foods[+i].isTru = true;
-      setCart([...cart, foods[+i]]);
     } else {
-      alert("bu bor gandon");
-      // toast.error(`Bu oldindan mavjud`, {
-      //     position: "bottom-right",
-      //     autoClose: 1500,
-      //     hideProgressBar: true,
-      //     closeOnClick: true,
-      //     pauseOnHover: true,
-      //     draggable: true,
-      //     progress: undefined,
-      //     theme: "light",
-      // });
+      toast.error("Bu Kartda Mavjud", {
+        position: "bottom-right",
+        autoClose: 500,
+      });
     }
   };
-
   return (
     <div className="containerb">
       <div className="flex max-lg:flex-wrap space-x-20 items-center justify-center">
@@ -121,6 +105,7 @@ const Home = () => {
         </div>
       </div>
 
+      <ToastContainer />
       {/*Mahsulotlarning qoshilishi  */}
       <div className="bg">
         <h2 className="text-[65px] text-white font-normal uppercase text-center mb-14">

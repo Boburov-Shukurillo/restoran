@@ -5,10 +5,11 @@ import headeLogo from "../assets/headerLogo.svg";
 import buy from "../assets/Buy 3.svg";
 import haburgerBtn from "../assets/hamburgerBtn.svg";
 import savatblack from "../assets/qoraSavat.svg";
-export let cartLength = 0;
+import { foods } from "../data";
 const Header = () => {
-  const [birnima, Setbirnima] = useState([]);
-
+  let update = foods.filter((e) => e.isTru === true);
+  const [cart, setCart] = useState(update);
+  console.log(update);
   const [menu, setMenu] = useState("hidden");
   // menyuni ochish  funksiyasi
   const openMenu = () => {
@@ -90,7 +91,7 @@ const Header = () => {
             <img className="max-my_screen:w-5 w-5" src={buy} alt="buy btn" />
           </button>
           <span className="text-white bg-orange absolute -bottom-5 -right-4 p-1 px-2.5 rounded-full">
-            {cartLength}
+            {}
           </span>
         </Link>
 

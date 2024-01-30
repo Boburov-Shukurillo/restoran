@@ -12,6 +12,7 @@ const Korzinka = () => {
   // qo'shilgan carni olib tashlash X qilish
   const removeItem = (i) => {
     cart[i].productLength = 1;
+    cart[i].isTru = false;
     let newArr = cart.slice(0, i).concat(cart.slice(i + 1));
     setCart(newArr);
   };
@@ -27,10 +28,20 @@ const Korzinka = () => {
     if (cart[id].productLength === 0) {
       let newArr = cart.slice(0, id).concat(cart.slice(id + 1));
       setCart(newArr);
+      cart[id].isTru = false;
+      cart[id].productLength = 1;
     } else {
       setCounter(cart[id].productLength--);
     }
   };
+  cart.map((product) => {
+    if (product.productLength === 0) {
+      let newArr = cart
+        .slice(0, cart.indexOf(product))
+        .concat(cart.slice(cart.indexOf(product) + 1));
+      setCart(newArr);
+    }
+  });
 
   // sotib olngan Mahsulotning umumiy qiymati
   let To = [];
@@ -53,6 +64,9 @@ const Korzinka = () => {
     ) {
       alert(`O'ynalar va Korzinka bo'sh bo'lmasligi kerak`);
     } else {
+      cart.map((r) => {
+        r.productLength = 1;
+      });
       alert("Buyurtma Berildi");
       setCart([]);
       setName("");
