@@ -1,17 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+
+// section lardagi rasimlar
 import pitsa from "../assets/homePitsa.png";
 import kokat from "../assets/kokat.png";
+
+// swiper va boshqa kutubhonalar
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// toastify cardga qoshildi
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+// ovqatlar datasi
 import { foods } from "../data";
+// kichik bir iconar
 import Star from "../assets/Star.svg";
 import pic1 from "../assets/pic (1).png";
 import pic2 from "../assets/pic (2).png";
 import pic3 from "../assets/pic (3).png";
 import pic4 from "../assets/pic (4).png";
+import profliPhoto1 from "../assets/profilePhoto (1).svg";
+import profliPhoto2 from "../assets/profilePhoto (2).svg";
+import profliPhoto3 from "../assets/profilePhoto (3).svg";
+import Header from "../Components/Header";
+
 export let cartNumber = [];
 const Home = () => {
-  console.log(cartNumber);
+  const [count, setCount] = useState(0);
   const addCart = (i) => {
     const found = foods[i].isTru === true;
     cartNumber.push(found);
@@ -28,6 +44,7 @@ const Home = () => {
       });
     }
   };
+  const slideTitles = ["bir", "ikki", "uch", "besh", "sakkiz", "qirq"];
   return (
     <div className="containerb">
       <div className="w-full flex flex-wrap h-full">
@@ -136,7 +153,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-
+      {/* Savatga qo'shildi */}
       <ToastContainer />
       {/*Mahsulotlarning qoshilishi  */}
       <div className="bg">
@@ -194,6 +211,64 @@ const Home = () => {
             );
           })}
         </ul>
+      </div>
+      <div className="w-full flex justify-center py-10">
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={3}
+          navigation={true}
+          modules={[Navigation]}
+          className="mySwiper"
+        >
+          <SwiperSlide className="rounded-3xl">
+            <img src={profliPhoto1} alt="" />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat
+            est a elit tristique efficitur. Phasellus sodales lectus ut
+            tincidunt sodales. Pellentesque viverra mattis mattis. Donec pretium
+            posuere enim, id tincidunt elit scelerisque vel. Etiam consectetur
+            fermentum odio euismod ullamcorper.
+          </SwiperSlide>
+          <SwiperSlide className="rounded-3xl">
+            <img src={profliPhoto2} alt="" />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat
+            est a elit tristique efficitur. Phasellus sodales lectus ut
+            tincidunt sodales. Pellentesque viverra mattis mattis. Donec pretium
+            posuere enim, id tincidunt elit scelerisque vel. Etiam consectetur
+            fermentum odio euismod ullamcorper.
+          </SwiperSlide>
+          <SwiperSlide className="rounded-3xl">
+            <img src={profliPhoto3} alt="" />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat
+            est a elit tristique efficitur. Phasellus sodales lectus ut
+            tincidunt sodales. Pellentesque viverra mattis mattis. Donec pretium
+            posuere enim, id tincidunt elit scelerisque vel. Etiam consectetur
+            fermentum odio euismod ullamcorper.
+          </SwiperSlide>
+          <SwiperSlide className="rounded-3xl">
+            <img src={profliPhoto1} alt="" />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat
+            est a elit tristique efficitur. Phasellus sodales lectus ut
+            tincidunt sodales. Pellentesque viverra mattis mattis. Donec pretium
+            posuere enim, id tincidunt elit scelerisque vel. Etiam consectetur
+            fermentum odio euismod ullamcorper.
+          </SwiperSlide>
+          <SwiperSlide className="rounded-3xl">
+            <img src={profliPhoto2} alt="" />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat
+            est a elit tristique efficitur. Phasellus sodales lectus ut
+            tincidunt sodales. Pellentesque viverra mattis mattis. Donec pretium
+            posuere enim, id tincidunt elit scelerisque vel. Etiam consectetur
+            fermentum odio euismod ullamcorper.
+          </SwiperSlide>
+          <SwiperSlide className="rounded-3xl">
+            <img src={profliPhoto3} alt="" />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat
+            est a elit tristique efficitur. Phasellus sodales lectus ut
+            tincidunt sodales. Pellentesque viverra mattis mattis. Donec pretium
+            posuere enim, id tincidunt elit scelerisque vel. Etiam consectetur
+            fermentum odio euismod ullamcorper.
+          </SwiperSlide>
+        </Swiper>
       </div>
     </div>
   );

@@ -43,3 +43,52 @@ nav .active::before {
   position: relative;
   background-image: url(./assets/Vector1.svg);
 }
+
+.swiper {
+  width: 1300px;
+  overflow: hidden;
+  position: relative;
+  padding: 0 20px;
+  height: 100%;
+}
+.mySwiper {
+  display: flex;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #dcdddf;
+  width: 410px;
+  height: 410px;
+  padding: 0 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-wrapper {
+  display: flex;
+}
+.swiper-slide img {
+  display: block;
+  object-fit: cover;
+}
+.swiper-button-next {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  bottom: 40%;
+  background-image: url(./assets/RightCircle21.svg);
+  background-size: contain;
+}
+.swiper-button-prev {
+  bottom: 40%;
+  position: absolute;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-image: url(./assets/RightCircle2.svg);
+}

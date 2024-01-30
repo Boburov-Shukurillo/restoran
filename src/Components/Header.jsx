@@ -7,8 +7,7 @@ import haburgerBtn from "../assets/hamburgerBtn.svg";
 import savatblack from "../assets/qoraSavat.svg";
 import { foods } from "../data";
 import { cartNumber } from "../pages/Home";
-
-const Header = () => {
+const Header = ({ count }) => {
   let update = foods.filter((e) => e.isTru === true);
   const [cart, setCart] = useState(update);
   console.log(update);
@@ -40,7 +39,6 @@ const Header = () => {
             +998 93 098 24 06
           </h3>
         </div>
-
         {/* bolimlar */}
         <nav
           className={`ma-md:w-1/3 max-md:${menu} max-md:absolute right-0 top-0 max-md:bg-white max-md:rounded-bl-3xl max-md:border-2`}
