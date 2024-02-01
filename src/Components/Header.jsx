@@ -24,8 +24,8 @@ const Header = ({ data, setCart, cart }) => {
   };
 
   return (
-    <header className="bg-[#292828]">
-      <div className="containerb flex items-center justify-between py-2.5">
+    <header className="bg-[#292828] ">
+      <div className="containerb flex items-center justify-between py-2.5 h-32">
         {/* header logsi home sahifaga olib o'tadi */}
         <Link to="/">
           <img
@@ -39,7 +39,7 @@ const Header = ({ data, setCart, cart }) => {
           <img src={MenuBtn} alt="" />
         </button>
 
-        <div className="w-full max-md:absolute max-md:bg-white max-md:border-2 max-md:text-black max-md:w-1/3 max-md:right-0 max-md:rounded-bl-3xl max-md:py-5 flex max-md:flex-col max-md:top-0 items-center justify-between px-5">
+        <div className="w-full max-md:absolute max-md:bg-white max-md:border-2 max-md:text-black max-md:w-2/4 max-sm:w-2/3 max-md:right-0 max-md:rounded-bl-3xl max-md:py-5 flex max-md:flex-col max-md:top-0 max-md:items-start items-ctart  justify-between px-5">
           {/* Qo'ngiroq hizmati adminga qo;ng;iroq qilish */}
           <a
             href="+99899453323"
@@ -51,7 +51,7 @@ const Header = ({ data, setCart, cart }) => {
 
           {/* navbar qismi bo'limlar bo'ylab tezkor o'tish */}
           <nav className="">
-            <ul className="flex items-center justify-between gap-5 text-white max-md:flex-col max-md:items-start text-center">
+            <ul className="flex  justify-between gap-5 text-white max-md:flex-col max-md:items-start ">
               <li>
                 <NavLink
                   to="/"
@@ -96,7 +96,7 @@ const Header = ({ data, setCart, cart }) => {
           </nav>
 
           {/* kkorzinka ga olib o'tuvchi tugma va link birlashmasi */}
-          <Link to="/korzinka" className="flex items-center">
+          <Link to="/korzinka" className="flex items-center justify-between">
             <button className="w-10 h-10 p-2 rounded-lg relative bg-[rgba(81,80,80,0.56)] max-md:bg-transparent max-my_screen:px-1 max-my_screen:py-1 flex items-center justify-center max-md:w-full">
               <img
                 src={savatchaImg}

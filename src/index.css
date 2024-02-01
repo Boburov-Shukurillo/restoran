@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .containerb {
-  @apply w-full max-w-[1620px] px-5 mx-auto;
+  @apply w-full max-w-[1320px] px-5 mx-auto;
 }
 
 body::-webkit-scrollbar {
@@ -12,14 +12,13 @@ body::-webkit-scrollbar {
 
 nav .active {
   display: flex;
-  transition: 0.4s all ease;
   align-items: center;
   flex-direction: column;
   color: #d9782a;
 }
 
 nav .active {
-  @apply max-md:flex-row max-md:after:hidden before:hidden max-md:before:inline-block before:mr-3;
+  @apply max-md:flex-row  max-md:after:hidden before:hidden max-md:before:inline-block before:mr-3;
 }
 
 nav .active::after {
@@ -91,4 +90,13 @@ nav .active::before {
   height: 40px;
   background-size: contain;
   background-image: url(./assets/RightCircle2.svg);
+}
+
+.gridl {
+  padding: 150px 0;
+  /* height: 1900px; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./assets/SecondMainBg.svg);
 }
