@@ -14,7 +14,7 @@ export const foods = [
     massa: 670,
     price: 500,
     img: img1,
-    isTru: false,
+    isTrue: false,
     productLength: 1,
   },
   {
@@ -23,7 +23,7 @@ export const foods = [
     massa: 270,
     price: 200,
     img: img2,
-    isTru: false,
+    isTrue: false,
     productLength: 1,
   },
   {
@@ -32,7 +32,7 @@ export const foods = [
     massa: 770,
     price: 700,
     img: img3,
-    isTru: false,
+    isTrue: false,
     productLength: 1,
   },
   {
@@ -41,7 +41,7 @@ export const foods = [
     massa: 320,
     price: 2400,
     img: img4,
-    isTru: false,
+    isTrue: false,
     productLength: 1,
   },
   {
@@ -50,7 +50,7 @@ export const foods = [
     massa: 470,
     price: 800,
     img: img5,
-    isTru: false,
+    isTrue: false,
     productLength: 1,
   },
   {
@@ -59,7 +59,7 @@ export const foods = [
     massa: 270,
     price: 600,
     img: img6,
-    isTru: false,
+    isTrue: false,
     productLength: 1,
   },
   {
@@ -68,7 +68,7 @@ export const foods = [
     massa: 400,
     price: 740,
     img: img7,
-    isTru: false,
+    isTrue: false,
     productLength: 1,
   },
   {
@@ -77,7 +77,7 @@ export const foods = [
     massa: 800,
     price: 1840,
     img: img8,
-    isTru: false,
+    isTrue: false,
     productLength: 1,
   },
 ];

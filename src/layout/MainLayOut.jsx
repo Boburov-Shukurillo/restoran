@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import { Outlet } from "react-router-dom";
-import { foods } from "../data";
 
-const MainLayOut = () => {
+const MainLayOut = ({ cart, setData, data, setCart }) => {
   return (
     <div>
-      <Header />
+      <Header cart={cart} setData={setData} data={data} setCart={setCart} />
       <main className="bg-[#1E1E1E]">
-        <Outlet />
+        <Outlet wtf="knock knock face" />
       </main>
     </div>
   );
