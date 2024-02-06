@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Korzinka from "./pages/Korzinka";
 import { foods } from "./data";
+import Menu from "./pages/Menu";
 
 const App = () => {
   const [data, setData] = useState([...foods]);
@@ -39,6 +40,12 @@ const App = () => {
         <Route
           path="/korzinka"
           element={<Korzinka cart={cart} setCart={setCart} />}
+        />
+        <Route
+          path="/menu"
+          element={
+            <Menu cart={cart} data={data} setData={setData} setCart={setCart} />
+          }
         />
       </Route>
     )

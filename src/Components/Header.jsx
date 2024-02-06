@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 // chaqirilgan rasimlar
 import savatchaImg from "../assets/Buy 3.svg";
@@ -9,7 +9,8 @@ import telImg from "../assets/TelLogoSvg.svg";
 import MenuBtn from "../assets/hamburgerBtn.svg";
 
 const Header = ({ data, setCart, cart }) => {
-  // console.log(props.data);
+  const name = useLocation();
+  const headerT = name.pathname === "/about";
   let nimadir = data.filter((e) => {
     return e.isTrue === true;
   });
@@ -24,22 +25,22 @@ const Header = ({ data, setCart, cart }) => {
   };
 
   return (
-    <header className="bg-[#292828] ">
-      <div className="containerb flex items-center justify-between py-2.5 h-32">
+    <header
+      className={`${
+        headerT ? "bg-transparent absolute top-0 w-full" : "bg-[#292828]"
+      } `}
+    >
+      <div className="containerb flex items-center justify-between h-28 py-4">
         {/* header logsi home sahifaga olib o'tadi */}
         <Link to="/">
-          <img
-            src={headerLogo}
-            alt="Main Logo"
-            className="w-52 max-lg:w-20 max-my_screen:w-32"
-          />
+          <img src={headerLogo} alt="Main Logo" className="h-full" />
         </Link>
 
         <button onClick={openMenu} className="hidden max-md:block">
           <img src={MenuBtn} alt="" />
         </button>
 
-        <div className="w-full max-md:absolute max-md:bg-white max-md:border-2 max-md:text-black max-md:w-2/4 max-sm:w-2/3 max-md:right-0 max-md:rounded-bl-3xl max-md:py-5 flex max-md:flex-col max-md:top-0 max-md:items-start items-ctart  justify-between px-5">
+        <div className="w-full max-md:absolute max-md:bg-white z-20 max-md:border-2 max-md:text-black max-md:w-2/4 max-sm:w-2/3 max-md:right-0 max-md:rounded-bl-3xl max-md:py-5 flex max-md:flex-col max-md:top-0 max-md:items-start items-ctart  justify-between px-5">
           {/* Qo'ngiroq hizmati adminga qo;ng;iroq qilish */}
           <a
             href="+99899453323"
@@ -51,7 +52,7 @@ const Header = ({ data, setCart, cart }) => {
 
           {/* navbar qismi bo'limlar bo'ylab tezkor o'tish */}
           <nav className="">
-            <ul className="flex  justify-between gap-5 text-white max-md:flex-col max-md:items-start ">
+            <ul className="flex items-center justify-between gap-5 text-white h-20 max-md:h-full max-md:flex-col max-md:items-start ">
               <li>
                 <NavLink
                   to="/"
@@ -108,7 +109,7 @@ const Header = ({ data, setCart, cart }) => {
                 alt="qoraSavatcha Svg "
                 className="hidden max-my_screen:w-10 max-md:block"
               />
-              <span className="absolute -right-3 -bottom-3 w-6 h-6 rounded-full flex items-center justify-center bg-[#E98D42] max-my_screen:text-xs max-my_screen:w-4 max-my_screen:h-4 max-my_screen:-right-2 max-my_screen:-bottom-2">
+              <span className="text-white text-[15px] absolute -right-3 -bottom-3 w-6 h-6 rounded-full flex items-center justify-center bg-[#E98D42] max-my_screen:text-xs max-my_screen:w-4 max-my_screen:h-4 max-my_screen:-right-2 max-my_screen:-bottom-2">
                 {cart.length}
               </span>
             </button>
