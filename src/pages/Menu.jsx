@@ -3,7 +3,7 @@ import Header from "../Components/Header";
 
 const Menu = ({ data, setCart }) => {
   const [filter, setFilter] = useState("food");
-  const [food, setFoodstyle] = useState("");
+  const [food, setFoodstyle] = useState("salom");
   const [salat, setSalatstyle] = useState("");
   const [drink, setDrinkstyle] = useState("");
   const [desert, setDesert] = useState("");
@@ -60,7 +60,7 @@ const Menu = ({ data, setCart }) => {
     setSalatstyle("");
   };
   return (
-    <div className="bg-[#292828] pt-44">
+    <div className="bg-[#292828] pt-4">
       {/* <Header /> */}
       <div className="containerb py-20">
         <div className="w-full flex flex-col items-center justify-between mb-10 h-44">

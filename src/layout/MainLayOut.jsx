@@ -4,9 +4,6 @@ import { Outlet, useLocation } from "react-router-dom";
 import Footer from "../Components/Footer";
 
 const MainLayOut = ({ cart, setData, data, setCart }) => {
-  const name = useLocation();
-  const headerT = name.pathname === "/menu";
-  // alert(name.pathname === "/");
   return (
     <div>
       <Header cart={cart} setData={setData} data={data} setCart={setCart} />

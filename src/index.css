@@ -42,12 +42,17 @@ nav .active::before {
   background-image: url(./assets/Vector1.svg);
 }
 
-
 .bg {
   background-size: cover;
   background-image: url(./assets/Fon.svg);
 }
 .salom {
-  border:2px solid #ff6a00;
+  border: 2px solid #ff6a00;
   box-shadow: 0 0 15px #ef6602, 0 0 15px #ef6602 inset;
 }
+
+.nimadi {
+  background-size: cover;
+  background-image: url(./assets/menubg.svg);
+}
+
