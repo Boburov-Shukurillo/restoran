@@ -436,4 +436,5 @@ const Home = ({ data, setCart }) => {
   );
 };
 
+
 export default Home;
