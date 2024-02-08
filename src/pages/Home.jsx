@@ -416,7 +416,7 @@ const Home = ({ data, setCart }) => {
                   src={slideTitle.img}
                   width="100px"
                   height="150px"
-                  className="rounded-full absolute -top-[15%] left-1/5 "
+                  className=" absolute rounded-full -top-[15%] left-1/5 "
                   alt={slideTitle.title + " png"}
                 />
                 <div className="w-full h-1/2 flex flex-col items-center justify-between">
