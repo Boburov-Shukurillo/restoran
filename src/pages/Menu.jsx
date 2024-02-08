@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Header from "../Components/Header";
 
 const Menu = ({ data, setCart }) => {
   const [filter, setFilter] = useState("food");

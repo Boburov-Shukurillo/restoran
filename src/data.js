@@ -7,6 +7,8 @@ import img6 from "../src/assets/foods (6).png";
 import img7 from "../src/assets/foods (7).png";
 import img8 from "../src/assets/foods (3).png";
 
+// galareya uchun export rasimlar
+
 export const foods = [
   {
     id: 0,
@@ -17,6 +19,7 @@ export const foods = [
     type: "food",
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 1,
@@ -27,6 +30,7 @@ export const foods = [
     img: img2,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 2,
@@ -37,6 +41,7 @@ export const foods = [
     isTru: false,
     type: "salat",
     productLength: 1,
+    type2: "all",
   },
   {
     id: 3,
@@ -47,6 +52,7 @@ export const foods = [
     img: img4,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 4,
@@ -57,6 +63,7 @@ export const foods = [
     isTru: false,
     type: "food",
     productLength: 1,
+    type2: "all",
   },
   {
     id: 5,
@@ -67,6 +74,7 @@ export const foods = [
     img: img6,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 6,
@@ -77,6 +85,7 @@ export const foods = [
     type: "salat",
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 7,
@@ -87,6 +96,7 @@ export const foods = [
     type: "salat",
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 8,
@@ -97,6 +107,7 @@ export const foods = [
     type: "withoutOil",
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 9,
@@ -107,6 +118,7 @@ export const foods = [
     type: "salat",
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 10,
@@ -117,6 +129,7 @@ export const foods = [
     img: img3,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 11,
@@ -127,6 +140,7 @@ export const foods = [
     img: img4,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 12,
@@ -137,6 +151,7 @@ export const foods = [
     img: img5,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 13,
@@ -147,6 +162,7 @@ export const foods = [
     type: "food",
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 14,
@@ -157,6 +173,7 @@ export const foods = [
     type: "salat",
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 15,
@@ -167,6 +184,7 @@ export const foods = [
     img: img8,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 16,
@@ -177,6 +195,7 @@ export const foods = [
     img: img2,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 17,
@@ -187,6 +206,7 @@ export const foods = [
     img: img3,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 18,
@@ -197,6 +217,7 @@ export const foods = [
     img: img4,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 19,
@@ -207,6 +228,7 @@ export const foods = [
     img: img5,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 20,
@@ -217,6 +239,7 @@ export const foods = [
     img: img6,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 21,
@@ -227,6 +250,7 @@ export const foods = [
     img: img7,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 22,
@@ -237,6 +261,7 @@ export const foods = [
     img: img8,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 23,
@@ -247,6 +272,7 @@ export const foods = [
     img: img3,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 24,
@@ -257,6 +283,7 @@ export const foods = [
     img: img4,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 25,
@@ -267,6 +294,7 @@ export const foods = [
     img: img5,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 26,
@@ -277,6 +305,7 @@ export const foods = [
     img: img6,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 27,
@@ -287,6 +316,7 @@ export const foods = [
     img: img7,
     isTru: false,
     productLength: 1,
+    type2: "all",
   },
   {
     id: 28,
@@ -297,5 +327,122 @@ export const foods = [
     img: img8,
     isTru: false,
     productLength: 1,
+    type2: "all",
+  },
+  {
+    id: 29,
+    name: "7up",
+    type: "drink",
+    massa: 1000,
+    price: 900,
+    img: img8,
+    isTru: false,
+    productLength: 1,
+    type2: "all",
+  },
+  {
+    id: 30,
+    name: "Maxito",
+    type: "drink",
+    massa: 1000,
+    price: 900,
+    img: img8,
+    isTru: false,
+    productLength: 1,
+    type2: "all",
+  },
+  {
+    id: 31,
+    name: "Coca Cola",
+    type: "drink",
+    massa: 1000,
+    price: 900,
+    img: img8,
+    isTru: false,
+    productLength: 1,
+    type2: "all",
+  },
+  {
+    id: 32,
+    name: "Dena",
+    type: "drink",
+    massa: 1000,
+    price: 900,
+    img: img8,
+    isTru: false,
+    productLength: 1,
+    type2: "all",
+  },
+  {
+    id: 33,
+    name: "Manti",
+    type: "withoutOil",
+    massa: 1000,
+    price: 900,
+    img: img8,
+    isTru: false,
+    productLength: 1,
+    type2: "all",
+  },
+  {
+    id: 34,
+    name: "Dena",
+    type: "withoutOil",
+    massa: 1000,
+    price: 900,
+    img: img8,
+    isTru: false,
+    productLength: 1,
+    type2: "all",
+  },
+  {
+    id: 35,
+    name: "Dena",
+    type: "withoutOil",
+    massa: 1000,
+    price: 900,
+    img: img8,
+    isTru: false,
+    productLength: 1,
+    type2: "all",
+  },
+  {
+    id: 36,
+    name: "Dena",
+    type: "withoutOil",
+    massa: 1000,
+    price: 900,
+    img: img8,
+    isTru: false,
+    productLength: 1,
+    type2: "all",
+  },
+];
+
+export const slideTitles = [
+  {
+    img:img1,
+    title: "bir",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
+  },
+  {img:img1,
+    title: "ikki",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
+  },
+  {img:img1,
+    title: "uch",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
+  },
+  {img:img1,
+    title: "to'rt",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
+  },
+  {img:img1,
+    title: "besh",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
+  },
+  {img:img1,
+    title: "olti",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
   },
 ];

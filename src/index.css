@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  padding: 0;
+  user-select: none;
+  margin: 0;
+  box-sizing: border-box;
+}
 .containerb {
-  @apply w-full max-w-[1320px] px-5 mx-auto;
+  @apply w-full max-w-[1220px] px-5 mx-auto;
 }
 
 body::-webkit-scrollbar {
@@ -37,14 +43,18 @@ nav .active::before {
   border-radius: 50%;
 }
 .bg {
-  background-size: contain;
-  position: relative;
-  background-image: url(./assets/Vector1.svg);
-}
-
-.bg {
+  background-position: center;
   background-size: cover;
-  background-image: url(./assets/Fon.svg);
+  background-image: url(./assets/orqaFonBg.svg);
+}
+/* 
+.bg-2 {
+  background-position: center;
+  background-size: cover;
+  background-image: url(./assets/orqaFon.svg);
+} */
+.bg-2::-webkit-scrollbar {
+  display: none;
 }
 .salom {
   border: 2px solid #ff6a00;
@@ -56,3 +66,31 @@ nav .active::before {
   background-image: url(./assets/menubg.svg);
 }
 
+.hero {
+  background-size: cover;
+  background-image: url(./assets/homeBg.png);
+}
+
+.pitsa {
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(./assets/pitsaPng.png);
+}
+
+.mySwiper {
+  width: 100%;
+  height: 450px;
+}
+.swiper-wrapper {
+  display: flex;
+}
+.swiper-slide {
+  width: 100%;
+  height: 450px;
+  background-color: transparent;
+}
+
+.swoperL {
+  width: 70%;
+}
