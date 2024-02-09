@@ -13,7 +13,7 @@ import star from "../assets/Star.svg";
 
 // swiper slide
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
@@ -81,9 +81,17 @@ const Home = ({ data, setCart }) => {
     setSalatstyle("");
   };
 
+  const [customSwiper, setCustomSwiper] = useState({});
+  const prev = () => {
+    customSwiper.slidePrev();
+  };
+  const next = () => {
+    customSwiper.slideNext();
+  };
+
   return (
     <div className="containerb pb-20">
-      <div className="hero grid grid-cols-2  items-center max-lg:pt-20 max-md:flex max-md;flex-col justify-between">
+      <div className="hero grid grid-cols-2  items-center max-lg:pt-20 max-md:pt-44 max-md max-md:flex max-md;flex-col justify-between">
         <div className="text-white flex flex-col items-start justify  max-md:items-center">
           <h2 className="text-[70px] max-middle_screen:text-[45px] leading-[70px] mb-10 font-bold max-md:text-center">
             Restoran <br />
@@ -98,8 +106,10 @@ const Home = ({ data, setCart }) => {
           </p>
           <img
             src={dumaloqXinkalin}
+            height={400}
+            width={400}
             className="max-md:block hidden h-full w-full"
-            alt=""
+            alt="hinkalin png"
           />
           <button className="px-20 py-5 bg-orange text-white font-bold rounded-xl shadow-lg shadow-orange max-sm:text-[10px]">
             Stol BandQilish
@@ -109,7 +119,8 @@ const Home = ({ data, setCart }) => {
           <img src={pitsa} alt="pitsa png" />
           <img
             src={kokat}
-            width={200}
+            width={100}
+            height={100}
             className="absolute bottom-1/4 right-[35%]"
             alt="kokat png"
           />
@@ -138,27 +149,27 @@ const Home = ({ data, setCart }) => {
             Accusantium, ratione recusandae molestias iusto voluptatee minus.
           </p>
           <div className="grid grid-cols-2  gap-5">
-            <div className="flex items-center mb-3 gap-5">
+            <div className="flex items-center mb-3 gap-5 max-md:flex-col">
               <img src={star} alt="satar svg" />
-              <p className="text-base leading-5 max-md:text-xs max-md:w-1/2">
+              <p className="text-base leading-5 max-md:text-xs max-md:w-4/5 font-bold ">
                 Lorem ipsum dolor sit amet consectetur.
               </p>
             </div>
-            <div className="flex items-center mb-3 gap-5">
+            <div className="flex items-center mb-3 gap-5 max-md:flex-col">
               <img src={star} alt="satar svg" />
-              <p className="text-base leading-5 max-md:text-xs max-md:w-1/2">
+              <p className="text-base leading-5 max-md:text-xs max-md:w-4/5 font-bold ">
                 Lorem ipsum dolor sit amet consectetur.
               </p>
             </div>
-            <div className="flex items-center mb-3 gap-5">
+            <div className="flex items-center mb-3 gap-5 max-md:flex-col">
               <img src={star} alt="satar svg" />
-              <p className="text-base leading-5 max-md:text-xs max-md:w-1/2">
+              <p className="text-base leading-5 max-md:text-xs max-md:w-4/5 font-bold ">
                 Lorem ipsum dolor sit amet consectetur.
               </p>
             </div>
-            <div className="flex items-center mb-3 gap-5">
+            <div className="flex items-center mb-3 gap-5 max-md:flex-col">
               <img src={star} alt="satar svg" />
-              <p className="text-base leading-5 max-md:text-xs max-md:w-1/2">
+              <p className="text-base leading-5 max-md:text-xs max-md:w-4/5 font-bold ">
                 Lorem ipsum dolor sit amet consectetur.
               </p>
             </div>
@@ -193,23 +204,21 @@ const Home = ({ data, setCart }) => {
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
-          pagination={{
-            type: "bullets",
-          }}
-          // modules={[Pagination]}
-          className="swoperL mb-20 hidden max-middle_screen:block"
+          navigation={true}
+          modules={[Navigation]}
+          className="swoperL mb-20 hidden max-middle_screen:block max-md:mb-0"
         >
           {slideTitles.map((slideTitle, i) => {
             return (
               <SwiperSlide
                 key={i}
-                className="rounded-xl relative flex flex-col items-center justify-end pt-16"
+                className="flex flex-col items-center px-3 py-3 max-sm:h-2/3 "
               >
                 <img
                   src={slideTitle.img}
                   width="100px"
                   height="150px"
-                  className="w-full h-full rounded-lg"
+                  className="w-full h-full rounded-3xl"
                   alt={slideTitle.title + " png"}
                 />
               </SwiperSlide>
@@ -331,10 +340,8 @@ const Home = ({ data, setCart }) => {
       <Swiper
         spaceBetween={50}
         slidesPerView={3}
-        pagination={{
-          type: "progressbar",
-        }}
-        // modules={[Pagination]}
+        navigation={true}
+        modules={[Navigation]}
         className={`mySwiper mb-20 max-middle_screen:hidden`}
       >
         {slideTitles.map((slideTitle, i) => {
@@ -435,6 +442,5 @@ const Home = ({ data, setCart }) => {
     </div>
   );
 };
-
 
 export default Home;

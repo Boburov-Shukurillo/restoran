@@ -17,14 +17,7 @@ body::-webkit-scrollbar {
 }
 
 nav .active {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   color: #d9782a;
-}
-
-nav .active {
-  @apply max-md:flex-row  max-md:after:hidden before:hidden max-md:before:inline-block before:mr-3;
 }
 
 nav .active::after {
@@ -81,6 +74,7 @@ nav .active::before {
 .mySwiper {
   width: 100%;
   height: 450px;
+  position: relative;
 }
 .swiper-wrapper {
   display: flex;
@@ -93,4 +87,22 @@ nav .active::before {
 
 .swoperL {
   width: 70%;
+}
+.swiper-button-next {
+  width: 30px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  z-index: 20;
+  background-image: url(./assets/Star.svg);
+}
+.swiper-button-prev {
+  width: 30px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  z-index: 20;
+  background-image: url(./assets/Star.svg);
 }

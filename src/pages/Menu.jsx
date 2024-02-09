@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 const Menu = ({ data, setCart }) => {
   const [filter, setFilter] = useState("food");
   const [food, setFoodstyle] = useState("salom");
@@ -66,7 +67,7 @@ const Menu = ({ data, setCart }) => {
           <h1 className="text-white text-6xl font-bold uppercase font-serif">
             bizning menu
           </h1>
-          <div className="w-full flex items-center justify-between flex-wrap">
+          <div className="w-full flex items-center justify-between flex-wrap max-middle_screen:hidden">
             <span
               onClick={filterSalat}
               className={`${salat} px-5 py-2 text-xl font-semibold rounded-3xl border-[2px]  text-white`}
@@ -139,6 +140,30 @@ const Menu = ({ data, setCart }) => {
             }
           })}
         </ul>
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation={true}
+          modules={[Navigation]}
+          className="swoperL mb-20 hidden max-middle_screen:block max-md:mb-0"
+        >
+          {data.map((slideTitle, i) => {
+            return (
+              <SwiperSlide
+                key={i}
+                className="flex flex-col items-center px-3 py-3 max-sm:h-2/3 "
+              >
+                <img
+                  src={slideTitle.img}
+                  width="100px"
+                  height="150px"
+                  className="w-full h-full rounded-3xl"
+                  alt={slideTitle.name + " png"}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
     </div>
   );
