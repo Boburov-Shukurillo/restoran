@@ -9,7 +9,7 @@ import locationImg from "../assets/Vectorlocation.svg";
 const Footer = () => {
   return (
     <footer className="bg-[#292828]  border-t-2 border-orange py-5">
-      <div className="containerb flex items-center justify-between h-22">
+      <div className="containerb flex items-center justify-between h-22 max-middle_screen:flex-col max-middle_screen:items-start max-middle_screen:space-y-1">
         {/* header logsi home sahifaga olib o'tadi */}
         <Link to="/">
           <img
@@ -23,7 +23,7 @@ const Footer = () => {
 
         {/* navbar qismi bo'limlar bo'ylab tezkor o'tish */}
         <nav className="w-1/2">
-          <ul className="w-full flex items-center justify-between gap-5 text-white h-20 max-md:h-full max-md:hidden">
+          <ul className="w-full flex items-center justify-between gap-5 text-white h-20 max-md:h-full max-middle_screen:hidden">
             <li>
               <NavLink
                 to="/"
@@ -67,7 +67,7 @@ const Footer = () => {
           </ul>
         </nav>
 
-        <div className="ml-5 max-md:w-2/3 flex flex-col items-start  space-y-3">
+        <div className="ml-5 max-md:w-2/3 flex flex-col items-start  space-y-3 max-middle_screen:ml-0">
           {/* Qo'ngiroq hizmati adminga qo;ng;iroq qilish */}
           <a
             href="+99899453323"

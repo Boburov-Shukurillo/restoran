@@ -93,13 +93,13 @@ const Home = ({ data, setCart }) => {
     <div className="containerb pb-20">
       <div className="hero grid grid-cols-2  items-center max-lg:pt-20 max-md:pt-44 max-md max-md:flex max-md;flex-col justify-between">
         <div className="text-white flex flex-col items-start justify  max-md:items-center">
-          <h2 className="text-[70px] max-middle_screen:text-[45px] leading-[70px] mb-10 font-bold max-md:text-center">
+          <h2 className="text-[70px] max-middle_screen:text-[45px] leading-[70px] mb-10 font-bold max-md:text-center max-mini_screen:text-2xl">
             Restoran <br />
-            <span className="text-[60px] max-middle_screen:text-[45px]">
+            <span className="text-[60px] max-middle_screen:text-[45px] max-mini_screen:text-xl">
               kavkazniy kuxni
             </span>
           </h2>
-          <p className="mb-20 text-xl font-medium max-middle_screen:text-[15px] max-md:w-10/12 max-md:text-center max-md:mb-0">
+          <p className="mb-20 text-xl font-medium max-middle_screen:text-[15px] max-md:w-10/12 max-md:text-center max-md:mb-0 max-mini_screen:text-xs">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
             odit, corporis adipisci incidunt esse perferendis magni perspiciatis
             aliquid minus voluptatem!
@@ -132,19 +132,19 @@ const Home = ({ data, setCart }) => {
           <h3 className="text-[65px] mb-10 max-md:text-2xl uppercase">
             Lorem, ipsum.
           </h3>
-          <p className="text-xl fon-normal mb-5 max-md:text-base">
+          <p className="text-xl fon-normal mb-5 max-md:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo enim
             itaque, atque, quia sit officiis explicabo laboriosam rem voluptatum
             eveniet est repellendus recusandae mollitia deserunt.
           </p>
-          <p className="text-xl fon-normal mb-5 max-md:text-base">
+          <p className="text-xl fon-normal mb-5 max-md:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
             dignissimos et dolorem, voluptates alias veritatis id dolorum
             dolores delectus maiores deserunt excepturi magni atque consequuntur
             eum fugit voluptatem reprehenderit consequatur labore quam
             doloremque, reiciendis aperiam?
           </p>
-          <p className="text-xl fon-normal mb-5 max-md:text-base">
+          <p className="text-xl fon-normal mb-5 max-md:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Accusantium, ratione recusandae molestias iusto voluptatee minus.
           </p>
@@ -204,21 +204,21 @@ const Home = ({ data, setCart }) => {
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
-          navigation={true}
-          modules={[Navigation]}
-          className="swoperL mb-20 hidden max-middle_screen:block max-md:mb-0"
+          pagination={true}
+          modules={[Pagination]}
+          className="swoperL mb-20 hidden max-middle_screen:block max-md:mb-0 "
         >
           {slideTitles.map((slideTitle, i) => {
             return (
               <SwiperSlide
                 key={i}
-                className="flex flex-col items-center px-3 py-3 max-sm:h-2/3 "
+                className="flex flex-col items-center px-3 py-3 justify-end"
               >
                 <img
                   src={slideTitle.img}
                   width="100px"
                   height="150px"
-                  className="w-full h-full rounded-3xl"
+                  className="w-full h-2/3 rounded-3xl mb-2"
                   alt={slideTitle.title + " png"}
                 />
               </SwiperSlide>
@@ -227,9 +227,9 @@ const Home = ({ data, setCart }) => {
         </Swiper>
       </div>
 
-      <div className="bg h-full py-5 bg-balck mb-20">
-        <div className="bg-2 py-20 flex flex-col items-center">
-          <div className="w-full flex flex-col items-center justify-between mb-10 h-44  ">
+      <div className="bg h-full py-5 bg-balck mb-20 ">
+        <div className="bg-2 py-20 flex flex-col items-center max-md:py-8">
+          <div className="w-full flex flex-col items-center justify-between mb-10 h-44 max-md:h-10 max-md:mb-0 max-md:justify-end">
             <h1 className="text-white text-6xl font-bold uppercase font-serif max-md:text-2xl mb-5">
               bizning menu
             </h1>
@@ -269,24 +269,22 @@ const Home = ({ data, setCart }) => {
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
-            pagination={{
-              type: "bullets",
-            }}
-            // modules={[Pagination]}
-            className="swoperL mb-20 hidden max-md:block"
+            pagination={true}
+            modules={[Pagination]}
+            className="swoperL mb-20 hidden max-middle_screen:block max-md:mb-0"
           >
-            {data.map((slideTitle, i) => {
+            {slideTitles.map((slideTitle, i) => {
               return (
                 <SwiperSlide
                   key={i}
-                  className="rounded-xl relative flex flex-col items-center justify-end pt-16"
+                  className="flex flex-col items-center px-3 py-3 max-sm:h-2/3 "
                 >
                   <img
                     src={slideTitle.img}
                     width="100px"
                     height="150px"
-                    className="w-full h-full rounded-lg"
-                    alt={slideTitle.name + " png"}
+                    className="w-full h-full rounded-3xl mb-2"
+                    alt={slideTitle.title + " png"}
                   />
                 </SwiperSlide>
               );
@@ -331,11 +329,47 @@ const Home = ({ data, setCart }) => {
               }
             })}
           </ul>
-          <Link to="/menu" className="text-blue-700 first-letter:uppercase ">
+          <Link
+            to="/menu"
+            className="text-blue-700 first-letter:uppercase mb-5"
+          >
             to'liq ko'rish uchun menu bolimiga o'ting
           </Link>
         </div>
       </div>
+
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={1}
+        navigation={true}
+        modules={[Navigation]}
+        className={`mySwiper mb-20 max-sm:block hidden`}
+      >
+        {slideTitles.map((slideTitle, i) => {
+          return (
+            <SwiperSlide
+              key={i}
+              className="rounded-xl relative flex flex-col items-center justify-end pt-16"
+            >
+              <div className="relative w-full h-[100%]  bg-[#dcdddf20] rounded-xl p-5 flex flex-col items-center justify-center">
+                <img
+                  src={slideTitle.img}
+                  width="100px"
+                  height="150px"
+                  className="rounded-full absolute -top-[15%] left-1/5 "
+                  alt={slideTitle.title + " png"}
+                />
+                <div className="w-full h-1/2 flex flex-col items-center justify-between">
+                  <h3 className="text-3xl font-bold text-white uppercase">
+                    {slideTitle.title}
+                  </h3>
+                  <p className="text-center text-white">{slideTitle.text}</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
 
       <Swiper
         spaceBetween={50}
@@ -372,11 +406,9 @@ const Home = ({ data, setCart }) => {
       <Swiper
         spaceBetween={50}
         slidesPerView={2}
-        pagination={{
-          type: "progressbar",
-        }}
-        // modules={[Pagination]}
-        className={`mySwiper mb-20 hidden max-middle_screen:block max-sm:hidden`}
+        navigation={true}
+        modules={[Navigation]}
+        className={`mySwiper mb-20 max-middle_screen:block max-sm:hidden hidden`}
       >
         {slideTitles.map((slideTitle, i) => {
           return (
@@ -390,40 +422,6 @@ const Home = ({ data, setCart }) => {
                   width="100px"
                   height="150px"
                   className="rounded-full absolute -top-[15%] left-1/5 "
-                  alt={slideTitle.title + " png"}
-                />
-                <div className="w-full h-1/2 flex flex-col items-center justify-between">
-                  <h3 className="text-3xl font-bold text-white uppercase">
-                    {slideTitle.title}
-                  </h3>
-                  <p className="text-center text-white">{slideTitle.text}</p>
-                </div>
-              </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-        pagination={{
-          type: "progressbar",
-        }}
-        // modules={[Pagination]}
-        className={`mySwiper mb-20 hidden max-sm:block`}
-      >
-        {slideTitles.map((slideTitle, i) => {
-          return (
-            <SwiperSlide
-              key={i}
-              className="rounded-xl relative flex flex-col items-center justify-end pt-16"
-            >
-              <div className="relative w-4/5 h-[100%]  bg-[#dcdddf20] rounded-xl p-5 flex flex-col items-center justify-center">
-                <img
-                  src={slideTitle.img}
-                  width="100px"
-                  height="150px"
-                  className=" absolute rounded-full -top-[15%] left-1/5 "
                   alt={slideTitle.title + " png"}
                 />
                 <div className="w-full h-1/2 flex flex-col items-center justify-between">

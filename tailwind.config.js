@@ -7,8 +7,9 @@ export default {
         orange: "#E98D42",
       },
       screens: {
-        "my_screen":"1220px",
-        "middle_screen":"850px"
+        my_screen: "1220px",
+        middle_screen: "850px",
+        mini_screen: "400px",
       },
     },
   },

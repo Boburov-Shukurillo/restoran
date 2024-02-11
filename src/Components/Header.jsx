@@ -41,8 +41,8 @@ const Header = ({ data, setCart, cart }) => {
           <img
             src={headerLogo}
             alt="Main Logo"
-            height={200}
-            width={200}
+            height="200px"
+            width="200px"
             className="w-full h-full  max-sm:w-2/3"
           />
         </Link>

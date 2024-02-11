@@ -386,7 +386,7 @@ export const foods = [
   },
   {
     id: 34,
-    name: "Dena",
+    name: "Nimdir",
     type: "withoutOil",
     massa: 1000,
     price: 900,
@@ -397,7 +397,7 @@ export const foods = [
   },
   {
     id: 35,
-    name: "Dena",
+    name: "Niind",
     type: "withoutOil",
     massa: 1000,
     price: 900,
@@ -408,7 +408,7 @@ export const foods = [
   },
   {
     id: 36,
-    name: "Dena",
+    name: "adklslkad",
     type: "withoutOil",
     massa: 1000,
     price: 900,
@@ -421,27 +421,32 @@ export const foods = [
 
 export const slideTitles = [
   {
-    img:img1,
+    img: img1,
     title: "bir",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
   },
-  {img:img1,
+  {
+    img: img2,
     title: "ikki",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
   },
-  {img:img1,
+  {
+    img: img3,
     title: "uch",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
   },
-  {img:img1,
+  {
+    img: img4,
     title: "to'rt",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
   },
-  {img:img1,
+  {
+    img: img5,
     title: "besh",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
   },
-  {img:img1,
+  {
+    img: img6,
     title: "olti",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
   },
