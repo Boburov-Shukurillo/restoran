@@ -7,7 +7,7 @@ import telImg from "../assets/TelLogoSvg.svg";
 
 const StolBandQilish = () => {
   return (
-    <div className="w-full grid grid-cols-2 gap-10 items-end px-10 py-10 rounded-2xl bg-[#181818] max-md:grid-cols-1 max-md:text-center">
+    <div className="containerb w-full grid grid-cols-2 gap-10 items-end px-10 py-10 rounded-2xl bg-[#181818] max-md:grid-cols-1 max-md:text-center">
       <div className="w-full h-full flex flex-col justify-between ">
         <h3 className="text-[65px] font-bold text-white mb-10 max-my_screen:text-3xl">
           Stol Band Qilish

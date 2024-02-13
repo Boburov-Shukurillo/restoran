@@ -36,7 +36,6 @@ nav .active::before {
   border-radius: 50%;
 }
 .bg {
-  background-position: center;
   background-size: cover;
   background-image: url(./assets/orqaFonBg.svg);
 }
@@ -82,7 +81,7 @@ nav .active::before {
 }
 .swiper-slide {
   width: 100%;
-  height: 450px;
+  height: 100%;
   background-color: transparent;
 }
 
@@ -140,5 +139,54 @@ nav .active::before {
 }
 
 .swiper-pagination-horizontal {
-  margin: -10px 0;
+  margin: -13px 0;
+}
+
+.d1 {
+  animation: 0.5s pinnggg infinite linear;
+  animation-delay: 400ms;
+}
+.d2 {
+  animation: 0.5s pinnggg infinite linear;
+  animation-delay: 800ms;
+}
+.d3 {
+  animation: 0.5s pinnggg infinite linear;
+  animation-delay: 1200ms;
+}
+.d4 {
+  animation: 0.5s pinnggg infinite linear;
+  animation-delay: 1600ms;
+}
+.d5 {
+  animation: 0.5s pinnggg infinite linear;
+  animation-delay: 2000ms;
+}
+.d6 {
+  animation: 0.5s pinnggg infinite linear;
+  animation-delay: 2400ms;
+}
+.d7 {
+  animation: 0.5s pinnggg infinite linear;
+  animation-delay: 2800ms;
+}
+.d8 {
+  animation: 0.5s pinnggg infinite linear;
+  animation-delay: 3200ms;
+}
+.d9 {
+  animation: 0.5s pinnggg infinite linear;
+  animation-delay: 3600ms;
+}
+
+@keyframes pinnggg {
+  0% {
+    color: orangered;
+  }
+  50% {
+    color: orangered;
+  }
+  100% {
+    transform: translateY(10px);
+  }
 }

@@ -90,84 +90,92 @@ const Home = ({ data, setCart }) => {
   };
 
   return (
-    <div className="containerb pb-20">
-      <div className="hero grid grid-cols-2  items-center max-lg:pt-20 max-md:pt-44 max-md max-md:flex max-md;flex-col justify-between">
-        <div className="text-white flex flex-col items-start justify  max-md:items-center">
-          <h2 className="text-[70px] max-middle_screen:text-[45px] leading-[70px] mb-10 font-bold max-md:text-center max-mini_screen:text-2xl">
-            Restoran <br />
-            <span className="text-[60px] max-middle_screen:text-[45px] max-mini_screen:text-xl">
-              kavkazniy kuxni
-            </span>
-          </h2>
-          <p className="mb-20 text-xl font-medium max-middle_screen:text-[15px] max-md:w-10/12 max-md:text-center max-md:mb-0 max-mini_screen:text-xs">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
-            odit, corporis adipisci incidunt esse perferendis magni perspiciatis
-            aliquid minus voluptatem!
-          </p>
-          <img
-            src={dumaloqXinkalin}
-            height={400}
-            width={400}
-            className="max-md:block hidden h-full w-full"
-            alt="hinkalin png"
-          />
-          <button className="px-20 py-5 bg-orange text-white font-bold rounded-xl shadow-lg shadow-orange max-sm:text-[10px]">
-            Stol BandQilish
-          </button>
-        </div>
-        <div className="w-full h-full pitsa relative max-md:hidden">
-          <img src={pitsa} alt="pitsa png" />
-          <img
-            src={kokat}
-            width={100}
-            height={100}
-            className="absolute bottom-1/4 right-[35%]"
-            alt="kokat png"
-          />
+    <div className="pb-20">
+      <div className="hero px-5 containerb">
+        <div className="w-full h-20"></div>
+        <div className=" grid grid-cols-2  items-center  max-md max-md:flex max-md:flex-col justify-between">
+          <div className="text-white flex flex-col items-start justify  max-md:items-center">
+            <h2 className="text-[70px] leading-[70px] max-middle_screen:text-[75px] max-middle_screen:leading-[50px] mb-10 font-bold max-md:text-center max-mini_screen:text-2xl">
+              Restoran <br />
+              <span className="text-[60px] max-middle_screen:text-[40px] max-mini_screen:text-xl">
+                kavkazniy kuxni
+              </span>
+            </h2>
+            <p className="mb-20 text-xl font-medium max-middle_screen:text-[15px] max-md:w-10/12 max-md:text-center max-md:mb-0 max-mini_screen:text-xs">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
+              odit, corporis adipisci incidunt esse perferendis magni
+              perspiciatis aliquid minus voluptatem!
+            </p>
+            <img
+              src={dumaloqXinkalin}
+              height={400}
+              width={400}
+              className="max-md:block hidden h-full w-full object-cover"
+              alt="hinkalin png"
+            />
+            <button className="px-20 py-5 bg-orange text-white font-bold rounded-xl shadow-lg shadow-orange max-sm:text-[10px] max-md:px-5 max-md:w-full">
+              Stol BandQilish
+            </button>
+          </div>
+          <div className="w-full h-full relative max-md:hidden ">
+            <img
+              src={pitsa}
+              width={600}
+              alt="pitsa png"
+              className="object-cover"
+            />
+            <img
+              src={kokat}
+              width={100}
+              height={100}
+              className="absolute bottom-1/4 right-[35%] object-cover"
+              alt="kokat png"
+            />
+          </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-10 items-center py-20 max-middle_screen:grid-cols-1">
+      <div className="containerb grid grid-cols-2 gap-10 items-center py-20 max-middle_screen:grid-cols-1 px-5">
         <div className="text-white max-middle_screen:flex max-middle_screen:flex-col max-middle_screen:items-center max-middle_screen:text-center">
           <h3 className="text-[65px] mb-10 max-md:text-2xl uppercase">
             Lorem, ipsum.
           </h3>
-          <p className="text-xl fon-normal mb-5 max-md:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
+          <p className="text-lg fon-normal mb-5 max-md:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo enim
             itaque, atque, quia sit officiis explicabo laboriosam rem voluptatum
             eveniet est repellendus recusandae mollitia deserunt.
           </p>
-          <p className="text-xl fon-normal mb-5 max-md:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
+          <p className="text-lg fon-normal mb-5 max-md:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
             dignissimos et dolorem, voluptates alias veritatis id dolorum
             dolores delectus maiores deserunt excepturi magni atque consequuntur
             eum fugit voluptatem reprehenderit consequatur labore quam
             doloremque, reiciendis aperiam?
           </p>
-          <p className="text-xl fon-normal mb-5 max-md:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
+          <p className="text-lg fon-normal mb-5 max-md:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Accusantium, ratione recusandae molestias iusto voluptatee minus.
           </p>
-          <div className="grid grid-cols-2  gap-5">
-            <div className="flex items-center mb-3 gap-5 max-md:flex-col">
+          <div className="grid grid-cols-2  gap-2">
+            <div className="flex items-center mb-0 gap-5 max-md:flex-col">
               <img src={star} alt="satar svg" />
               <p className="text-base leading-5 max-md:text-xs max-md:w-4/5 font-bold ">
                 Lorem ipsum dolor sit amet consectetur.
               </p>
             </div>
-            <div className="flex items-center mb-3 gap-5 max-md:flex-col">
+            <div className="flex items-center mb-0 gap-5 max-md:flex-col">
               <img src={star} alt="satar svg" />
               <p className="text-base leading-5 max-md:text-xs max-md:w-4/5 font-bold ">
                 Lorem ipsum dolor sit amet consectetur.
               </p>
             </div>
-            <div className="flex items-center mb-3 gap-5 max-md:flex-col">
+            <div className="flex items-center mb-0 gap-5 max-md:flex-col">
               <img src={star} alt="satar svg" />
               <p className="text-base leading-5 max-md:text-xs max-md:w-4/5 font-bold ">
                 Lorem ipsum dolor sit amet consectetur.
               </p>
             </div>
-            <div className="flex items-center mb-3 gap-5 max-md:flex-col">
+            <div className="flex items-center mb-0 gap-5 max-md:flex-col">
               <img src={star} alt="satar svg" />
               <p className="text-base leading-5 max-md:text-xs max-md:w-4/5 font-bold ">
                 Lorem ipsum dolor sit amet consectetur.
@@ -175,8 +183,8 @@ const Home = ({ data, setCart }) => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-5 items-center max-middle_screen:hidden">
-          <div className="space-y-5 mt-5">
+        <div className="grid grid-cols-2 gap-5 items-center max-middle_screen:hidden ">
+          <div className="space-y-5 mt-20">
             <img
               src={pic1}
               className="rounded-xl shadow-2xl shadow-orange"
@@ -206,19 +214,19 @@ const Home = ({ data, setCart }) => {
           slidesPerView={1}
           pagination={true}
           modules={[Pagination]}
-          className="swoperL mb-20 hidden max-middle_screen:block max-md:mb-0 "
+          className="w-full swoperL mb-20 hidden max-middle_screen:block max-md:mb-0 "
         >
           {slideTitles.map((slideTitle, i) => {
             return (
               <SwiperSlide
                 key={i}
-                className="flex flex-col items-center px-3 py-3 justify-end"
+                className="w-full flex flex-col items-center px-3 py-3 justify-end max-md:p-0"
               >
                 <img
                   src={slideTitle.img}
-                  width="100px"
-                  height="150px"
-                  className="w-full h-2/3 rounded-3xl mb-2"
+                  width={300}
+                  height={200}
+                  className="w-full h-3/4 max-md:h-full rounded-3xl mb-2"
                   alt={slideTitle.title + " png"}
                 />
               </SwiperSlide>
@@ -227,9 +235,9 @@ const Home = ({ data, setCart }) => {
         </Swiper>
       </div>
 
-      <div className="bg h-full py-5 bg-balck mb-20 ">
+      <div className="containerb bg h-full py-5 bg-balck mb-20 ">
         <div className="bg-2 py-20 flex flex-col items-center max-md:py-8">
-          <div className="w-full flex flex-col items-center justify-between mb-10 h-44 max-md:h-10 max-md:mb-0 max-md:justify-end">
+          <div className="w-full flex flex-col items-center justify-between mb-10 h-44 max-md:h-10 max-md:mb-0 max-md:justify-end max-middle_screen:hidden">
             <h1 className="text-white text-6xl font-bold uppercase font-serif max-md:text-2xl mb-5">
               bizning menu
             </h1>
@@ -269,28 +277,55 @@ const Home = ({ data, setCart }) => {
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
+            navigation={true}
             pagination={true}
-            modules={[Pagination]}
-            className="swoperL mb-20 hidden max-middle_screen:block max-md:mb-0"
+            modules={[Navigation, Pagination]}
+            className="swoperL swpW mb-20 hidden max-middle_screen:block max-md:mb-0"
           >
-            {slideTitles.map((slideTitle, i) => {
-              return (
-                <SwiperSlide
-                  key={i}
-                  className="flex flex-col items-center px-3 py-3 max-sm:h-2/3 "
-                >
-                  <img
-                    src={slideTitle.img}
-                    width="100px"
-                    height="150px"
-                    className="w-full h-full rounded-3xl mb-2"
-                    alt={slideTitle.title + " png"}
-                  />
-                </SwiperSlide>
-              );
+            {data.map((product) => {
+              if (product.id < 10) {
+                return (
+                  <SwiperSlide
+                    key={product.id}
+                    className="flex flex-col items-center px-3 py-3 max-sm:h-2/3 "
+                  >
+                    <li
+                      key={product.id}
+                      className="w-3/4 max-md:w-full text-white bg-[#d9d9d91f] rounded-xl "
+                    >
+                      <img
+                        src={product.img}
+                        alt={product.name + " png"}
+                        className="rounded-xl w-full"
+                        width={300}
+                        height={350}
+                      />
+                      <div className="px-5 py-5 flex flex-col justify-between">
+                        <h3 className="text-xl tracking-wide max-lg:text-lg max-md:text-sm font-bold first-letter:uppercase mb-1 truncate">
+                          {product.name}
+                        </h3>
+                        <p className="text-base max-lg:text-base max-md:text-xs text-gray-400 font-medium mb-3">
+                          {product.massa}gr
+                        </p>
+                        <div className="flex items-center justify-between max-sm:space-x-5">
+                          <p className="text-base max-lg:text-base  max-md:text-xs font-medium">
+                            {product.price}₽
+                          </p>
+                          <button
+                            className="px-2 py-2 bg-orange rounded-lg text-[70%] max-lg:text-xs active:bg-transparent active:text-orange active:border-[2px]  active:border-orange border-2 border-orange max-sm:p-1 max-sm:truncate"
+                            onClick={() => handleBuy(product.id)}
+                          >
+                            Buyurtma berish
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                  </SwiperSlide>
+                );
+              }
             })}
           </Swiper>
-          <ul className="grid grid-cols-4 max-md:grid-cols-2 gap-10 max-lg:grid-cols-3 max-sm:hidden py-10 max-md:hidden">
+          <ul className="grid grid-cols-4 max-md:grid-cols-2 gap-10 max-lg:grid-cols-3 max-sm:hidden py-10 max-middle_screen:hidden">
             {data.map((product) => {
               if (product.type === filter) {
                 return (
@@ -317,7 +352,7 @@ const Home = ({ data, setCart }) => {
                           {product.price}₽
                         </p>
                         <button
-                          className="px-2 py-2 bg-[#ff722b] rounded-lg text-[70%] max-lg:text-xs active:bg-transparent active:text-orange active:border-[2px]  active:border-[#ff722b] border-2 border-[#ff722b]"
+                          className="px-2 py-2 bg-orange rounded-lg text-[70%] max-lg:text-xs active:bg-transparent active:text-orange active:border-[2px]  active:border-orange border-2 border-orange"
                           onClick={() => handleBuy(product.id)}
                         >
                           Buyurtma berish
@@ -329,15 +364,11 @@ const Home = ({ data, setCart }) => {
               }
             })}
           </ul>
-          <Link
-            to="/menu"
-            className="text-blue-700 first-letter:uppercase mb-5"
-          >
-            to'liq ko'rish uchun menu bolimiga o'ting
+          <Link to="/menu" className="text-white first-letter:uppercase mb-5">
+            to'liq ko'rish
           </Link>
         </div>
       </div>
-
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
@@ -370,7 +401,6 @@ const Home = ({ data, setCart }) => {
           );
         })}
       </Swiper>
-
       <Swiper
         spaceBetween={50}
         slidesPerView={3}
@@ -435,7 +465,6 @@ const Home = ({ data, setCart }) => {
           );
         })}
       </Swiper>
-
       <StolBanqilish />
     </div>
   );
