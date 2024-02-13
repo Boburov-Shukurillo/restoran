@@ -159,23 +159,23 @@ const Menu = ({ data, setCart }) => {
         </div>
 
         <ul
-          className={`max-middle_screen:${showFoods} grid grid-cols-4 gap-10 max-lg:grid-cols-3 py-10 max-middle_screen:grid-cols-1 space-y-4 `}
+          className={`max-middle_screen:${showFoods} grid grid-cols-4 gap-10 max-lg:grid-cols-3 py-10 max-middle_screen:grid-cols-1 `}
         >
           {data.map((product) => {
             if (product.type === filter) {
               return (
                 <li
                   key={product.id}
-                  className="flex flex-col items-center justify-between w-full text-white bg-[#d9d9d91f] rounded-xl max-middle_screen:flex-row max-middle_screen:items-center px-3"
+                  className="flex flex-col items-center justify-between w-full h-full text-white bg-[#d9d9d91f] rounded-xl max-middle_screen:flex-row max-middle_screen:items-center"
                 >
                   <img
                     src={product.img}
                     alt={product.name + " png"}
-                    className="rounded-xl h-3/4 max-middle_screen:w-1/4 max-sm:hidden"
+                    className="rounded-xl h-full w-ful max-middle_screen:w-1/4 max-sm:hidden"
                     width="350"
                     height="350"
                   />
-                  <div className="px-5 py-5 flex flex-col justify-between max-middle_screen:flex-row max-middle_screen:items-center w-full space-x-3">
+                  <div className="px-5 py-3 flex flex-col justify-between max-middle_screen:flex-row max-middle_screen:items-center w-full space-x-3">
                     <h3 className="text-xl tracking-wide max-lg:text-lg max-md:text-sm font-bold first-letter:uppercase mb-1 truncate">
                       {product.name}
                     </h3>
