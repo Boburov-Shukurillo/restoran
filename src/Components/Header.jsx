@@ -37,10 +37,7 @@ const Header = ({ data, setCart, cart }) => {
     >
       <div className="containerb flex items-center justify-between  py-4 max-sm:py-1">
         {/* header logsi home sahifaga olib o'tadi */}
-        <Link
-          to="/"
-          // className="max-md:w-1/3 max-mini_screen:w-1/2 max-middle_screen:w-1/4 max-middle_screen:h-full max-mini_screen:h-1/2 flex items-center "
-        >
+        <Link to="/" className="w-52 h-28">
           <img
             src={headerLogo}
             alt="Main Logo"
