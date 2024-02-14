@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import StolBanqilish from "../Components/StolBandQilish";
+
+// malumotlar bazasi
 import { slideTitles } from "../data";
+
 // rasimlar
 import dumaloqXinkalin from "../assets/dumaloqPts.svg";
 import pitsa from "../assets/pitsaPng.png";
@@ -11,13 +14,16 @@ import pic3 from "../assets/pic (3).png";
 import pic4 from "../assets/pic (4).png";
 import star from "../assets/Star.svg";
 
-// swiper slide
+// swiper slide va bazi kutubhonalar
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
+
 const Home = ({ data, setCart }) => {
+
+  // menudagi taomlarni filter qilib chiqarib beradi
   const [filter, setFilter] = useState("food");
   const [food, setFoodstyle] = useState("salom");
   const [salat, setSalatstyle] = useState("");
@@ -38,7 +44,6 @@ const Home = ({ data, setCart }) => {
       setCart(sdfghj);
     }
   };
-  const showAll = () => {};
 
   const filterFoods = () => {
     setFilter("food");
@@ -82,12 +87,9 @@ const Home = ({ data, setCart }) => {
   };
 
   const [customSwiper, setCustomSwiper] = useState({});
-  const prev = () => {
-    customSwiper.slidePrev();
-  };
-  const next = () => {
-    customSwiper.slideNext();
-  };
+  const prev = () => customSwiper.slidePrev();
+
+  const next = () => customSwiper.slideNext();
 
   return (
     <div className="pb-20">
@@ -96,7 +98,7 @@ const Home = ({ data, setCart }) => {
         <div className=" grid grid-cols-2  items-center  max-md max-md:flex max-md:flex-col justify-between">
           <div className="text-white flex flex-col items-start justify  max-md:items-center">
             <h2 className="text-[70px] leading-[70px] max-middle_screen:text-[75px] max-middle_screen:leading-[50px] mb-10 font-bold max-md:text-center max-mini_screen:text-2xl">
-              Restoran salom restoran ancha o'zgardi <br />
+              Restoran <br />
               <span className="text-[60px] max-middle_screen:text-[40px] max-mini_screen:text-xl">
                 kavkazniy kuxni
               </span>
@@ -300,14 +302,14 @@ const Home = ({ data, setCart }) => {
                         width={300}
                         height={350}
                       />
-                      <div className="px-5 py-5 flex flex-col justify-between">
+                      <div className="px-5 py-5 flex flex-col justify-between items-center">
                         <h3 className="text-xl tracking-wide max-lg:text-lg max-md:text-sm font-bold first-letter:uppercase mb-1 truncate">
                           {product.name}
                         </h3>
                         <p className="text-base max-lg:text-base max-md:text-xs text-gray-400 font-medium mb-3">
                           {product.massa}gr
                         </p>
-                        <div className="flex items-center justify-between max-sm:space-x-5">
+                        <div className="flex items-center justify-between max-sm:space-y-5 max-md:flex-col max-md:items-center">
                           <p className="text-base max-lg:text-base  max-md:text-xs font-medium">
                             {product.price}₽
                           </p>
