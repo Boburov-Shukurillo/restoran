@@ -375,7 +375,7 @@ const Home = ({ data, setCart }) => {
           slidesPerView={1}
           navigation={true}
           modules={[Navigation]}
-          className={`mySwiper mb-20 max-sm:block hidden`}
+          className={`mySwiper  mb-20 max-sm:block hidden`}
         >
           {slideTitles.map((slideTitle, i) => {
             return (
