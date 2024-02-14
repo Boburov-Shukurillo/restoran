@@ -96,7 +96,7 @@ const Home = ({ data, setCart }) => {
       <div className="hero px-5 containerb">
         <div className="w-full h-32"></div>
         <div className=" grid grid-cols-2  items-center  max-md max-md:flex max-md:flex-col justify-between">
-          <div className="text-white flex flex-col items-start justify  max-md:items-center">
+          <div className="text-white">
             <h2 className="text-[70px] leading-[70px] max-middle_screen:text-[75px] max-middle_screen:leading-[50px] mb-10 font-bold max-md:text-center max-mini_screen:text-2xl">
               Restoran <br />
               <span className="text-[60px] max-middle_screen:text-[40px] max-mini_screen:text-xl">
@@ -137,8 +137,8 @@ const Home = ({ data, setCart }) => {
         </div>
       </div>
 
-      <div className="containerb grid grid-cols-2 gap-10 items-center py-20 max-middle_screen:grid-cols-1 px-5">
-        <div className="text-white max-middle_screen:flex max-middle_screen:flex-col max-middle_screen:items-center max-middle_screen:text-center">
+      <div className="containerb grid grid-cols-2 max-middle_screen:grid-cols-1">
+        <div className="text-white mr-10 max-middle_screen:flex max-middle_screen:flex-col max-middle_screen:items-center max-middle_screen:text-center">
           <h3 className="text-[65px] mb-10 max-md:text-2xl uppercase">
             Lorem, ipsum.
           </h3>
