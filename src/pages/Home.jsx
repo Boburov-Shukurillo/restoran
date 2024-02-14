@@ -92,7 +92,7 @@ const Home = ({ data, setCart }) => {
   return (
     <div className="pb-20">
       <div className="hero px-5 containerb">
-        <div className="w-full h-20"></div>
+        <div className="w-full h-32"></div>
         <div className=" grid grid-cols-2  items-center  max-md max-md:flex max-md:flex-col justify-between">
           <div className="text-white flex flex-col items-start justify  max-md:items-center">
             <h2 className="text-[70px] leading-[70px] max-middle_screen:text-[75px] max-middle_screen:leading-[50px] mb-10 font-bold max-md:text-center max-mini_screen:text-2xl">

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 
 const Korzinka = ({ cart, setCart }) => {
@@ -23,6 +24,7 @@ const Korzinka = ({ cart, setCart }) => {
   const addProduct = (i) => {
     setNima(cart[i].productLength++);
   };
+
   const removePoduct = (i) => {
     if (cart[i].productLength > 1) {
       setNima(cart[i].productLength--);
@@ -33,6 +35,34 @@ const Korzinka = ({ cart, setCart }) => {
   cart.map((product) => {
     TotalPrice.push(product.price * product.productLength);
   });
+
+  const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState();
+  const [adress, setAdress] = useState("");
+
+  const handleChange = (event) => {
+    event.preventDefault();
+    console.log(typeof phoneNumber);
+    if (
+      name.trim() === "" ||
+      phoneNumber.trim() === "" ||
+      adress.trim() === "" ||
+      cart.length === 0
+    ) {
+      alert("Malumotlar To'liq Emas");
+    } else {
+      const telegram_bot_id = "6831636523:AAH-He85gM2AVkPJFd6_DRtHWHJD5bFb9EA";
+      const chat_id = "6076096557";
+
+      const telegramMessage = `👤 Ismi: ${name}\n\n 📱 Telefon-Raqam: ${phoneNumber}\n\n ✉️ Adress: ${adress} \n\n foydalanuvchu: ${cart.length}ta mahsulot sotib oldi`;
+
+      axios.post(`https://api.telegram.org/bot${telegram_bot_id}/sendMessage`, {
+        chat_id,
+        text: telegramMessage,
+      });
+      alert("Malumot yuborildi");
+    }
+  };
 
   return (
     <div className="containerb py-20">
@@ -112,22 +142,27 @@ const Korzinka = ({ cart, setCart }) => {
           Total Price : {cart.length > 0 ? eval(TotalPrice.join("+")) : 0} ₱
         </h1>
       </div>
-      <form
-        className="grid grid-cols-4 h-20
-      gap-5"
-      >
-        <input className="px-5 py-2 rounded-xl" type="text" required />
+      <form onSubmit={handleChange} className="grid grid-cols-4 h-20 gap-5">
         <input
           className="px-5 py-2 rounded-xl"
-          type="tel"
+          placeholder="Ism"
+          type="text"
+          onChange={(e) => setName(e.target.value)}
           required
-          pattern="+998[0-9]"
+        />
+        <input
+          className="px-5 py-2 rounded-xl"
+          placeholder="Telefon Raqam"
+          type="tel"
+          onChange={(e) => setPhoneNumber(e.target.value)}
+          required
         />
         <input
           className="px-5 py-2 rounded-xl"
           type="text"
+          placeholder="Manzil"
+          onChange={(e) => setAdress(e.target.value)}
           required
-          pattern="[a-z]@gmail.com"
         />
         <button className="px-5 py-2 rounded-xl bg-orange text-white shadow-xl shadow-orange border-2">
           Buyurtma Berish
