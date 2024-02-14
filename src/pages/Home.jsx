@@ -369,102 +369,104 @@ const Home = ({ data, setCart }) => {
           </Link>
         </div>
       </div>
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-        navigation={true}
-        modules={[Navigation]}
-        className={`mySwiper mb-20 max-sm:block hidden`}
-      >
-        {slideTitles.map((slideTitle, i) => {
-          return (
-            <SwiperSlide
-              key={i}
-              className="rounded-xl relative flex flex-col items-center justify-end pt-16"
-            >
-              <div className="relative w-full h-[100%]  bg-[#dcdddf20] rounded-xl p-5 flex flex-col items-center justify-center">
-                <img
-                  src={slideTitle.img}
-                  width="100px"
-                  height="150px"
-                  className="rounded-full absolute -top-[15%] left-1/5 "
-                  alt={slideTitle.title + " png"}
-                />
-                <div className="w-full h-1/2 flex flex-col items-center justify-between">
-                  <h3 className="text-3xl font-bold text-white uppercase">
-                    {slideTitle.title}
-                  </h3>
-                  <p className="text-center text-white">{slideTitle.text}</p>
+      <div className="containerb">
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation={true}
+          modules={[Navigation]}
+          className={`mySwiper mb-20 max-sm:block hidden`}
+        >
+          {slideTitles.map((slideTitle, i) => {
+            return (
+              <SwiperSlide
+                key={i}
+                className="rounded-xl relative flex flex-col items-center justify-end pt-16"
+              >
+                <div className="relative w-full h-[100%]  bg-[#dcdddf20] rounded-xl p-5 flex flex-col items-center justify-center">
+                  <img
+                    src={slideTitle.img}
+                    width="100px"
+                    height="150px"
+                    className="rounded-full absolute -top-[15%] left-1/5 "
+                    alt={slideTitle.title + " png"}
+                  />
+                  <div className="w-full h-1/2 flex flex-col items-center justify-between">
+                    <h3 className="text-3xl font-bold text-white uppercase">
+                      {slideTitle.title}
+                    </h3>
+                    <p className="text-center text-white">{slideTitle.text}</p>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={3}
-        navigation={true}
-        modules={[Navigation]}
-        className={`mySwiper mb-20 max-middle_screen:hidden`}
-      >
-        {slideTitles.map((slideTitle, i) => {
-          return (
-            <SwiperSlide
-              key={i}
-              className="rounded-xl relative flex flex-col items-center justify-end pt-16"
-            >
-              <div className="relative w-full h-[100%]  bg-[#dcdddf20] rounded-xl p-5 flex flex-col items-center justify-center">
-                <img
-                  src={slideTitle.img}
-                  width="100px"
-                  height="150px"
-                  className="rounded-full absolute -top-[15%] left-1/5 "
-                  alt={slideTitle.title + " png"}
-                />
-                <div className="w-full h-1/2 flex flex-col items-center justify-between">
-                  <h3 className="text-3xl font-bold text-white uppercase">
-                    {slideTitle.title}
-                  </h3>
-                  <p className="text-center text-white">{slideTitle.text}</p>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={3}
+          navigation={true}
+          modules={[Navigation]}
+          className={`mySwiper mb-20 max-middle_screen:hidden`}
+        >
+          {slideTitles.map((slideTitle, i) => {
+            return (
+              <SwiperSlide
+                key={i}
+                className="rounded-xl relative flex flex-col items-center justify-end pt-16"
+              >
+                <div className="relative w-full h-[100%]  bg-[#dcdddf20] rounded-xl p-5 flex flex-col items-center justify-center">
+                  <img
+                    src={slideTitle.img}
+                    width="100px"
+                    height="150px"
+                    className="rounded-full absolute -top-[15%] left-1/5 "
+                    alt={slideTitle.title + " png"}
+                  />
+                  <div className="w-full h-1/2 flex flex-col items-center justify-between">
+                    <h3 className="text-3xl font-bold text-white uppercase">
+                      {slideTitle.title}
+                    </h3>
+                    <p className="text-center text-white">{slideTitle.text}</p>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={2}
-        navigation={true}
-        modules={[Navigation]}
-        className={`mySwiper mb-20 max-middle_screen:block max-sm:hidden hidden`}
-      >
-        {slideTitles.map((slideTitle, i) => {
-          return (
-            <SwiperSlide
-              key={i}
-              className="rounded-xl relative flex flex-col items-center justify-end pt-16"
-            >
-              <div className="relative w-full h-[100%]  bg-[#dcdddf20] rounded-xl p-5 flex flex-col items-center justify-center">
-                <img
-                  src={slideTitle.img}
-                  width="100px"
-                  height="150px"
-                  className="rounded-full absolute -top-[15%] left-1/5 "
-                  alt={slideTitle.title + " png"}
-                />
-                <div className="w-full h-1/2 flex flex-col items-center justify-between">
-                  <h3 className="text-3xl font-bold text-white uppercase">
-                    {slideTitle.title}
-                  </h3>
-                  <p className="text-center text-white">{slideTitle.text}</p>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={2}
+          navigation={true}
+          modules={[Navigation]}
+          className={`mySwiper mb-20 max-middle_screen:block max-sm:hidden hidden`}
+        >
+          {slideTitles.map((slideTitle, i) => {
+            return (
+              <SwiperSlide
+                key={i}
+                className="rounded-xl relative flex flex-col items-center justify-end pt-16"
+              >
+                <div className="relative w-full h-[100%]  bg-[#dcdddf20] rounded-xl p-5 flex flex-col items-center justify-center">
+                  <img
+                    src={slideTitle.img}
+                    width="100px"
+                    height="150px"
+                    className="rounded-full absolute -top-[15%] left-1/5 "
+                    alt={slideTitle.title + " png"}
+                  />
+                  <div className="w-full h-1/2 flex flex-col items-center justify-between">
+                    <h3 className="text-3xl font-bold text-white uppercase">
+                      {slideTitle.title}
+                    </h3>
+                    <p className="text-center text-white">{slideTitle.text}</p>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
       <StolBanqilish />
     </div>
   );
