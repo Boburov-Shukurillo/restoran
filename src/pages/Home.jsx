@@ -96,7 +96,7 @@ const Home = ({ data, setCart }) => {
         <div className=" grid grid-cols-2  items-center  max-md max-md:flex max-md:flex-col justify-between">
           <div className="text-white flex flex-col items-start justify  max-md:items-center">
             <h2 className="text-[70px] leading-[70px] max-middle_screen:text-[75px] max-middle_screen:leading-[50px] mb-10 font-bold max-md:text-center max-mini_screen:text-2xl">
-              Restoran <br />
+              Restoran salom restoran ancha o'zgardi <br />
               <span className="text-[60px] max-middle_screen:text-[40px] max-mini_screen:text-xl">
                 kavkazniy kuxni
               </span>
