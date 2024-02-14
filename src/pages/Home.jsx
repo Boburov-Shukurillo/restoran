@@ -22,7 +22,6 @@ import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 
 const Home = ({ data, setCart }) => {
-
   // menudagi taomlarni filter qilib chiqarib beradi
   const [filter, setFilter] = useState("food");
   const [food, setFoodstyle] = useState("salom");
@@ -94,16 +93,16 @@ const Home = ({ data, setCart }) => {
   return (
     <div className="pb-20">
       <div className="hero px-5 containerb">
-        <div className="w-full h-32"></div>
-        <div className=" grid grid-cols-2  items-center  max-md max-md:flex max-md:flex-col justify-between">
-          <div className="text-white">
+        <div className="w-full h-36 "></div>
+        <div className=" flex flex-row items-center justify-between max-middle_screen:flex-col px-5 mb-5">
+          <div className="text-white space-y-10">
             <h2 className="text-[70px] leading-[70px] max-middle_screen:text-[75px] max-middle_screen:leading-[50px] mb-10 font-bold max-md:text-center max-mini_screen:text-2xl">
               Restoran <br />
               <span className="text-[60px] max-middle_screen:text-[40px] max-mini_screen:text-xl">
                 kavkazniy kuxni
               </span>
             </h2>
-            <p className="mb-20 text-xl font-medium max-middle_screen:text-[15px] max-md:w-10/12 max-md:text-center max-md:mb-0 max-mini_screen:text-xs">
+            <p className="text-xl font-medium max-middle_screen:text-[15px] max-md:w-full max-md:text-center max-md:mb-0 max-mini_screen:text-xs">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
               odit, corporis adipisci incidunt esse perferendis magni
               perspiciatis aliquid minus voluptatem!
@@ -112,14 +111,14 @@ const Home = ({ data, setCart }) => {
               src={dumaloqXinkalin}
               height={400}
               width={400}
-              className="max-md:block hidden h-full w-full object-cover"
+              className="max-middle_screen:block hidden h-full w-full object-contain"
               alt="hinkalin png"
             />
             <button className="px-20 py-5 bg-orange text-white font-bold rounded-xl shadow-lg shadow-orange max-sm:text-[10px] max-md:px-5 max-md:w-full">
               Stol BandQilish
             </button>
           </div>
-          <div className="w-full h-full relative max-md:hidden ">
+          <div className="w-full h-full relative max-middle_screen:hidden ">
             <img
               src={pitsa}
               width={600}
