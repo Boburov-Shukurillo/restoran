@@ -296,7 +296,7 @@ const Home = ({ data, setCart }) => {
                       <img
                         src={product.img}
                         alt={product.name + " png"}
-                        className="rounded-xl w-full"
+                        className="rounded-xl w-full object-cover"
                         width={300}
                         height={350}
                       />
