@@ -95,7 +95,7 @@ const Home = ({ data, setCart }) => {
       <div className="hero px-5 containerb mb-5">
         <div className="w-full h-36"></div>
         <div className="w-full h-full flex justify-between items-center">
-          <div className="text-white  h-full flex flex-col justify-between items-start max-middle_screen:items-center">
+          <div className="text-white  h-full flex flex-col justify-between items-start max-middle_screen:items-center space-y-5">
             <h2 className="text-[70px] leading-[70px] max-middle_screen:text-[75px] max-middle_screen:leading-[50px] mb-10 font-bold max-md:text-center max-mini_screen:text-2xl">
               Restoran <br />
               <span className="text-[60px] max-middle_screen:text-[40px] max-mini_screen:text-xl">
