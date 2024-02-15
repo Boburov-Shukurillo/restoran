@@ -122,6 +122,7 @@ const Home = ({ data, setCart }) => {
             <img
               src={pitsa}
               width={600}
+              height={900}
               alt="pitsa png"
               className="object-cover"
             />
