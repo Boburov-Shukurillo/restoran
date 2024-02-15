@@ -11,7 +11,6 @@ const StolBandQilish = () => {
   const [tel, setNumber] = useState("");
   const StolBandQilish = (e) => {
     e.preventDefault();
-    event.preventDefault();
     console.log(typeof phoneNumber);
     if (name.trim() === "" || tel.trim() === "") {
       alert("Malumotlar To'liq Emas");
