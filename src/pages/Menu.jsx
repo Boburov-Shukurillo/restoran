@@ -159,7 +159,7 @@ const Menu = ({ data, setCart }) => {
         </div>
 
         <ul
-          className={`max-middle_screen:${showFoods} grid grid-cols-4 gap-10 max-lg:grid-cols-3 py-10 max-middle_screen:grid-cols-1 `}
+          className={`max-middle_screen:${showFoods} grid grid-cols-4 gap-10 max-lg:grid-cols-3 py-10 max-middle_screen:grid-cols-1 max-middle_screen:space-y-5 `}
         >
           {data.map((product) => {
             if (product.type === filter) {

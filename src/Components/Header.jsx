@@ -37,13 +37,13 @@ const Header = ({ data, setCart, cart }) => {
     >
       <div className="containerb flex items-center justify-between  py-4 max-sm:py-1">
         {/* header logsi home sahifaga olib o'tadi */}
-        <Link to="/" className="w-52 h-28">
+        <Link to="/" className="">
           <img
             src={headerLogo}
             alt="Main Logo"
             height={100}
             width={150}
-            className=" w-full h-full  max-sm:w-2/3 max-sm:h-1/2"
+            className="w-52 h-28  max-sm:w-2/3 max-sm:h-1/2"
           />
         </Link>
 
@@ -58,7 +58,7 @@ const Header = ({ data, setCart, cart }) => {
           <div
             className={`w-full max-middle_screen:absolute max-middle_screen:bg-white z-20 max-middle_screen:border-2 max-middle_screen:text-black  max-middle_screen:w-1/2 max-sm:w-4/6 max-middle_screen:right-0 max-middle_screen:rounded-bl-3xl max-middle_screen:pb-5 flex max-middle_screen:flex-col max-middle_screen:top-0 max-middle_screen:items-start items-center  justify-between px-5`}
           >
-            <button className="hidden max-middle_screen:block w-5/6 text-end text-3xl font-bold font-[cursive] pr-2 pb-3 cursor-pointer">
+            <button className="hidden max-middle_screen:block w-full text-end text-3xl font-bold font-[cursive] pr-2 pb-3 cursor-pointer">
               x
             </button>
             {/* Qo'ngiroq hizmati adminga qo;ng;iroq qilish */}

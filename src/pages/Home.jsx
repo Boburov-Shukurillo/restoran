@@ -92,17 +92,17 @@ const Home = ({ data, setCart }) => {
 
   return (
     <div className="pb-20">
-      <div className="hero px-5 containerb">
-        <div className="w-full h-36 "></div>
-        <div className=" flex flex-row items-center justify-between max-middle_screen:flex-col px-5 mb-5">
-          <div className="text-white space-y-10">
+      <div className="hero px-5 containerb mb-5">
+        <div className="w-full h-36"></div>
+        <div className="w-full h-full flex justify-between items-center">
+          <div className="text-white  h-full flex flex-col justify-between items-start max-middle_screen:items-center">
             <h2 className="text-[70px] leading-[70px] max-middle_screen:text-[75px] max-middle_screen:leading-[50px] mb-10 font-bold max-md:text-center max-mini_screen:text-2xl">
               Restoran <br />
               <span className="text-[60px] max-middle_screen:text-[40px] max-mini_screen:text-xl">
                 kavkazniy kuxni
               </span>
             </h2>
-            <p className="text-xl font-medium max-middle_screen:text-[15px] max-md:w-full max-md:text-center max-md:mb-0 max-mini_screen:text-xs">
+            <p className="text-xl font-medium max-middle_screen:text-[25px] max-md:w-full max-middle_screen:text-center max-md:mb-0 max-mini_screen:text-xs">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
               odit, corporis adipisci incidunt esse perferendis magni
               perspiciatis aliquid minus voluptatem!
@@ -114,7 +114,7 @@ const Home = ({ data, setCart }) => {
               className="max-middle_screen:block hidden h-full w-full object-contain"
               alt="hinkalin png"
             />
-            <button className="px-20 py-5 bg-orange text-white font-bold rounded-xl shadow-lg shadow-orange max-sm:text-[10px] max-md:px-5 max-md:w-full">
+            <button className="px-20 py-5 bg-orange text-white font-bold rounded-xl shadow-lg shadow-orange max-sm:text-[10px] max-md:px-5 max-middle_screen:w-3/5">
               Stol BandQilish
             </button>
           </div>
@@ -135,50 +135,49 @@ const Home = ({ data, setCart }) => {
           </div>
         </div>
       </div>
-
-      <div className="containerb grid grid-cols-2 max-middle_screen:grid-cols-1">
-        <div className="text-white mr-10 max-middle_screen:flex max-middle_screen:flex-col max-middle_screen:items-center max-middle_screen:text-center">
-          <h3 className="text-[65px] mb-10 max-md:text-2xl uppercase">
+      <div className="containerb grid grid-cols-2 gap-5 max-middle_screen:grid-cols-1 h-full py-5">
+        <div className="text-white max-middle_screen:items-center max-middle_screen:text-center flex flex-col justify-between space-y-5">
+          <h3 className="text-[65px] max-lg:text-2xl mb-10 max-md:text-2xl uppercase">
             Lorem, ipsum.
           </h3>
-          <p className="text-lg fon-normal mb-5 max-md:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
+          <p className="text-lg fon-normal max-lg:w-full max-middle_screen:w-3/4 max-md:w-full  max-md:text-sm max-lg:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo enim
             itaque, atque, quia sit officiis explicabo laboriosam rem voluptatum
             eveniet est repellendus recusandae mollitia deserunt.
           </p>
-          <p className="text-lg fon-normal mb-5 max-md:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
+          <p className="text-lg fon-normal max-lg:w-full max-middle_screen:w-3/4 max-md:w-full  max-md:text-sm max-lg:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
             dignissimos et dolorem, voluptates alias veritatis id dolorum
             dolores delectus maiores deserunt excepturi magni atque consequuntur
             eum fugit voluptatem reprehenderit consequatur labore quam
             doloremque, reiciendis aperiam?
           </p>
-          <p className="text-lg fon-normal mb-5 max-md:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
+          <p className="text-lg fon-normal max-lg:w-full max-middle_screen:w-3/4 max-md:w-full  max-md:text-sm max-lg:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Accusantium, ratione recusandae molestias iusto voluptatee minus.
           </p>
-          <div className="grid grid-cols-2  gap-2">
-            <div className="flex items-center mb-0 gap-5 max-md:flex-col">
-              <img src={star} alt="satar svg" />
-              <p className="text-base leading-5 max-md:text-xs max-md:w-4/5 font-bold ">
+          <div className="grid grid-cols-2  gap-2 max-md:gap-0">
+            <div className="flex items-center mb-0 gap-5 max-md:gap-2 max-md:flex-col">
+              <img src={star} alt="satar svg" className="w-1/6" />
+              <p className="text-base leading-5 max-lg:text-sm max-lg:font-light max-md:text-xs max-md:w-4/5 font-bold ">
                 Lorem ipsum dolor sit amet consectetur.
               </p>
             </div>
-            <div className="flex items-center mb-0 gap-5 max-md:flex-col">
-              <img src={star} alt="satar svg" />
-              <p className="text-base leading-5 max-md:text-xs max-md:w-4/5 font-bold ">
+            <div className="flex items-center mb-0 gap-5 max-md:gap-2 max-md:flex-col">
+              <img src={star} alt="satar svg" className="w-1/6" />
+              <p className="text-base leading-5 max-lg:text-sm max-lg:font-light max-md:text-xs max-md:w-4/5 font-bold ">
                 Lorem ipsum dolor sit amet consectetur.
               </p>
             </div>
-            <div className="flex items-center mb-0 gap-5 max-md:flex-col">
-              <img src={star} alt="satar svg" />
-              <p className="text-base leading-5 max-md:text-xs max-md:w-4/5 font-bold ">
+            <div className="flex items-center mb-0 gap-5 max-md:gap-2 max-md:flex-col">
+              <img src={star} alt="satar svg" className="w-1/6" />
+              <p className="text-base leading-5 max-lg:text-sm max-lg:font-light max-md:text-xs max-md:w-4/5 font-bold ">
                 Lorem ipsum dolor sit amet consectetur.
               </p>
             </div>
-            <div className="flex items-center mb-0 gap-5 max-md:flex-col">
-              <img src={star} alt="satar svg" />
-              <p className="text-base leading-5 max-md:text-xs max-md:w-4/5 font-bold ">
+            <div className="flex items-center mb-0 gap-5 max-md:gap-2 max-md:flex-col">
+              <img src={star} alt="satar svg" className="w-1/6" />
+              <p className="text-base leading-5 max-lg:text-sm max-lg:font-light max-md:text-xs max-md:w-4/5 font-bold ">
                 Lorem ipsum dolor sit amet consectetur.
               </p>
             </div>
@@ -215,7 +214,7 @@ const Home = ({ data, setCart }) => {
           slidesPerView={1}
           pagination={true}
           modules={[Pagination]}
-          className="w-full swoperL mb-20 hidden max-middle_screen:block max-md:mb-0 "
+          className="w-full swoperL mb-20 hidden max-middle_screen:block max-md:mb-0"
         >
           {slideTitles.map((slideTitle, i) => {
             return (
@@ -281,7 +280,7 @@ const Home = ({ data, setCart }) => {
             navigation={true}
             pagination={true}
             modules={[Navigation, Pagination]}
-            className="swoperL swpW mb-20 hidden max-middle_screen:block max-md:mb-0"
+            className="sipererMenu mb-20 hidden max-middle_screen:block max-md:mb-0 max-md:w-3/4 max-mini_screen:w-full"
           >
             {data.map((product) => {
               if (product.id < 10) {
@@ -302,18 +301,18 @@ const Home = ({ data, setCart }) => {
                         height={350}
                       />
                       <div className="px-5 py-5 flex flex-col justify-between items-center">
-                        <h3 className="text-xl tracking-wide max-lg:text-lg max-md:text-sm font-bold first-letter:uppercase mb-1 truncate">
+                        <h3 className="text-xl tracking-wide max-lg:text-lg max-md:text-2xl font-bold first-letter:uppercase mb-1 truncate">
                           {product.name}
                         </h3>
-                        <p className="text-base max-lg:text-base max-md:text-xs text-gray-400 font-medium mb-3">
+                        <p className="text-base max-lg:text-base max-md:text-xl text-gray-400 font-medium mb-3">
                           {product.massa}gr
                         </p>
-                        <div className="flex items-center justify-between max-sm:space-y-5 max-md:flex-col max-md:items-center">
-                          <p className="text-base max-lg:text-base  max-md:text-xs font-medium">
+                        <div className="flex items-center justify-between max-sm:space-y-5 max-middle_screen:flex-col max-md:items-center max-middle_screen:gap-3 w-full">
+                          <p className="text-base max-lg:text-base  max-md:text-lg font-medium">
                             {product.price}₽
                           </p>
                           <button
-                            className="px-2 py-2 bg-orange rounded-lg text-[70%] max-lg:text-xs active:bg-transparent active:text-orange active:border-[2px]  active:border-orange border-2 border-orange max-sm:p-1 max-sm:truncate"
+                            className="w-1/2 px-2 py-2 bg-orange rounded-lg text-[70%] max-lg:text-xs active:bg-transparent active:text-orange active:border-[2px]  active:border-orange border-2 border-orange  max-sm:truncate max-md:w-3/4 max-md:py-3"
                             onClick={() => handleBuy(product.id)}
                           >
                             Buyurtma berish
@@ -376,19 +375,19 @@ const Home = ({ data, setCart }) => {
           slidesPerView={1}
           navigation={true}
           modules={[Navigation]}
-          className={`mySwiper  mb-20 max-sm:block hidden`}
+          className={`Swiperonce mb-20 max-sm:block hidden max-md:w-full`}
         >
           {slideTitles.map((slideTitle, i) => {
             return (
               <SwiperSlide
                 key={i}
-                className="rounded-xl relative flex flex-col items-center justify-end pt-16"
+                className="rounded-xl relative flex flex-col items-center justify-end pt-16 max-md:h-full"
               >
                 <div className="relative w-full h-[100%]  bg-[#dcdddf20] rounded-xl p-5 flex flex-col items-center justify-center">
                   <img
                     src={slideTitle.img}
-                    width="100px"
-                    height="150px"
+                    width={100}
+                    height={200}
                     className="rounded-full absolute -top-[15%] left-1/5 "
                     alt={slideTitle.title + " png"}
                   />
