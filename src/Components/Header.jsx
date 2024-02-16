@@ -7,6 +7,7 @@ import qoraSavatchaImg from "../assets/qoraKorzinka.svg";
 import headerLogo from "../assets/RestaranLogo.svg";
 import telImg from "../assets/TelLogoSvg.svg";
 import MenuBtn from "../assets/hamburgerBtn.svg";
+import Iks from "../assets/iks.svg";
 
 const Header = ({ data, setCart, cart }) => {
   const name = useLocation();
@@ -20,8 +21,12 @@ const Header = ({ data, setCart, cart }) => {
   }, []);
 
   const [menu, setMenu] = useState("hidden");
+  const [jpg, setJpg] = useState(false);
   const openMenu = () => {
     setMenu("flex");
+    setJpg(true);
+    setJpg(jpg === false ? true : false);
+    setMenu(menu === "hidden" ? "flex" : "hidden");
   };
   const closeMenu = () => {
     setMenu("hidden");
@@ -47,8 +52,24 @@ const Header = ({ data, setCart, cart }) => {
           />
         </Link>
 
-        <button onClick={openMenu} className="hidden max-middle_screen:block ">
-          <img src={MenuBtn} alt="" className="max-sm:max-sm:w-2/3" />
+        <button
+          onClick={openMenu}
+          className="hidden max-middle_screen:flex absolute z-50 right-[5%] bottom-1/4   items-center"
+        >
+          {!jpg && (
+            <img
+              src={MenuBtn}
+              alt="menu btn"
+              className={` max-sm:max-sm:w-full`}
+            />
+          )}
+          {jpg && (
+            <img
+              src={Iks}
+              alt="menu btn"
+              className={` max-sm:max-sm:w-full px-2`}
+            />
+          )}
         </button>
 
         <div
@@ -58,9 +79,6 @@ const Header = ({ data, setCart, cart }) => {
           <div
             className={`w-full max-middle_screen:absolute max-middle_screen:bg-white z-20 max-middle_screen:border-2 max-middle_screen:text-black  max-middle_screen:w-1/3 max-sm:w-1/3 max-mini_screen:w-1/2 max-middle_screen:right-0 max-middle_screen:rounded-bl-3xl max-middle_screen:pb-5 flex max-middle_screen:flex-col max-middle_screen:top-0 max-middle_screen:items-start items-center  justify-between px-5`}
           >
-            <button className="hidden max-middle_screen:block w-full text-end text-3xl font-bold font-[cursive] pr-2 pb-3 cursor-pointer">
-              x
-            </button>
             {/* Qo'ngiroq hizmati adminga qo;ng;iroq qilish */}
             <a
               href="+99899453323"
@@ -73,7 +91,7 @@ const Header = ({ data, setCart, cart }) => {
 
             {/* navbar qismi bo'limlar bo'ylab tezkor o'tish */}
             <nav className="">
-              <ul className=" w-full flex items-center justify-between gap-5 text-white h-20 max-middle_screen:h-full max-middle_screen:flex-col max-middle_screen:items-start ">
+              <ul className=" w-full flex items-center justify-between gap-5 text-white h-20 max-middle_screen:h-full max-middle_screen:flex-col max-middle_screen:items-start pt-12">
                 <li>
                   <NavLink
                     to="/"
@@ -120,9 +138,9 @@ const Header = ({ data, setCart, cart }) => {
             {/* kkorzinka ga olib o'tuvchi tugma va link birlashmasi */}
             <Link
               to="/korzinka"
-              className="flex items-center justify-between max-middle_screen:mt-5"
+              className="flex items-center justify-between max-middle_screen:mt-5 "
             >
-              <button
+              <div
                 className={`w-10 h-10 p-2 rounded-lg relative ${
                   headerT || headerHome ? "bg-[#333]" : "bg-[#5150508f]"
                 }  max-middle_screen:bg-transparent max-my_screen:px-1 max-my_screen:py-1 flex items-center justify-center max-middle_screen:w-full`}
@@ -135,12 +153,12 @@ const Header = ({ data, setCart, cart }) => {
                 <img
                   src={qoraSavatchaImg}
                   alt="qoraSavatcha Svg "
-                  className="hidden max-my_screen:w-7 max-middle_screen:block"
+                  className="hidden max-my_screen:w-7 max-middle_screen:block  "
                 />
                 <span className="text-white text-[15px] absolute -right-3 -bottom-3 w-6 h-6 rounded-full flex items-center justify-center bg-[#E98D42] max-my_screen:text-xs max-my_screen:w-4 max-my_screen:h-4 max-my_screen:-right-1 max-my_screen:-bottom-1.5">
                   {cart.length}
                 </span>
-              </button>
+              </div>
               {<span className="hidden max-middle_screen:block">korzinka</span>}
             </Link>
           </div>

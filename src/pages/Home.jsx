@@ -6,6 +6,7 @@ import { slideTitles } from "../data";
 
 // rasimlar
 import dumaloqXinkalin from "../assets/xinkalin.svg";
+import heroMobilBg from "../assets/heroBg.svg";
 import choq from "../assets/choq.svg";
 import choqHac from "../assets/chogHac.svg";
 import kokat from "../assets/kokat.svg";
@@ -92,50 +93,54 @@ const Home = ({ data, setCart }) => {
   const next = () => customSwiper.slideNext();
 
   return (
-    <div className="pb-20 ">
-      <div className="hero px-5   mb-5">
-        <div className="containerb  overflow-hidden relative">
-          <div className="w-full h-36"></div>
-          <div className="w-1/2 h-full flex items-center  py-20 ">
+    <div className="pb-20">
+      <div className="hero px-5 mb-5 overflow-hidden">
+        <div className="containerb relative">
+          <div className="w-full h-36 max-md:h-20"></div>
+          <div className="w-1/2 h-full flex items-center  py-20 max-middle_screen:w-full max-md:p-5">
             <div className="text-white  h-full flex flex-col justify-between items-start max-middle_screen:items-center">
-              <h2 className="text-[70px] leading-[70px] max-middle_screen:text-[75px] max-middle_screen:leading-[50px] mb-10 font-bold max-md:text-center max-mini_screen:text-2xl">
+              <h1 className="text-[70px] leading-[70px] max-middle_screen:text-[75px] max-middle_screen:leading-10 mb-10 font-bold max-md:text-center max-mini_screen:text-2xl max-mini_screen:leading-3">
                 Restoran <br />
                 <span className="text-[60px] max-middle_screen:text-[40px] max-mini_screen:text-xl">
                   kavkazniy kuxni
                 </span>
-              </h2>
+              </h1>
               <p className="text-xl font-medium max-middle_screen:text-[25px] max-md:w-full max-middle_screen:text-center max-md:mb-0 max-mini_screen:text-xs mb-20">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Dolores odit, corporis adipisci incidunt esse perferendis magni
                 perspiciatis aliquid minus voluptatem!
               </p>
-              <img
-                src={dumaloqXinkalin}
-                height={400}
-                width={400}
-                className="max-middle_screen:block hidden h-full w-full object-contain "
-                alt="hinkalin png"
-              />
-              <button className="px-20 py-5 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-white font-bold rounded-xl shadow-lg shadow-orange max-sm:text-[10px] max-md:px-5 max-middle_screen:w-3/5">
-                Stol BandQilish
+              <div className="max-middle_screen:block hidden max-middle_screen:relative ">
+                <img src={dumaloqXinkalin} className="w-full" alt="" />
+                <img
+                  src={kokat}
+                  width={30}
+                  className="w-1/4 absolute bottom-1/4 left-1/4"
+                  alt=""
+                />
+              </div>
+              <button className="px-20 py-5 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-white font-bold rounded-xl shadow-lg shadow-orange max-sm:text-xs max-md:px-5 max-middle_screen:w-3/5">
+                Stol Band Qilish
               </button>
             </div>
-            <div>
+            <div className="max-middle_screen:hidden">
               <img
                 src={dumaloqXinkalin}
                 alt="xinkalin png"
-                height={500}
-                width={500}
-                className="w-1/2 h-4/6 scale-[2] absolute bottom-5 -right-[20%] z-20"
+                height={800}
+                width={800}
+                className="w-1/2 h-4/6 scale-[2] absolute bottom-5 -right-[20%] z-20 max-middle_screen:hidden"
               />
               <img
                 src={choq}
                 alt="cho'g' svg"
-                className="w-full h-full absolute bottom-0 left-1/4 "
+                className="w-10/12 h-5/6 absolute bottom-0 left-1/3"
               />
               <img
                 src={kokat}
                 alt="Ko'kat Png"
+                width={100}
+                height={100}
                 className="w-1/6 h-1/6 absolute left-3/4 z-30 bottom-10"
               />
             </div>
@@ -399,7 +404,7 @@ const Home = ({ data, setCart }) => {
                 key={i}
                 className="rounded-xl relative flex flex-col items-center justify-end pt-16 max-md:h-full"
               >
-                <div className="relative w-full h-[100%]  bg-[#dcdddf20] rounded-xl p-5 flex flex-col items-center justify-center">
+                <div className="relative w-2/3 max-mini_screen:w-full h-[100%]  bg-[#dcdddf20] rounded-xl p-5 flex flex-col items-center justify-center">
                   <img
                     src={slideTitle.img}
                     width={100}

@@ -54,7 +54,7 @@ nav .active::before {
 }
 
 .hero {
-  background-image: url(./assets/homeBg.png);
+  background-image: url(./assets/heroBg.png);
 }
 
 .mySwiper {
