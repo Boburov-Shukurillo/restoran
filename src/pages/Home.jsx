@@ -96,7 +96,7 @@ const Home = ({ data, setCart }) => {
     <div className="pb-20">
       <div className="hero px-5 mb-5 overflow-hidden">
         <div className="containerb relative">
-          <div className="w-full h-36 max-md:h-20"></div>
+          <div className="w-full h-40 max-middle_screen:h-32"></div>
           <div className="w-1/2 h-full flex items-center  py-20 max-middle_screen:w-full max-md:p-5">
             <div className="text-white  h-full flex flex-col justify-between items-start max-middle_screen:items-center">
               <h1 className="text-[70px] leading-[70px] max-middle_screen:text-[75px] max-middle_screen:leading-10 mb-10 font-bold max-md:text-center max-mini_screen:text-2xl max-mini_screen:leading-3">
@@ -105,7 +105,7 @@ const Home = ({ data, setCart }) => {
                   kavkazniy kuxni
                 </span>
               </h1>
-              <p className="text-xl font-medium max-middle_screen:text-[25px] max-md:w-full max-middle_screen:text-center max-md:mb-0 max-mini_screen:text-xs mb-20">
+              <p className="text-xl font-medium max-middle_screen:text-[25px] max-md:w-full max-middle_screen:text-center max-md:mb-0 max-mini_screen:text-xs mb-20 max-md:leading-9">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Dolores odit, corporis adipisci incidunt esse perferendis magni
                 perspiciatis aliquid minus voluptatem!

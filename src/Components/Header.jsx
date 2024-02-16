@@ -29,7 +29,10 @@ const Header = ({ data, setCart, cart }) => {
     setMenu(menu === "hidden" ? "flex" : "hidden");
   };
   const closeMenu = () => {
-    setMenu("hidden");
+    setMenu("flex");
+    setJpg(true);
+    setJpg(jpg === false ? true : false);
+    setMenu(menu === "hidden" ? "flex" : "hidden");
   };
 
   return (
@@ -91,7 +94,7 @@ const Header = ({ data, setCart, cart }) => {
 
             {/* navbar qismi bo'limlar bo'ylab tezkor o'tish */}
             <nav className="">
-              <ul className=" w-full flex items-center justify-between gap-5 text-white h-20 max-middle_screen:h-full max-middle_screen:flex-col max-middle_screen:items-start pt-12">
+              <ul className=" w-full flex items-center justify-between gap-5 text-white h-20 max-middle_screen:h-full max-middle_screen:flex-col max-middle_screen:items-start max-middle_screen:pt-12">
                 <li>
                   <NavLink
                     to="/"
