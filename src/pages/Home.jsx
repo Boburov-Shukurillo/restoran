@@ -6,6 +6,9 @@ import { slideTitles } from "../data";
 
 // rasimlar
 import dumaloqXinkalin from "../assets/xinkalin.svg";
+import choq from "../assets/choq.svg";
+import choqHac from "../assets/chogHac.svg";
+import kokat from "../assets/kokat.svg";
 import pic1 from "../assets/pic (1).png";
 import pic2 from "../assets/pic (2).png";
 import pic3 from "../assets/pic (3).png";
@@ -113,17 +116,29 @@ const Home = ({ data, setCart }) => {
                 className="max-middle_screen:block hidden h-full w-full object-contain "
                 alt="hinkalin png"
               />
-              <button className="px-20 py-5 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-white font-bold rounded-xl shadow-lg shadow-orange max-sm:text-[10px] max-md:px-5 max-middle_screen:w-3/5">
+              <button className="px-20 py-5 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-black font-bold rounded-xl shadow-lg shadow-orange max-sm:text-[10px] max-md:px-5 max-middle_screen:w-3/5">
                 Stol BandQilish
               </button>
             </div>
-            <img
-              src={dumaloqXinkalin}
-              alt="xinkalin png"
-              height={500}
-              width={500}
-              className="w-1/2 h-4/6 scale-[2] absolute bottom-5 -right-[20%]"
-            />
+            <div>
+              <img
+                src={dumaloqXinkalin}
+                alt="xinkalin png"
+                height={500}
+                width={500}
+                className="w-1/2 h-4/6 scale-[2] absolute bottom-5 -right-[20%] z-20"
+              />
+              <img
+                src={choq}
+                alt="cho'g' svg"
+                className="w-full h-full absolute bottom-0 left-1/4 "
+              />
+              <img
+                src={kokat}
+                alt="Ko'kat Png"
+                className="w-1/6 h-1/6 absolute left-3/4 z-30 bottom-10"
+              />
+            </div>
           </div>
         </div>
       </div>
