@@ -43,7 +43,7 @@ const Contact = () => {
           </p>
         </div>
         <div className="w-1/2 max-md:w-full">
-          <img src={img04} className="w-full" width={300} height={300} alt="" />
+          <img src={img04} className="w-full" width={353} height={387} alt="" />
         </div>
       </div>
     </div>

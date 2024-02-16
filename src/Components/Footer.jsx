@@ -15,9 +15,9 @@ const Footer = () => {
           <img
             src={headerLogo}
             alt="Main Logo"
-            className="max-md:w-full"
-            width="70%"
-            height="50%"
+            className="max-md:w-1/2"
+            width={88}
+            height={46}
           />
         </Link>
 
@@ -73,7 +73,13 @@ const Footer = () => {
             href="+99899453323"
             className="text-base text-white font-semibold flex items-center justify-center gap-5  max-lg:gap-1 max-my_screen:text-sm  max-lg:text-[10px]"
           >
-            <img src={telImg} alt="Telefon svg" className="max-lg:w-5" />
+            <img
+              src={telImg}
+              width={20}
+              height={20}
+              alt="Telefon svg"
+              className="max-lg:w-5"
+            />
             +998 678 45 96
           </a>
           <a
@@ -81,7 +87,13 @@ const Footer = () => {
             target="_blank"
             className="text-base text-white font-semibold flex items-center justify-between gap-5  max-lg:gap-1 max-my_screen:text-sm  max-lg:text-xs"
           >
-            <img src={locationImg} alt="Telefon svg" className="max-lg:w-5" />
+            <img
+              src={locationImg}
+              width={20}
+              height={25}
+              alt="Telefon svg"
+              className="max-lg:w-5"
+            />
             bizning oshxonaning joylashuvi
           </a>
         </div>

@@ -65,7 +65,7 @@ const Korzinka = ({ cart, setCart }) => {
   };
 
   return (
-    <div className="containerb py-20">
+    <div className="containerb py-20 px-2">
       <ToastContainer />
       <h2 className="mb-20 text-[65px] font-bold font-[cursive] text-white max-middle_screen:text-5xl max-mini_screen:text-3xl">
         Korzinka
@@ -142,29 +142,32 @@ const Korzinka = ({ cart, setCart }) => {
           Total Price : {cart.length > 0 ? eval(TotalPrice.join("+")) : 0} ₱
         </h1>
       </div>
-      <form onSubmit={handleChange} className="grid grid-cols-4 h-20 gap-5">
+      <form
+        onSubmit={handleChange}
+        className="flex flex-wrap items-center justify-evenly h-full gap-5 w-full"
+      >
         <input
-          className="px-5 py-2 rounded-xl"
+          className="px-5 py-2 rounded-xl "
           placeholder="Ism"
           type="text"
           onChange={(e) => setName(e.target.value)}
           required
         />
         <input
-          className="px-5 py-2 rounded-xl"
+          className="px-5 py-2 rounded-xl "
           placeholder="Telefon Raqam"
           type="tel"
           onChange={(e) => setPhoneNumber(e.target.value)}
           required
         />
         <input
-          className="px-5 py-2 rounded-xl"
+          className="px-5 py-2 rounded-xl "
           type="text"
           placeholder="Manzil"
           onChange={(e) => setAdress(e.target.value)}
           required
         />
-        <button className="px-5 py-2 rounded-xl bg-orange text-white shadow-xl shadow-orange border-2">
+        <button className="px-5 py-2 rounded-xl  bg-orange text-white shadow-xl shadow-orange border-2">
           Buyurtma Berish
         </button>
       </form>

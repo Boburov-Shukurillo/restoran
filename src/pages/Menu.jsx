@@ -172,8 +172,8 @@ const Menu = ({ data, setCart }) => {
                     src={product.img}
                     alt={product.name + " png"}
                     className="rounded-xl h-full w-ful max-middle_screen:w-1/4 max-sm:hidden"
-                    width="350"
-                    height="350"
+                    width={260}
+                    height={236}
                   />
                   <div className="px-5 py-3 flex flex-col justify-between max-middle_screen:flex-row max-middle_screen:items-center w-full space-x-3">
                     <h3 className="text-xl tracking-wide max-lg:text-lg max-md:text-sm font-bold first-letter:uppercase mb-1 truncate">

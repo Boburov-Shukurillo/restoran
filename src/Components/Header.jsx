@@ -56,7 +56,7 @@ const Header = ({ data, setCart, cart }) => {
           className={`max-middle_screen:${menu} top-0 z-20 w-full h-full max-middle_screen:fixed max-middle_screen:bg-[#00000078] left-0`}
         >
           <div
-            className={`w-full max-middle_screen:absolute max-middle_screen:bg-white z-20 max-middle_screen:border-2 max-middle_screen:text-black  max-middle_screen:w-1/2 max-sm:w-4/6 max-middle_screen:right-0 max-middle_screen:rounded-bl-3xl max-middle_screen:pb-5 flex max-middle_screen:flex-col max-middle_screen:top-0 max-middle_screen:items-start items-center  justify-between px-5`}
+            className={`w-full max-middle_screen:absolute max-middle_screen:bg-white z-20 max-middle_screen:border-2 max-middle_screen:text-black  max-middle_screen:w-1/3 max-sm:w-1/3 max-mini_screen:w-1/2 max-middle_screen:right-0 max-middle_screen:rounded-bl-3xl max-middle_screen:pb-5 flex max-middle_screen:flex-col max-middle_screen:top-0 max-middle_screen:items-start items-center  justify-between px-5`}
           >
             <button className="hidden max-middle_screen:block w-full text-end text-3xl font-bold font-[cursive] pr-2 pb-3 cursor-pointer">
               x

@@ -20,27 +20,27 @@ const Galareya = () => {
         <div
           className={`flex flex-col gap-10 items-center max-middle_screen:${show} max-middle_screen:space-y-10`}
         >
-          <img src={img01} alt="galareya imgs" width={400} height={400} />
-          <img src={img02} alt="galareya imgs" width={400} height={400} />
-          <img src={img03} alt="galareya imgs" width={400} height={400} />
-          <img src={img04} alt="galareya imgs" width={400} height={400} />
+          <img src={img01} alt="galareya imgs" width={367} height={400} />
+          <img src={img02} alt="galareya imgs" width={367} height={400} />
+          <img src={img03} alt="galareya imgs" width={367} height={400} />
+          <img src={img04} alt="galareya imgs" width={367} height={400} />
         </div>
         <div className="flex flex-col gap-10 max-middle_screen:row-start-1 max-middle_screen:row-end-2 items-center">
           <h1 className="mb-10 text-5xl font-bold font-serif text-white text-center">
             Galareya
           </h1>
-          <img src={img05} alt="galareya imgs" width={400} height={400} />
-          <img src={img06} alt="galareya imgs" width={400} height={400} />
-          <img src={img07} alt="galareya imgs" width={400} height={400} />
-          <img src={img08} alt="galareya imgs" width={400} height={400} />
+          <img src={img05} alt="galareya imgs" width={367} height={400} />
+          <img src={img06} alt="galareya imgs" width={367} height={400} />
+          <img src={img07} alt="galareya imgs" width={367} height={400} />
+          <img src={img08} alt="galareya imgs" width={367} height={400} />
         </div>
         <div
           className={`flex flex-col gap-10 max-middle_screen:${show} max-middle_screen:space-y-10 `}
         >
-          <img src={img09} alt="galareya imgs" width={400} height={400} />
-          <img src={img11} alt="galareya imgs" width={400} height={400} />
-          <img src={img10} alt="galareya imgs" width={400} height={400} />
-          <img src={img11} alt="galareya imgs" width={400} height={400} />
+          <img src={img09} alt="galareya imgs" width={367} height={400} />
+          <img src={img11} alt="galareya imgs" width={367} height={400} />
+          <img src={img10} alt="galareya imgs" width={367} height={400} />
+          <img src={img11} alt="galareya imgs" width={367} height={400} />
         </div>
       </div>
       <button

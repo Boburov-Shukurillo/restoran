@@ -65,8 +65,8 @@ nav .active::before {
 
 .pitsa {
   background-position: top;
-  background-size: contain;
-  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-repeat: repeat;
   background-image: url(./assets/pitsaPng.png);
 }
 

@@ -45,7 +45,7 @@ const About = () => {
             doloremque quos, iusto vel quasi.
           </p>
         </li>
-        <li className="text-center px-5 pt-10 pb-5 w-full h-full bg-[#d9d9d918] relative  flex items-center flex-col">
+        <li className="text-center px-5 pt-10 pb-5 w-full h-full bg-[#d9d9d918] relative rounded-xl flex items-center flex-col">
           <span className="w-20 h-20 -top-[15%] border-[10px] bg-[#323232] rounded-full border-[#1E1E1E] absolute flex items-center justify-center text-2xl font-bold text-[#E6783F]">
             2
           </span>
@@ -104,6 +104,8 @@ const About = () => {
               <SwiperSlide key={imgs.id}>
                 <img
                   src={imgs.img}
+                  width={565}
+                  height={512}
                   alt={imgs.name + "ning rasmi"}
                   className="w-full rounded-lg max-middle_screen:hidden"
                 />

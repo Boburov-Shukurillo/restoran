@@ -121,8 +121,8 @@ const Home = ({ data, setCart }) => {
           <div className="w-full h-full relative max-middle_screen:hidden ">
             <img
               src={pitsa}
-              width={600}
-              height={900}
+              width={533}
+              height={890}
               alt="pitsa png"
               className="object-cover"
             />
@@ -136,8 +136,8 @@ const Home = ({ data, setCart }) => {
           </div>
         </div>
       </div>
-      <div className="containerb grid grid-cols-2 gap-5 max-middle_screen:grid-cols-1 h-full py-5">
-        <div className="text-white max-middle_screen:items-center max-middle_screen:text-center flex flex-col justify-between space-y-5">
+      <div className="containerb flex  gap-5 max-middle_screen:grid-cols-1 h-full py-10">
+        <div className="w-1/2 text-white max-middle_screen:items-center max-middle_screen:text-center flex flex-col justify-between space-y-5 max-middle_screen:hidden">
           <h3 className="text-[65px] max-lg:text-2xl mb-10 max-md:text-2xl uppercase">
             Lorem, ipsum.
           </h3>
@@ -184,17 +184,21 @@ const Home = ({ data, setCart }) => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-5 items-center max-middle_screen:hidden ">
+        <div className="w-1/2 grid grid-cols-2 gap-5 items-center max-middle_screen:hidden ">
           <div className="space-y-5 mt-20">
             <img
               src={pic1}
               className="rounded-xl shadow-2xl shadow-orange"
               alt="grid pictures"
+              width={280}
+              height={303}
             />
             <img
               src={pic2}
               className="rounded-xl shadow-2xl shadow-orange "
               alt="grid pictures"
+              width={280}
+              height={303}
             />
           </div>
           <div className="space-y-5">
@@ -202,11 +206,15 @@ const Home = ({ data, setCart }) => {
               src={pic3}
               className="rounded-xl shadow-2xl shadow-orange "
               alt="grid pictures"
+              width={280}
+              height={303}
             />
             <img
               src={pic4}
               className="rounded-xl shadow-2xl shadow-orange"
               alt="grid pictures"
+              width={280}
+              height={303}
             />
           </div>
         </div>
@@ -235,85 +243,125 @@ const Home = ({ data, setCart }) => {
           })}
         </Swiper>
       </div>
-
-      <div className="containerb bg h-full py-5 bg-balck mb-20 ">
-        <div className="bg-2 py-20 flex flex-col items-center max-md:py-8">
-          <div className="w-full flex flex-col items-center justify-between mb-10 h-44 max-md:h-10 max-md:mb-0 max-md:justify-end max-middle_screen:hidden">
-            <h1 className="text-white text-6xl font-bold uppercase font-serif max-md:text-2xl mb-5">
-              bizning menu
-            </h1>
-            <div className="max-md:hidden w-full grid grid-cols-5 gap-5 max-middle_screen:grid-cols-4 max-md:grid-cols-3 max-sm:grid-cols-2 ">
-              <span
-                onClick={filterSalat}
-                className={`text-base cursor-pointer inline-block ${salat} px-5 py-2 text-xl font-semibold rounded-3xl border-[2px]  text-white max-my_screen:text-xs text-center`}
-              >
-                Salatlar
-              </span>
-              <span
-                onClick={filterFoods}
-                className={`text-base cursor-pointer inline-block ${food} px-5 py-2 text-xl font-semibold rounded-3xl border-[2px]  text-white max-my_screen:text-xs text-center`}
-              >
-                Mahsus Taomlar
-              </span>
-              <span
-                onClick={filterWithoutOil}
-                className={`text-base cursor-pointer inline-block ${withoutOil} px-5 py-2 text-xl font-semibold rounded-3xl border-[2px]  text-white max-my_screen:text-xs text-center`}
-              >
-                Yog'siz Taomlar
-              </span>
-              <span
-                onClick={filterDrinks}
-                className={`text-base cursor-pointer inline-block ${drink} px-5 py-2 text-xl font-semibold rounded-3xl border-[2px]  text-white max-my_screen:text-xs text-center`}
-              >
-                Ichimiklar
-              </span>
-              <span
-                onClick={filterDesert}
-                className={`text-base cursor-pointer inline-block ${desert} px-5 py-2 text-xl font-semibold rounded-3xl border-[2px]  text-white max-my_screen:text-xs text-center`}
-              >
-                Shrinliklar
-              </span>
+      <div className="bg">
+        <div className="containerb  h-full py-5 bg-balck mb-20 ">
+          <div className="bg-2 py-20 flex flex-col items-center max-md:py-8">
+            <div className="w-full flex flex-col items-center justify-between mb-10 h-44 max-md:h-10 max-md:mb-0 max-md:justify-end max-middle_screen:hidden">
+              <h1 className="text-white text-6xl font-bold uppercase font-serif max-md:text-2xl mb-5">
+                bizning menu
+              </h1>
+              <div className="max-md:hidden w-full grid grid-cols-5 gap-5 max-middle_screen:grid-cols-4 max-md:grid-cols-3 max-sm:grid-cols-2 ">
+                <span
+                  onClick={filterSalat}
+                  className={`text-base cursor-pointer inline-block ${salat} px-5 py-2 text-xl font-semibold rounded-3xl border-[2px]  text-white max-my_screen:text-xs text-center`}
+                >
+                  Salatlar
+                </span>
+                <span
+                  onClick={filterFoods}
+                  className={`text-base cursor-pointer inline-block ${food} px-5 py-2 text-xl font-semibold rounded-3xl border-[2px]  text-white max-my_screen:text-xs text-center`}
+                >
+                  Mahsus Taomlar
+                </span>
+                <span
+                  onClick={filterWithoutOil}
+                  className={`text-base cursor-pointer inline-block ${withoutOil} px-5 py-2 text-xl font-semibold rounded-3xl border-[2px]  text-white max-my_screen:text-xs text-center`}
+                >
+                  Yog'siz Taomlar
+                </span>
+                <span
+                  onClick={filterDrinks}
+                  className={`text-base cursor-pointer inline-block ${drink} px-5 py-2 text-xl font-semibold rounded-3xl border-[2px]  text-white max-my_screen:text-xs text-center`}
+                >
+                  Ichimiklar
+                </span>
+                <span
+                  onClick={filterDesert}
+                  className={`text-base cursor-pointer inline-block ${desert} px-5 py-2 text-xl font-semibold rounded-3xl border-[2px]  text-white max-my_screen:text-xs text-center`}
+                >
+                  Shrinliklar
+                </span>
+              </div>
             </div>
-          </div>
-          <Swiper
-            spaceBetween={50}
-            slidesPerView={1}
-            navigation={true}
-            pagination={true}
-            modules={[Navigation, Pagination]}
-            className="sipererMenu mb-20 hidden max-middle_screen:block max-md:mb-0 max-md:w-3/4 max-mini_screen:w-full"
-          >
-            {data.map((product) => {
-              if (product.id < 10) {
-                return (
-                  <SwiperSlide
-                    key={product.id}
-                    className="flex flex-col items-center px-3 py-3 max-sm:h-2/3 "
-                  >
+            <Swiper
+              spaceBetween={50}
+              slidesPerView={1}
+              navigation={true}
+              pagination={true}
+              modules={[Navigation, Pagination]}
+              className="sipererMenu mb-20 hidden max-middle_screen:block max-md:mb-0 max-md:w-3/4 max-mini_screen:w-full"
+            >
+              {data.map((product) => {
+                if (product.id < 10) {
+                  return (
+                    <SwiperSlide
+                      key={product.id}
+                      className="flex flex-col items-center px-3 py-3 max-sm:h-2/3 "
+                    >
+                      <li
+                        key={product.id}
+                        className="w-3/4 max-md:w-full text-white bg-[#d9d9d91f] rounded-xl "
+                      >
+                        <img
+                          src={product.img}
+                          alt={product.name + " png"}
+                          className="rounded-xl w-full object-cover"
+                          width={300}
+                          height={350}
+                        />
+                        <div className="px-5 py-5 flex flex-col justify-between items-center">
+                          <h3 className="text-xl tracking-wide max-lg:text-lg max-md:text-2xl font-bold first-letter:uppercase mb-1 truncate">
+                            {product.name}
+                          </h3>
+                          <p className="text-base max-lg:text-base max-md:text-xl text-gray-400 font-medium mb-3">
+                            {product.massa}gr
+                          </p>
+                          <div className="flex items-center justify-between max-sm:space-y-5 max-middle_screen:flex-col max-md:items-center max-middle_screen:gap-3 w-full">
+                            <p className="text-base max-lg:text-base  max-md:text-lg font-medium">
+                              {product.price}₽
+                            </p>
+                            <button
+                              className="w-1/2 px-2 py-2 bg-orange rounded-lg text-[70%] max-lg:text-xs active:bg-transparent active:text-orange active:border-[2px]  active:border-orange border-2 border-orange  max-sm:truncate max-md:w-3/4 max-md:py-3"
+                              onClick={() => handleBuy(product.id)}
+                            >
+                              Buyurtma berish
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                    </SwiperSlide>
+                  );
+                }
+              })}
+            </Swiper>
+            <ul className="grid grid-cols-4 max-md:grid-cols-2 gap-10 max-lg:grid-cols-3 max-sm:hidden py-10 max-middle_screen:hidden">
+              {data.map((product) => {
+                if (product.type === filter) {
+                  return (
                     <li
                       key={product.id}
-                      className="w-3/4 max-md:w-full text-white bg-[#d9d9d91f] rounded-xl "
+                      className="w-full text-white bg-[#d9d9d91f] rounded-xl max-sm:w-2/3 "
                     >
                       <img
                         src={product.img}
                         alt={product.name + " png"}
-                        className="rounded-xl w-full object-cover"
-                        width={300}
-                        height={350}
+                        className="rounded-xl "
+                        width={265}
+                        height={240}
                       />
-                      <div className="px-5 py-5 flex flex-col justify-between items-center">
-                        <h3 className="text-xl tracking-wide max-lg:text-lg max-md:text-2xl font-bold first-letter:uppercase mb-1 truncate">
+                      <div className="px-5 py-5 flex flex-col justify-between">
+                        <h3 className="text-xl tracking-wide max-lg:text-lg max-md:text-sm font-bold first-letter:uppercase mb-1 truncate">
                           {product.name}
                         </h3>
-                        <p className="text-base max-lg:text-base max-md:text-xl text-gray-400 font-medium mb-3">
+                        <p className="text-base max-lg:text-base max-md:text-xs text-gray-400 font-medium mb-3">
                           {product.massa}gr
                         </p>
-                        <div className="flex items-center justify-between max-sm:space-y-5 max-middle_screen:flex-col max-md:items-center max-middle_screen:gap-3 w-full">
-                          <p className="text-base max-lg:text-base  max-md:text-lg font-medium">
+                        <div className="flex items-center justify-between">
+                          <p className="text-base max-lg:text-base  max-md:text-xs font-medium">
                             {product.price}₽
                           </p>
                           <button
-                            className="w-1/2 px-2 py-2 bg-orange rounded-lg text-[70%] max-lg:text-xs active:bg-transparent active:text-orange active:border-[2px]  active:border-orange border-2 border-orange  max-sm:truncate max-md:w-3/4 max-md:py-3"
+                            className="px-2 py-2 bg-orange rounded-lg text-[70%] max-lg:text-xs active:bg-transparent active:text-orange active:border-[2px]  active:border-orange border-2 border-orange"
                             onClick={() => handleBuy(product.id)}
                           >
                             Buyurtma berish
@@ -321,53 +369,14 @@ const Home = ({ data, setCart }) => {
                         </div>
                       </div>
                     </li>
-                  </SwiperSlide>
-                );
-              }
-            })}
-          </Swiper>
-          <ul className="grid grid-cols-4 max-md:grid-cols-2 gap-10 max-lg:grid-cols-3 max-sm:hidden py-10 max-middle_screen:hidden">
-            {data.map((product) => {
-              if (product.type === filter) {
-                return (
-                  <li
-                    key={product.id}
-                    className="w-full text-white bg-[#d9d9d91f] rounded-xl max-sm:w-2/3 "
-                  >
-                    <img
-                      src={product.img}
-                      alt={product.name + " png"}
-                      className="rounded-xl "
-                      width="300"
-                      height="350"
-                    />
-                    <div className="px-5 py-5 flex flex-col justify-between">
-                      <h3 className="text-xl tracking-wide max-lg:text-lg max-md:text-sm font-bold first-letter:uppercase mb-1 truncate">
-                        {product.name}
-                      </h3>
-                      <p className="text-base max-lg:text-base max-md:text-xs text-gray-400 font-medium mb-3">
-                        {product.massa}gr
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <p className="text-base max-lg:text-base  max-md:text-xs font-medium">
-                          {product.price}₽
-                        </p>
-                        <button
-                          className="px-2 py-2 bg-orange rounded-lg text-[70%] max-lg:text-xs active:bg-transparent active:text-orange active:border-[2px]  active:border-orange border-2 border-orange"
-                          onClick={() => handleBuy(product.id)}
-                        >
-                          Buyurtma berish
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                );
-              }
-            })}
-          </ul>
-          <Link to="/menu" className="text-white first-letter:uppercase mb-5">
-            to'liq ko'rish
-          </Link>
+                  );
+                }
+              })}
+            </ul>
+            <Link to="/menu" className="text-white first-letter:uppercase mb-5">
+              to'liq ko'rish
+            </Link>
+          </div>
         </div>
       </div>
       <div className="containerb">
@@ -388,7 +397,7 @@ const Home = ({ data, setCart }) => {
                   <img
                     src={slideTitle.img}
                     width={100}
-                    height={200}
+                    height={90}
                     className="rounded-full absolute -top-[15%] left-1/5 "
                     alt={slideTitle.title + " png"}
                   />
@@ -419,8 +428,8 @@ const Home = ({ data, setCart }) => {
                 <div className="relative w-full h-[100%]  bg-[#dcdddf20] rounded-xl p-5 flex flex-col items-center justify-center">
                   <img
                     src={slideTitle.img}
-                    width="100px"
-                    height="150px"
+                    width={100}
+                    height={91}
                     className="rounded-full absolute -top-[15%] left-1/5 "
                     alt={slideTitle.title + " png"}
                   />
