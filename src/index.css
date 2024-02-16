@@ -36,15 +36,10 @@ nav .active::before {
   border-radius: 50%;
 }
 .bg {
-  background-size: cover;
+  background-size: contain;
   background-image: url(./assets/orqaFonBg.svg);
 }
-/* 
-.bg-2 {
-  background-position: center;
-  background-size: cover;
-  background-image: url(./assets/orqaFon.svg);
-} */
+
 .bg-2::-webkit-scrollbar {
   display: none;
 }
@@ -54,20 +49,14 @@ nav .active::before {
 }
 
 .nimadi {
-  background-size: cover;
+  background-size: contain;
   background-image: url(./assets/menubg.svg);
 }
 
 .hero {
+  background-position: center;
   background-size: cover;
   background-image: url(./assets/homeBg.png);
-}
-
-.pitsa {
-  background-position: top;
-  /* background-size: cover; */
-  background-repeat: repeat;
-  background-image: url(./assets/pitsaPng.png);
 }
 
 .mySwiper {
@@ -89,6 +78,7 @@ nav .active::before {
   width: 70%;
   height: 100%;
 }
+
 .swiper-button-next {
   width: 40px;
   height: 40px;

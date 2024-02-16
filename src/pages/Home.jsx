@@ -5,9 +5,7 @@ import StolBanqilish from "../Components/StolBandQilish";
 import { slideTitles } from "../data";
 
 // rasimlar
-import dumaloqXinkalin from "../assets/dumaloqPts.svg";
-import pitsa from "../assets/pitsaPng.png";
-import kokat from "../assets/kokat.png";
+import dumaloqXinkalin from "../assets/xinkalin.svg";
 import pic1 from "../assets/pic (1).png";
 import pic2 from "../assets/pic (2).png";
 import pic3 from "../assets/pic (3).png";
@@ -91,47 +89,40 @@ const Home = ({ data, setCart }) => {
   const next = () => customSwiper.slideNext();
 
   return (
-    <div className="pb-20">
-      <div className="hero px-5 containerb mb-5">
-        <div className="w-full h-36"></div>
-        <div className="w-full h-full flex justify-between items-center">
-          <div className="text-white  h-full flex flex-col justify-between items-start max-middle_screen:items-center space-y-5">
-            <h2 className="text-[70px] leading-[70px] max-middle_screen:text-[75px] max-middle_screen:leading-[50px] mb-10 font-bold max-md:text-center max-mini_screen:text-2xl">
-              Restoran <br />
-              <span className="text-[60px] max-middle_screen:text-[40px] max-mini_screen:text-xl">
-                kavkazniy kuxni
-              </span>
-            </h2>
-            <p className="text-xl font-medium max-middle_screen:text-[25px] max-md:w-full max-middle_screen:text-center max-md:mb-0 max-mini_screen:text-xs">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
-              odit, corporis adipisci incidunt esse perferendis magni
-              perspiciatis aliquid minus voluptatem!
-            </p>
+    <div className="pb-20 ">
+      <div className="hero px-5   mb-5">
+        <div className="containerb  overflow-hidden relative">
+          <div className="w-full h-36"></div>
+          <div className="w-1/2 h-full flex items-center  py-20 ">
+            <div className="text-white  h-full flex flex-col justify-between items-start max-middle_screen:items-center">
+              <h2 className="text-[70px] leading-[70px] max-middle_screen:text-[75px] max-middle_screen:leading-[50px] mb-10 font-bold max-md:text-center max-mini_screen:text-2xl">
+                Restoran <br />
+                <span className="text-[60px] max-middle_screen:text-[40px] max-mini_screen:text-xl">
+                  kavkazniy kuxni
+                </span>
+              </h2>
+              <p className="text-xl font-medium max-middle_screen:text-[25px] max-md:w-full max-middle_screen:text-center max-md:mb-0 max-mini_screen:text-xs mb-20">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolores odit, corporis adipisci incidunt esse perferendis magni
+                perspiciatis aliquid minus voluptatem!
+              </p>
+              <img
+                src={dumaloqXinkalin}
+                height={400}
+                width={400}
+                className="max-middle_screen:block hidden h-full w-full object-contain "
+                alt="hinkalin png"
+              />
+              <button className="px-20 py-5 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-white font-bold rounded-xl shadow-lg shadow-orange max-sm:text-[10px] max-md:px-5 max-middle_screen:w-3/5">
+                Stol BandQilish
+              </button>
+            </div>
             <img
               src={dumaloqXinkalin}
-              height={400}
-              width={400}
-              className="max-middle_screen:block hidden h-full w-full object-contain"
-              alt="hinkalin png"
-            />
-            <button className="px-20 py-5 bg-orange text-white font-bold rounded-xl shadow-lg shadow-orange max-sm:text-[10px] max-md:px-5 max-middle_screen:w-3/5">
-              Stol BandQilish
-            </button>
-          </div>
-          <div className="w-full h-full relative max-middle_screen:hidden ">
-            <img
-              src={pitsa}
-              width={533}
-              height={890}
-              alt="pitsa png"
-              className="object-cover"
-            />
-            <img
-              src={kokat}
-              width={100}
-              height={100}
-              className="absolute bottom-1/4 right-[35%] object-cover"
-              alt="kokat png"
+              alt="xinkalin png"
+              height={500}
+              width={500}
+              className="w-1/2 h-4/6 scale-[2] absolute bottom-5 -right-[20%]"
             />
           </div>
         </div>
