@@ -111,12 +111,18 @@ const Home = ({ data, setCart }) => {
                 perspiciatis aliquid minus voluptatem!
               </p>
               <div className="max-middle_screen:block hidden max-middle_screen:relative ">
-                <img src={dumaloqXinkalin} className="w-full" alt="" />
+                <img
+                  src={dumaloqXinkalin}
+                  className="w-full"
+                  width={200}
+                  height={206}
+                  alt="xinkalin"
+                />
                 <img
                   src={kokat}
                   width={30}
                   className="w-1/4 absolute bottom-1/4 left-1/4"
-                  alt=""
+                  alt="ko'kat"
                 />
               </div>
               <button className="px-20 py-5 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-white font-bold rounded-xl shadow-lg shadow-orange max-sm:text-xs max-md:px-5 max-middle_screen:w-3/5">

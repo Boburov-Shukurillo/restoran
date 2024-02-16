@@ -28,7 +28,7 @@ const Contact = () => {
           </a>
           <address className="flex items-center justify-start gap-5 text-white mb-5 max-middle_screen:hidden">
             <div className="w-5">
-              <img src={loctionPic} alt="" />
+              <img src={loctionPic} alt="location svg" />
             </div>
             <div className="flex flex-col">
               <p>Lorem ipsum dolor sit amet.</p>
@@ -43,7 +43,7 @@ const Contact = () => {
           </p>
         </div>
         <div className="w-1/2 max-md:w-full">
-          <img src={img04} className="w-full" width={353} height={387} alt="" />
+          <img src={img04} className="w-full" width={353} height={387} alt="kontakt img" />
         </div>
       </div>
     </div>

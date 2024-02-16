@@ -52,14 +52,14 @@ const StolBandQilish = () => {
             +998 (99) 678 45 96
           </a>
           <address className="max-middle_screen:hidden flex items-center justify-start gap-5 text-[#888] mb-5">
-            <img width={27} height={34} src={loctionPic} alt="" />
+            <img width={27} height={34} src={loctionPic} alt="location picture" />
             <div className="flex flex-col">
               <p>Lorem ipsum dolor sit amet.</p>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
             </div>
           </address>
           <p className="max-md:hidden flex items-center text-[#888] gap-5 ">
-            <img src={watchSvg} width={28} height={29} alt="" />
+            <img src={watchSvg} width={28} height={29} alt="clock svg" />
             <span>Ish Vaqti 12:00 | 00:00</span>
           </p>
         </div>
