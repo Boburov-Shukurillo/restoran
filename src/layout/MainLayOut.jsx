@@ -6,11 +6,15 @@ import Loader from "../Components/Loader";
 
 const MainLayOut = ({ cart, setData, data, setCart }) => {
   const [loader, setLoader] = useState(true);
-  setTimeout(() => setLoader(false), 1000);
+  setTimeout(() => setLoader(false), 300);
   return (
     <div>
       <Header cart={cart} setData={setData} data={data} setCart={setCart} />
-      {loader && <Loader />}
+      {loader && (
+        <div className="fixed z-50">
+          <Loader />
+        </div>
+      )}
       <main className="bg-[#1E1E1E]">
         <Outlet wtf="knock knock face" />
       </main>

@@ -7,27 +7,29 @@ import { Navigation, Pagination } from "swiper/modules";
 const About = () => {
   return (
     <div className="h-[100%]  bg-[#1E1E1E]">
-      <div className="containerb nimadi w-full py-44 text-white max-middle_screen:text-center max-middle_screen:flex max-middle_screen:flex-col max-middle_screen:items-center">
-        <h1 className="text-[65px] font-semibold mb-10 max-middle_screen:text-4xl">
-          Restoran Haqida
-        </h1>
-        <p className="w-1/2 mb-5 text-xl max-middle_screen:w-2/3 max-md:w-full max-md:text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus modi
-          excepturi cum soluta id eius sapiente hic, illo tempora quasi
-          cupiditate quaerat repellat numquam nostrum atque, impedit iure
-          officia quidem omnis quo fugiat sit? Perspiciatis ea dolorem illum
-          officia repudiandae soluta quos obcaecati est odit sunt! Nisi, velit
-          dolor? Nostrum ad odit fuga facilis voluptas blanditiis at qui,
-          quibusdam, officia omnis alias cum distinctio deleniti placeat quasi
-          ex sed praesentium!
-        </p>
-        <p className="w-1/2 text-xl max-middle_screen:w-2/3 max-md:w-full max-md:text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
-          voluptatibus illum, fugiat ullam accusamus esse non quidem incidunt
-          odit explicabo aliquid a ipsa dolorum optio recusandae? Minus quae quo
-          blanditiis itaque repudiandae, aut a, at repellendus neque voluptatem
-          accusantium reiciendis?
-        </p>
+      <div className="nimadi w-full">
+        <div className="containerb w-full py-44 text-white max-middle_screen:text-center max-middle_screen:flex max-middle_screen:flex-col max-middle_screen:items-center">
+          <h1 className="text-[65px] font-semibold mb-10 max-middle_screen:text-4xl">
+            Restoran Haqida
+          </h1>
+          <p className="w-1/2 mb-5 text-xl max-middle_screen:w-2/3 max-md:w-full max-md:text-base">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            modi excepturi cum soluta id eius sapiente hic, illo tempora quasi
+            cupiditate quaerat repellat numquam nostrum atque, impedit iure
+            officia quidem omnis quo fugiat sit? Perspiciatis ea dolorem illum
+            officia repudiandae soluta quos obcaecati est odit sunt! Nisi, velit
+            dolor? Nostrum ad odit fuga facilis voluptas blanditiis at qui,
+            quibusdam, officia omnis alias cum distinctio deleniti placeat quasi
+            ex sed praesentium!
+          </p>
+          <p className="w-1/2 text-xl max-middle_screen:w-2/3 max-md:w-full max-md:text-base">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+            voluptatibus illum, fugiat ullam accusamus esse non quidem incidunt
+            odit explicabo aliquid a ipsa dolorum optio recusandae? Minus quae
+            quo blanditiis itaque repudiandae, aut a, at repellendus neque
+            voluptatem accusantium reiciendis?
+          </p>
+        </div>
       </div>
 
       <ul className="containerb grid grid-cols-4 gap-6 w-full h-full py-2 bg-[#1E1E1E] max-lg:grid-cols-3 max-middle_screen:grid-cols-2 max-middle_screen:gap-20 max-sm:grid-cols-1">

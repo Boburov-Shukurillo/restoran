@@ -36,6 +36,7 @@ nav .active::before {
   border-radius: 50%;
 }
 .bg {
+  background-position: center;
   background-size: contain;
   background-image: url(./assets/orqaFonBg.svg);
 }
@@ -49,11 +50,12 @@ nav .active::before {
 }
 
 .nimadi {
-  background-size: contain;
+  background-position: center;
   background-image: url(./assets/menubg.svg);
 }
 
 .hero {
+  background-position: center;
   background-image: url(./assets/heroBg.png);
 }
 
