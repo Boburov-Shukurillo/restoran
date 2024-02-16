@@ -31,7 +31,7 @@ const Header = ({ data, setCart, cart }) => {
     <header
       className={`${
         headerT || headerHome
-          ? "bg-transparent absolute top-0 w-full px-5"
+          ? "bg-transparent absolute top-0 w-full px-5 z-50"
           : "bg-[#292828] px-5"
       } `}
     >
