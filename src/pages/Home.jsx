@@ -125,7 +125,7 @@ const Home = ({ data, setCart }) => {
                   alt="ko'kat"
                 />
               </div>
-              <button className="px-20 py-5 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-white font-bold rounded-xl shadow-lg shadow-orange max-sm:text-xs max-md:px-5 max-middle_screen:w-3/5">
+              <button className="px-20 py-5 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-white font-bold rounded-xl shadow-lg shadow-orange max-sm:text-xs max-md:px-5 max-middle_screen:w-3/5 max-sm:w-full">
                 Stol Band Qilish
               </button>
             </div>
