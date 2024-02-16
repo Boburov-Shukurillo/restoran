@@ -116,7 +116,7 @@ const Home = ({ data, setCart }) => {
                 className="max-middle_screen:block hidden h-full w-full object-contain "
                 alt="hinkalin png"
               />
-              <button className="px-20 py-5 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-black font-bold rounded-xl shadow-lg shadow-orange max-sm:text-[10px] max-md:px-5 max-middle_screen:w-3/5">
+              <button className="px-20 py-5 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-white font-bold rounded-xl shadow-lg shadow-orange max-sm:text-[10px] max-md:px-5 max-middle_screen:w-3/5">
                 Stol BandQilish
               </button>
             </div>
