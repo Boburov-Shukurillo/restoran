@@ -73,12 +73,17 @@ const Korzinka = ({ cart, setCart }) => {
         Korzinka
       </h1>
       <hr className="mb-10" />
-      <ul className={`mb-10 ${cart.length === 0 && `h-[20vh]`}`}>
+      {cart.length === 0 && (
+        <h1 className="text-center text-5xl font-bold text-white tracking-widest">
+          Cartda Hechnarsa Yo'q
+        </h1>
+      )}
+      <ul className={`mb-10`}>
         {cart.map((product, i) => {
           return (
             <li
               key={product.id}
-              className="flex items-center justify-between h-44 max-md:h-20 mb-10 text-white border-b-[1px] max-md:relative max-md:mb-16"
+              className="flex items-center justify-between h-44 max-md:h-20 mb-10 text-white max-middle_screen:border-b-[1px] max-md:relative max-md:mb-16"
             >
               <div className="h-full flex w-1/3 items-center justify-between max-middle_screen:mr-5 max-md:mr-0">
                 <div className="w-full h-full flex items-center justify-between gap-5 ">
@@ -87,7 +92,7 @@ const Korzinka = ({ cart, setCart }) => {
                     height={200}
                     src={product.img}
                     alt={product.name + " png"}
-                    className="rounded-md border-2 border-orange h-full max-md:hidden w-full  max-lg:h-full object-cover"
+                    className=" rounded-3xl border-2 border-orange h-full max-md:hidden w-1/2  max-lg:h-full object-cover"
                   />
                   <div className="flex flex-col items-start w-3/6">
                     <h3 className="text-4xl first-letter:uppercase max-middle_screen:text-2xl max-mini_screen:text-xl ">
@@ -160,6 +165,7 @@ const Korzinka = ({ cart, setCart }) => {
           className="w-full h-full rounded-xl px-5 "
           placeholder="Telefon Raqam"
           type="tel"
+          pattern="(\+998|8)[\- ]?\d{2}[\- ]?\d{3}[\- ]?\d{2}[\- ]?\d{2}"
           onChange={(e) => setPhoneNumber(e.target.value)}
           value={phoneNumber}
           required

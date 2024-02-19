@@ -5,7 +5,7 @@ import loctionPic from "../assets/Vectorlocation.svg";
 import watchSvg from "../assets/watchSvg.svg";
 import telImg from "../assets/TelLogoSvg.svg";
 import axios from "axios";
-
+import choq from "../assets/choqs.svg";
 const StolBandQilish = () => {
   const [name, setName] = useState("");
   const [tel, setNumber] = useState("");
@@ -28,7 +28,7 @@ const StolBandQilish = () => {
   };
 
   return (
-    <div className="containerb">
+    <div className="containerb ">
       <div className="grid grid-cols-2 gap-10  p-20 rounded-2xl bg-[#181818] max-middle_screen:grid-cols-1 max-md:text-center max-md:py-10 max-md:px-5">
         <div className="w-full h-full flex flex-col justify-between max-middle_screen:items-center">
           <h3 className="text-[65px] font-bold text-white mb-10 max-my_screen:text-3xl">
@@ -82,7 +82,7 @@ const StolBandQilish = () => {
           <input
             className="w-full rounded-2xl px-5 py-6 max-middle_screen:py-4 max-middle_screen:w-3/4 max-md:w-3/4 max-sm:w-full max-sm:py-2 max-sm:rounded-md "
             type="telefon raqamingiz"
-            pattern="+998"
+            pattern="(\+998|8)[\- ]?\d{2}[\- ]?\d{3}[\- ]?\d{2}[\- ]?\d{2}"
             required
             onChange={(e) => setNumber(e.target.value)}
             placeholder="Telefon Raqam"

@@ -202,16 +202,18 @@ const Menu = ({ data, setCart }) => {
                     width={260}
                     height={236}
                   />
-                  <div className="px-5 py-3 flex flex-col justify-between max-middle_screen:flex-row max-middle_screen:items-center w-full space-x-3 ">
+                  <div className="px-5 py-3 flex flex-col justify-between max-middle_screen:flex-row max-middle_screen:items-center w-full  ">
                     <div className="max-md:flex max-md:flex-col">
                       {" "}
-                      <h3 className="text-xl tracking-wide max-lg:text-lg max-md:text-sm font-bold first-letter:uppercase mb-1 truncate">
+                      <h3 className="text-xl tracking-wide max-lg:text-lg max-md:text-sm font-bold first-letter:uppercase mb-1 truncate w-20">
                         {product.name}
                       </h3>
                       <h4 className="text-base max-lg:text-base max-md:text-xs text-gray-400 font-medium mb-3 max-middle_screen:mb-0">
                         {product.massa}gr
                       </h4>
-                      <h5>{product.price}P</h5>
+                      <h5 className="max-middle_screen:block hidden">
+                        {product.price}P
+                      </h5>
                     </div>
                     <div className="flex items-center justify-between max-middle_screen:w-1/3">
                       <p className="text-base max-lg:text-base  max-md:hidden font-medium ">

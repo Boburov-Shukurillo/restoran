@@ -6,7 +6,7 @@ import { Navigate } from "react-router-dom";
 import { Navigation, Pagination } from "swiper/modules";
 const About = () => {
   return (
-    <div className="h-[100%]  bg-[#1E1E1E]">
+    <div className="h-[100%]  bg-[#1E1E1E] ">
       <div className="nimadi w-full">
         <div className="containerb w-full py-44 text-white max-middle_screen:text-center max-middle_screen:flex max-middle_screen:flex-col max-middle_screen:items-center">
           <h1 className="text-[65px] font-semibold mb-10 max-middle_screen:text-4xl">
@@ -32,7 +32,7 @@ const About = () => {
         </div>
       </div>
 
-      <ul className="containerb grid grid-cols-4 gap-6 w-full h-full py-2 bg-[#1E1E1E] max-lg:grid-cols-3 max-middle_screen:grid-cols-2 max-middle_screen:gap-20 max-sm:grid-cols-1">
+      <ul className="containerb  grid grid-cols-4 gap-6 w-full h-full py-20 bg-[#1E1E1E] max-lg:grid-cols-3 max-middle_screen:grid-cols-2 max-middle_screen:gap-20 max-sm:grid-cols-1">
         <li className="text-center px-5 pt-10 pb-5 w-full h-full bg-[#d9d9d918] relative rounded-xl flex items-center flex-col">
           <span className="w-20 h-20 -top-[15%] border-[10px] bg-[#323232] rounded-full border-[#1E1E1E] absolute flex items-center justify-center text-2xl font-bold text-[#E6783F]">
             1
