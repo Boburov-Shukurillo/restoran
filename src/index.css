@@ -44,7 +44,7 @@ nav .active::before {
 .bg-2::-webkit-scrollbar {
   display: none;
 }
-.salom {
+.salom:hover {
   border: 2px solid #ff6a00;
   box-shadow: 0 0 15px #ef6602, 0 0 15px #ef6602 inset;
 }
@@ -134,11 +134,14 @@ nav .active::before {
 
 .sipererMenu {
   width: 70%;
-  height: 1000%;
+  height: 100%;
 }
 
 .sipererMenu .swiper-wrapper {
   display: flex;
+}
+.sipererMenu .swiper-slide {
+  height: 500px;
 }
 
 .Swiperonce {
@@ -156,4 +159,24 @@ nav .active::before {
 }
 .Swiperonce .swiper-button-prev {
   bottom: 40%;
+}
+.swoperL2 {
+  width: 100%;
+  height: 100%;
+}
+.swoperL2 .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.swoperL2 .swiper-slide {
+  width: 320px;
+  padding: 20px;
+  height: 320px;
+}
+.swoperL2 .swiper-pagination-horizontal {
+  margin-bottom: -10px;
+}
+.soyalar {
+  box-shadow: 0 0 30px #eec1b1 inset;
+  filter: drop-shadow(0 0 10px #ff6a00);
 }

@@ -22,6 +22,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 
 const Home = ({ data, setCart }) => {
   // menudagi taomlarni filter qilib chiqarib beradi
@@ -37,9 +38,27 @@ const Home = ({ data, setCart }) => {
   // kartga qoshish
   const handleBuy = (i) => {
     if (data[i].isTrue === true) {
-      alert("bu krtda mavjud");
+      toast.error(`Bu Taom Cartda Mavjud`, {
+        position: "bottom-right",
+        autoClose: 500,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     } else {
-      alert("katga qowildi");
+      toast.success(`Cartga qo'shildi`, {
+        position: "bottom-right",
+        autoClose: 500,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       data[i].isTrue = true;
       const sdfghj = data.filter((e) => e.isTrue === true);
       setCart(sdfghj);
@@ -91,17 +110,20 @@ const Home = ({ data, setCart }) => {
   const prev = () => customSwiper.slidePrev();
 
   const next = () => customSwiper.slideNext();
-
+  const stolBandQilish = () => {
+    window.scrollTo({ left: 0, top: "4000", behavior: "smooth" });
+  };
   return (
     <div className="pb-20">
+      <ToastContainer />
       <div className="hero px-5 mb-5 overflow-hidden">
         <div className="containerb relative">
-          <div className="w-full h-40 max-middle_screen:h-32"></div>
+          <div className="w-full h-40 max-sm:h-20"></div>
           <div className="w-1/2 h-full flex items-center  py-20 max-middle_screen:w-full max-md:p-5">
             <div className="text-white  h-full flex flex-col justify-between items-start max-middle_screen:items-center">
-              <h1 className="text-[70px] leading-[70px] max-middle_screen:text-[75px] max-middle_screen:leading-10 mb-10 font-bold max-md:text-center max-mini_screen:text-2xl max-mini_screen:leading-3">
+              <h1 className="text-[70px] leading-[70px] max-middle_screen:text-[75px] max-middle_screen:leading-10 mb-10 font-bold max-md:text-center max-mini_screen:text-xl max-mini_screen:leading-7 max-md:mb-5">
                 Restoran <br />
-                <span className="text-[60px] max-middle_screen:text-[40px] max-mini_screen:text-xl">
+                <span className="text-[60px] max-middle_screen:text-[40px] max-mini_screen:text-2xl">
                   kavkazniy kuxni
                 </span>
               </h1>
@@ -110,7 +132,7 @@ const Home = ({ data, setCart }) => {
                 Dolores odit, corporis adipisci incidunt esse perferendis magni
                 perspiciatis aliquid minus voluptatem!
               </p>
-              <div className="max-middle_screen:block hidden max-middle_screen:relative ">
+              <div className="max-middle_screen:block hidden max-middle_screen:relative w-52 h-52 ">
                 <img
                   src={dumaloqXinkalin}
                   className="w-full"
@@ -125,7 +147,10 @@ const Home = ({ data, setCart }) => {
                   alt="ko'kat"
                 />
               </div>
-              <button className="px-20 py-5 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-white font-bold rounded-xl shadow-lg shadow-orange max-sm:text-xs max-md:px-5 max-middle_screen:w-3/5 max-sm:w-full">
+              <button
+                onClick={stolBandQilish}
+                className="soyalar px-20 py-6 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-white font-bold rounded-3xl max-sm:text-lg max-md:px-5 max-middle_screen:w-3/5 max-sm:w-full"
+              >
                 Stol Band Qilish
               </button>
             </div>
@@ -140,14 +165,14 @@ const Home = ({ data, setCart }) => {
               <img
                 src={choq}
                 alt="cho'g' svg"
-                className="w-10/12 h-5/6 absolute bottom-0 left-1/3"
+                className="w-10/12 h-5/6 absolute bottom-0 left-1/3  max-my_screen:hidden"
               />
               <img
                 src={kokat}
                 alt="Ko'kat Png"
                 width={100}
                 height={100}
-                className="w-1/6 h-1/6 absolute left-3/4 z-30 bottom-10"
+                className="w-1/6 h-1/6 absolute left-3/4 z-30 bottom-10 "
               />
             </div>
           </div>
@@ -240,19 +265,19 @@ const Home = ({ data, setCart }) => {
           slidesPerView={1}
           pagination={true}
           modules={[Pagination]}
-          className="w-full swoperL mb-20 hidden max-middle_screen:block max-md:mb-0"
+          className="w-full swoperL2 mb-20 hidden max-middle_screen:block max-md:mb-0"
         >
           {slideTitles.map((slideTitle, i) => {
             return (
               <SwiperSlide
                 key={i}
-                className="w-full flex flex-col items-center px-3 py-3 justify-end max-md:p-0"
+                className="w-full flex flex-col items-center justify-end max-md:p-0"
               >
                 <img
                   src={slideTitle.img}
                   width={300}
                   height={200}
-                  className="w-full h-3/4 max-md:h-full rounded-3xl mb-2"
+                  className="w-full h-full max-md:h-full rounded-3xl mb-2 object-cover"
                   alt={slideTitle.title + " png"}
                 />
               </SwiperSlide>
@@ -260,9 +285,9 @@ const Home = ({ data, setCart }) => {
           })}
         </Swiper>
       </div>
-      <div className="bg">
+      <div className="bg max-2xl:bg-cover">
         <div className="containerb  h-full py-5 bg-balck mb-20 ">
-          <div className="bg-2 py-20 flex flex-col items-center max-md:py-8">
+          <div className="bg-2 py-20 flex flex-col items-center max-md:py-8 space-y-10">
             <div className="w-full flex flex-col items-center justify-between mb-10 h-44 max-md:h-10 max-md:mb-0 max-md:justify-end max-middle_screen:hidden">
               <h1 className="text-white text-6xl font-bold uppercase font-serif max-md:text-2xl mb-5">
                 bizning menu
@@ -306,18 +331,18 @@ const Home = ({ data, setCart }) => {
               navigation={true}
               pagination={true}
               modules={[Navigation, Pagination]}
-              className="sipererMenu mb-20 hidden max-middle_screen:block max-md:mb-0 max-md:w-3/4 max-mini_screen:w-full"
+              className="sipererMenu mb-20 hidden max-middle_screen:block max-md:mb-0 max-md:w-3/4 max-mini_screen:w-full "
             >
               {data.map((product) => {
                 if (product.id < 10) {
                   return (
                     <SwiperSlide
                       key={product.id}
-                      className="flex flex-col items-center px-3 py-3 max-sm:h-2/3 "
+                      className="flex flex-col items-center px-3 py-3  "
                     >
                       <li
                         key={product.id}
-                        className="w-3/4 max-md:w-full text-white bg-[#d9d9d91f] rounded-xl "
+                        className="w-3/4 max-md:w-full text-white bg-[#d9d9d91f] rounded-xl h-full"
                       >
                         <img
                           src={product.img}
@@ -378,7 +403,7 @@ const Home = ({ data, setCart }) => {
                             {product.price}₽
                           </p>
                           <button
-                            className="px-2 py-2 bg-[#EF6602] rounded-lg text-[70%] max-lg:text-xs active:bg-transparent active:text-[#EF6602] active:border-[2px]  active:border-[#EF6602] border-2 border-[#EF6602]"
+                            className="px-2 py-2 bg-[#EF6602] rounded-lg text-[100%] max-lg:text-xs active:bg-transparent active:text-[#EF6602] active:border-[2px]  active:border-[#EF6602] border-2 border-[#EF6602]"
                             onClick={() => handleBuy(product.id)}
                           >
                             Buyurtma berish
@@ -390,7 +415,10 @@ const Home = ({ data, setCart }) => {
                 }
               })}
             </ul>
-            <Link to="/menu" className="text-white first-letter:uppercase mb-5">
+            <Link
+              to="/menu"
+              className="text-white first-letter:uppercase mb-5 px-5 py-2 border-[1px] rounded-[65px] w-full text-center"
+            >
               to'liq ko'rish
             </Link>
           </div>
@@ -408,9 +436,9 @@ const Home = ({ data, setCart }) => {
             return (
               <SwiperSlide
                 key={i}
-                className="rounded-xl relative flex flex-col items-center justify-end pt-16 max-md:h-full"
+                className="rounded-xl relative flex flex-col items-center justify-end pt-16 max-md:h-full "
               >
-                <div className="relative w-2/3 max-mini_screen:w-full h-[100%]  bg-[#dcdddf20] rounded-xl p-5 flex flex-col items-center justify-center">
+                <div className="relative w-2/3 max-mini_screen:w-full h-[100%]  bg-[#dcdddf20] rounded-xl p-10 flex flex-col items-center justify-center">
                   <img
                     src={slideTitle.img}
                     width={100}

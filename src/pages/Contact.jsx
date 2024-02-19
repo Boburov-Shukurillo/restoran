@@ -26,13 +26,13 @@ const Contact = () => {
             </div>
             +998 678 45 96
           </a>
-          <address className="flex items-center justify-start gap-5 text-white mb-5 max-middle_screen:hidden">
-            <div className="w-5">
+          <address className="flex items-start justify-start gap-5 text-white mb-5 max-md:hidden">
+            <div className="w-16">
               <img src={loctionPic} alt="location svg" />
             </div>
-            <div className="flex flex-col">
-              <p>Lorem ipsum dolor sit amet.</p>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+            <div className="text-start">
+              Lorem ipsum dolor sit amet. Lorem ipsum dolor, sit amet
+              consectetur adipisicing.
             </div>
           </address>
           <p className="flex items-center text-white gap-5 max-md:text-[10px]">
@@ -41,9 +41,24 @@ const Contact = () => {
             </span>
             <span>Ish Vaqti 12:00 | 00:00</span>
           </p>
+          <address className="flex items-start justify-start gap-5 text-white mb-5">
+            <div className="w-16">
+              <img src={loctionPic} alt="location svg" />
+            </div>
+            <div className="text-start">
+              Lorem ipsum dolor sit amet. Lorem ipsum dolor, sit amet
+              consectetur adipisicing.
+            </div>
+          </address>
         </div>
         <div className="w-1/2 max-md:w-full">
-          <img src={img04} className="w-full" width={353} height={387} alt="kontakt img" />
+          <img
+            src={img04}
+            className="w-full"
+            width={353}
+            height={387}
+            alt="kontakt img"
+          />
         </div>
       </div>
     </div>

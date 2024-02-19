@@ -71,7 +71,7 @@ const Footer = () => {
           {/* Qo'ngiroq hizmati adminga qo;ng;iroq qilish */}
           <a
             href="+99899453323"
-            className="text-base text-white font-semibold flex items-center justify-center gap-5  max-lg:gap-1 max-my_screen:text-sm  max-lg:text-[10px]"
+            className="text-base text-white font-semibold flex items-center justify-center gap-5  max-lg:gap-1 max-my_screen:text-sm  max-lg:text-sm"
           >
             <img
               src={telImg}

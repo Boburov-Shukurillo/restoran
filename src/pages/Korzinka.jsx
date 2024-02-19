@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
-
+import iks from "../assets/whiteIks.svg";
 const Korzinka = ({ cart, setCart }) => {
   const handleRemove = (i) => {
     let removingItem = cart.slice(0, i).concat(cart.slice(i + 1, cart.length));
@@ -37,12 +37,11 @@ const Korzinka = ({ cart, setCart }) => {
   });
 
   const [name, setName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState();
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [adress, setAdress] = useState("");
 
   const handleChange = (event) => {
     event.preventDefault();
-    console.log(typeof phoneNumber);
     if (
       name.trim() === "" ||
       phoneNumber.trim() === "" ||
@@ -61,22 +60,25 @@ const Korzinka = ({ cart, setCart }) => {
         text: telegramMessage,
       });
       alert("Malumot yuborildi");
+      setName("");
+      setPhoneNumber("");
+      setAdress("");
     }
   };
 
   return (
-    <div className="containerb py-20 px-2">
+    <div className="containerb py-20 px-2 max-md:py-10">
       <ToastContainer />
-      <h2 className="mb-20 text-[65px] font-bold font-[cursive] text-white max-middle_screen:text-5xl max-mini_screen:text-3xl">
+      <h1 className="mb-20 text-[65px] font-bold font-[cursive] text-white max-middle_screen:text-5xl max-mini_screen:text-3xl max-md:mb-10">
         Korzinka
-      </h2>
+      </h1>
       <hr className="mb-10" />
       <ul className={`mb-10 ${cart.length === 0 && `h-[20vh]`}`}>
         {cart.map((product, i) => {
           return (
             <li
               key={product.id}
-              className="flex items-center justify-between h-44 mb-10 text-white"
+              className="flex items-center justify-between h-44 max-md:h-20 mb-10 text-white border-b-[1px] max-md:relative max-md:mb-16"
             >
               <div className="h-full flex w-1/3 items-center justify-between max-middle_screen:mr-5 max-md:mr-0">
                 <div className="w-full h-full flex items-center justify-between gap-5 ">
@@ -85,22 +87,22 @@ const Korzinka = ({ cart, setCart }) => {
                     height={200}
                     src={product.img}
                     alt={product.name + " png"}
-                    className="rounded-md border-2 border-orange h-full max-middle_screen:hidden w-1/2  max-lg:h-1/2 object-cover"
+                    className="rounded-md border-2 border-orange h-full max-md:hidden w-full  max-lg:h-full object-cover"
                   />
-                  <div className="flex flex-col items-start w-full">
+                  <div className="flex flex-col items-start w-3/6">
                     <h3 className="text-4xl first-letter:uppercase max-middle_screen:text-2xl max-mini_screen:text-xl ">
                       {product.name}
                     </h3>
                     <p className="text-2xl first-letter:uppercase text-gray-300 max-middle_screen:text-lg max-mini_screen:text-sm">
-                      {product.massa * product.productLength}gr
+                      {product.massa * product.productLength} gr.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="w-1/6 h-1/4 bg-white rounded-xl text-black flex items-center justify-between p-1  max-md:h-[15%] max-sm:w-1/4 max-middle_screen:h-1/4">
+              <div className="w-44 h-1/4 bg-white rounded-xl text-black flex items-center justify-between p-1 max-md:w-20 max-md:h-7 max-md:rounded-sm">
                 <button
                   onClick={() => removePoduct(i)}
-                  className="w-1/3 h-full bg-[#DCDDDF] rounded-lg max-mini_screen:text-xs flex items-center justify-center"
+                  className="w-1/3 h-full bg-[#DCDDDF] rounded-lg text-gray-700 font-bold max-mini_screen:text-xl flex items-center justify-center max-md:pb-1 max-md:rounded-sm"
                 >
                   -
                 </button>
@@ -109,7 +111,7 @@ const Korzinka = ({ cart, setCart }) => {
                 </span>
                 <button
                   onClick={() => addProduct(i)}
-                  className="w-1/3 h-full bg-[#EF6602] rounded-lg max-mini_screen:text-xs flex items-center justify-center"
+                  className="w-1/3 h-full bg-[#EF6602] rounded-lg text-white font-bold max-mini_screen:text-xl flex items-center justify-center max-md:pb-1 max-md:rounded-sm"
                 >
                   +
                 </button>
@@ -119,9 +121,9 @@ const Korzinka = ({ cart, setCart }) => {
               </p>
               <button
                 onClick={() => handleRemove(i)}
-                className="text-5xl font-bold font-[cursive] max-mini_screen:text-xl"
+                className="text-5xl font-bold font-[cursive] max-mini_screen:text-xl max-md:absolute max-md:-top-1/4 max-md:right-0 max-md:font-thin max-md:font-sans"
               >
-                x
+                <img src={iks} alt="" />
               </button>
             </li>
           );
@@ -129,9 +131,9 @@ const Korzinka = ({ cart, setCart }) => {
       </ul>
       <hr className="mb-5" />
       <div className="w-full flex items-center justify-between max-middle_screen:flex-col mb-5">
-        <p className="w-1/2 text-white text-xl max-middle_screen:w-full max-middle_screen:text-center max-middle_screen:mb-5 max-md:text-sm">
+        <p className="w-1/2 text-[#DCDDDF] text-base max-middle_screen:w-full max-middle_screen:text-center max-middle_screen:mb-5 max-md:text-sm">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
-          minima{" "}
+          minima <br />
           <span className="font-bold italic">
             {" "}
             soluta sapiente beatae harum delectus architecto in illum quia
@@ -144,30 +146,33 @@ const Korzinka = ({ cart, setCart }) => {
       </div>
       <form
         onSubmit={handleChange}
-        className="flex flex-wrap items-center justify-evenly h-full gap-5 w-full"
+        className="grid grid-cols-4 h-20 gap-5 max-middle_screen:grid-cols-3 max-middle_screen:h-44 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:h-96"
       >
         <input
-          className="px-5 py-2 rounded-xl "
+          className="w-full h-full rounded-xl px-5 "
           placeholder="Ism"
           type="text"
           onChange={(e) => setName(e.target.value)}
+          value={name}
           required
         />
         <input
-          className="px-5 py-2 rounded-xl "
+          className="w-full h-full rounded-xl px-5 "
           placeholder="Telefon Raqam"
           type="tel"
           onChange={(e) => setPhoneNumber(e.target.value)}
+          value={phoneNumber}
           required
         />
         <input
-          className="px-5 py-2 rounded-xl "
+          className="w-full h-full rounded-xl px-5 "
           type="text"
           placeholder="Manzil"
           onChange={(e) => setAdress(e.target.value)}
+          value={adress}
           required
         />
-        <button className="px-5 py-2 rounded-xl  bg-orange text-white shadow-xl shadow-orange border-2">
+        <button className="w-full h-full rounded-2xl bg-orange text-white soyalar text-lg font-bold">
           Buyurtma Berish
         </button>
       </form>

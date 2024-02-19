@@ -39,11 +39,11 @@ const Header = ({ data, setCart, cart }) => {
     <header
       className={`${
         headerT || headerHome
-          ? "bg-transparent absolute top-0 w-full px-5 z-50"
-          : "bg-[#292828] px-5"
+          ? "bg-transparent absolute top-0 w-full px-0 z-50"
+          : "bg-[#292828] px-0"
       } `}
     >
-      <div className="containerb flex items-center justify-between  py-4 max-sm:py-1">
+      <div className="containerb flex items-center justify-between  py-4 max-sm:py-1 relative">
         {/* header logsi home sahifaga olib o'tadi */}
         <Link to="/" className="">
           <img
@@ -56,23 +56,14 @@ const Header = ({ data, setCart, cart }) => {
         </Link>
 
         <button
-          onClick={openMenu}
-          className="hidden max-middle_screen:flex absolute z-50 right-[5%] bottom-1/4   items-center"
+          onClick={() => setMenu("flex")}
+          className="hidden max-middle_screen:block"
         >
-          {!jpg && (
-            <img
-              src={MenuBtn}
-              alt="menu btn"
-              className={` max-sm:max-sm:w-full`}
-            />
-          )}
-          {jpg && (
-            <img
-              src={Iks}
-              alt="menu btn"
-              className={` max-sm:max-sm:w-full px-2`}
-            />
-          )}
+          <img
+            src={MenuBtn}
+            alt="menu btn"
+            className={` max-sm:max-sm:w-full`}
+          />
         </button>
 
         <div
@@ -80,7 +71,7 @@ const Header = ({ data, setCart, cart }) => {
           className={`max-middle_screen:${menu} top-0 z-20 w-full h-full max-middle_screen:fixed max-middle_screen:bg-[#00000078] left-0`}
         >
           <div
-            className={`w-full max-middle_screen:absolute max-middle_screen:bg-white z-20 max-middle_screen:border-2 max-middle_screen:text-black  max-middle_screen:w-1/3 max-sm:w-1/3 max-mini_screen:w-1/2 max-middle_screen:right-0 max-middle_screen:rounded-bl-3xl max-middle_screen:pb-5 flex max-middle_screen:flex-col max-middle_screen:top-0 max-middle_screen:items-start items-center  justify-between px-5`}
+            className={`w-full h-1/2 max-middle_screen:absolute max-middle_screen:bg-white z-20 max-middle_screen:border-2 max-middle_screen:text-black  max-middle_screen:w-1/2 max-middle_screen:right-0 flex max-middle_screen:flex-col max-middle_screen:top-0 max-middle_screen:items-start items-center  max-middle_screen:justify-start justify-between max-middle_screen:h-full px-5`}
           >
             {/* Qo'ngiroq hizmati adminga qo;ng;iroq qilish */}
             <a
@@ -91,7 +82,16 @@ const Header = ({ data, setCart, cart }) => {
               <img src={telImg} alt="Telefon svg" className="max-lg:w-5" />
               +998 678 45 96
             </a>
-
+            <button
+              onClick={() => setMenu("hidden")}
+              className="hidden max-middle_screen:block absolute z-50 right-0 p-5"
+            >
+              <img
+                src={Iks}
+                alt="menu btn"
+                className={` max-sm:max-sm:w-full px-2`}
+              />
+            </button>
             {/* navbar qismi bo'limlar bo'ylab tezkor o'tish */}
             <nav className="">
               <ul className=" w-full flex items-center justify-between gap-5 text-white h-20 max-middle_screen:h-full max-middle_screen:flex-col max-middle_screen:items-start max-middle_screen:pt-12">
