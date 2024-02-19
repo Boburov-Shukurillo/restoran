@@ -417,7 +417,7 @@ const Home = ({ data, setCart }) => {
             </ul>
             <Link
               to="/menu"
-              className="text-white first-letter:uppercase mb-5 px-5 py-2 border-[1px] rounded-[65px] w-full text-center"
+              className="text-white first-letter:uppercase mb-5 px-5 py-2 border-[1px] rounded-[65px] max-md:w-full text-center"
             >
               to'liq ko'rish
             </Link>
