@@ -89,7 +89,7 @@ const StolBandQilish = () => {
           />
           <button
             type="submit"
-            className="soyalar w-full border-2 px-5 py-4 rounded-2xl bg-orange shadow-lg shadow-orange text-white text-xl font-semibold uppercase max-middle_screen:w-3/4 max-md:w-3/4 max-sm:w-full max-sm:py-2 max-sm:text-lg max-sm:tracking-wider"
+            className="soyalar w-full py-2.5 rounded-2xl bg-[#FD7511] text-white text-xl uppercase max-middle_screen:w-3/4 max-md:w-3/4 max-sm:w-full max-sm:text-lg max-sm:tracking-wider"
           >
             Yuborish
           </button>

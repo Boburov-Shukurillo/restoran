@@ -124,7 +124,7 @@ const Header = ({ data, setCart, cart }) => {
                     to="/galareya"
                     className="flex flex-col items-center gap-1 text-xl font-medium hover:opacity-75 max-my_screen:text-base max-middle_screen:text-black max-lg:text-xs  max-middle_screen:flex-row max-middle_screen:after:hidden max-middle_screen:before:block before:hidden"
                   >
-                    Galaeya
+                    Galareya
                   </NavLink>
                 </li>
                 <li>

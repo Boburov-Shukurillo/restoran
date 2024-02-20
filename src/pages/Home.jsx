@@ -6,9 +6,7 @@ import { slideTitles } from "../data";
 
 // rasimlar
 import dumaloqXinkalin from "../assets/xinkalin.svg";
-import heroMobilBg from "../assets/heroBg.svg";
 import choq from "../assets/choq.svg";
-import choqHac from "../assets/chogHac.svg";
 import kokat from "../assets/kokat.svg";
 import pic1 from "../assets/pic (1).png";
 import pic2 from "../assets/pic (2).png";
@@ -126,7 +124,7 @@ const Home = ({ data, setCart }) => {
           <img src={arrow} alt="" />
         </button>
       )}
-      <div className="hero px-5 mb-5 overflow-hidden">
+      <div className="hero overflow-hidden">
         <div className="containerb relative">
           <div className="w-full h-40 max-sm:h-20"></div>
           <div className="w-1/2 h-full flex items-center  py-20 max-middle_screen:w-full max-md:p-5">
@@ -373,7 +371,7 @@ const Home = ({ data, setCart }) => {
                               {product.price}₽
                             </p>
                             <button
-                              className="w-1/2 px-2 py-2 bg-orange rounded-lg text-[70%] max-lg:text-xs active:bg-transparent active:text-orange active:border-[2px]  active:border-orange border-2 border-orange  max-sm:truncate max-md:w-3/4 max-md:py-3"
+                              className="w-1/2 px-2 py-2 bg-[#FD7511] rounded-lg text-[70%] max-lg:text-xs active:bg-transparent active:text-orange active:border-[2px]  active:border-orange border-2 border-orange  max-sm:truncate max-md:w-3/4 max-md:py-3"
                               onClick={() => handleBuy(product.id)}
                             >
                               Buyurtma berish

@@ -17,6 +17,8 @@ body::-webkit-scrollbar {
 }
 
 nav .active {
+  margin-top: 10px;
+  transition: all 100ms ease;
   color: #d9782a;
 }
 
@@ -139,8 +141,9 @@ nav .active::before {
 .sipererMenu .swiper-wrapper {
   display: flex;
 }
+
 .sipererMenu .swiper-slide {
-  height: 500px;
+  height: 100%;
 }
 
 .Swiperonce {
@@ -176,6 +179,6 @@ nav .active::before {
   margin-bottom: -10px;
 }
 .soyalar {
-  box-shadow: 0 0 30px #eec1b1 inset;
-  filter: drop-shadow(0 0 10px #ff6a00);
+  box-shadow: 0 0 30px #dcdcdc inset;
+  filter: drop-shadow(0 0 10px #fd7511);
 }

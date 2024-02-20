@@ -151,7 +151,7 @@ const Korzinka = ({ cart, setCart }) => {
       </div>
       <form
         onSubmit={handleChange}
-        className="grid grid-cols-4 h-20 gap-5 max-middle_screen:grid-cols-3 max-middle_screen:h-44 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:h-96"
+        className="grid grid-cols-4 h-20 gap-5 max-middle_screen:grid-cols-3 max-middle_screen:h-44 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:h-64"
       >
         <input
           className="w-full h-full rounded-xl px-5 "
@@ -178,7 +178,7 @@ const Korzinka = ({ cart, setCart }) => {
           value={adress}
           required
         />
-        <button className="w-full h-full rounded-2xl bg-orange text-white soyalar text-lg font-bold">
+        <button className="w-full h-full rounded-2xl bg-[#FD7511] text-white soyalar text-lg font-bold">
           Buyurtma Berish
         </button>
       </form>
