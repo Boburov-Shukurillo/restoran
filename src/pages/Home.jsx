@@ -190,9 +190,9 @@ const Home = ({ data, setCart }) => {
       </div>
       <div className="containerb flex  gap-5 max-middle_screen:grid-cols-1 h-full py-10">
         <div className="w-1/2 text-white max-middle_screen:items-center max-middle_screen:text-center flex flex-col justify-between space-y-5 max-middle_screen:hidden">
-          <h3 className="text-[65px] max-lg:text-2xl mb-10 max-md:text-2xl uppercase">
+          <h2 className="text-[65px] max-lg:text-2xl mb-10 max-md:text-2xl uppercase">
             Lorem, ipsum.
-          </h3>
+          </h2>
           <p className="text-lg fon-normal max-lg:w-full max-middle_screen:w-3/4 max-md:w-full  max-md:text-sm max-lg:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo enim
             itaque, atque, quia sit officiis explicabo laboriosam rem voluptatum
@@ -405,13 +405,13 @@ const Home = ({ data, setCart }) => {
                         <h3 className="text-xl tracking-wide max-lg:text-lg max-md:text-sm font-bold first-letter:uppercase mb-1 truncate">
                           {product.name}
                         </h3>
-                        <p className="text-base max-lg:text-base max-md:text-xs text-gray-400 font-medium mb-3">
+                        <h4 className="text-base max-lg:text-base max-md:text-xs text-gray-400 font-medium mb-3">
                           {product.massa}gr
-                        </p>
+                        </h4>
                         <div className="flex items-center justify-between">
-                          <p className="text-base max-lg:text-base  max-md:text-xs font-medium">
+                          <h5 className="text-base max-lg:text-base  max-md:text-xs font-medium">
                             {product.price}₽
-                          </p>
+                          </h5>
                           <button
                             className="px-2 py-2 bg-[#EF6602] rounded-lg text-[100%] max-lg:text-xs active:bg-transparent active:text-[#EF6602] active:border-[2px]  active:border-[#EF6602] border-2 border-[#EF6602]"
                             onClick={() => handleBuy(product.id)}
