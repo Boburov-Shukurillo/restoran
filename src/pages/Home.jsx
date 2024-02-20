@@ -413,7 +413,7 @@ const Home = ({ data, setCart }) => {
                             {product.price}₽
                           </h5>
                           <button
-                            className="px-2 py-2 bg-[#EF6602] rounded-lg text-[100%] max-lg:text-xs active:bg-transparent active:text-[#EF6602] active:border-[2px]  active:border-[#EF6602] border-2 border-[#EF6602]"
+                            className="px-2 py-2 bg-[#FD7511] rounded-lg text-[100%] max-lg:text-xs active:bg-transparent active:text-[#EF6602] active:border-[2px]  active:border-[#EF6602] border-2 border-[#EF6602]"
                             onClick={() => handleBuy(product.id)}
                           >
                             Buyurtma berish
