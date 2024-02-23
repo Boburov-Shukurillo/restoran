@@ -53,7 +53,9 @@ const Korzinka = ({ cart, setCart }) => {
       const telegram_bot_id = "6831636523:AAH-He85gM2AVkPJFd6_DRtHWHJD5bFb9EA";
       const chat_id = "6076096557";
 
-      const telegramMessage = `👤 Ismi: ${name}\n\n 📱 Telefon-Raqam: ${phoneNumber}\n\n ✉️ Adress: ${adress} \n\n foydalanuvchu: ${cart.length}ta mahsulot sotib oldi`;
+      const telegramMessage = `👤 Ismi: ${name}\n\n 📱 Telefon-Raqam: ${phoneNumber}\n\n ✉️ Adress: ${adress} \n\n foydalanuvchu: ${eval(
+        TotalPrice.join("+")
+      )}₱ lik mahsulot sotib oldi`;
 
       axios.post(`https://api.telegram.org/bot${telegram_bot_id}/sendMessage`, {
         chat_id,
@@ -94,24 +96,24 @@ const Korzinka = ({ cart, setCart }) => {
                     alt={product.name + " png"}
                     className=" rounded-3xl border-2 border-orange h-full max-md:hidden w-1/2  max-lg:h-full object-cover"
                   />
-                  <div className="flex flex-col items-start w-3/6">
+                  <div className="flex flex-col items-start w-2/3 truncate">
                     <h3 className="text-4xl first-letter:uppercase max-middle_screen:text-2xl max-mini_screen:text-xl ">
                       {product.name}
                     </h3>
-                    <p className="text-2xl first-letter:uppercase text-gray-300 max-middle_screen:text-lg max-mini_screen:text-sm">
+                    <p className="w-20 max-md:truncate text-2xl first-letter:uppercase text-gray-300 max-middle_screen:text-lg max-mini_screen:text-sm">
                       {product.massa * product.productLength} gr.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="w-44 h-1/4 bg-white rounded-xl text-black flex items-center justify-between p-1 max-md:w-20 max-md:h-7 max-md:rounded-sm">
+              <div className="w-52 h-1/4 bg-white gap-1 rounded-xl text-black flex items-center justify-between p-1 max-md:w-20 max-md:h-7 max-md:rounded-sm">
                 <button
                   onClick={() => removePoduct(i)}
                   className="w-1/3 h-full bg-[#DCDDDF] rounded-lg text-gray-700 font-bold max-mini_screen:text-xl flex items-center justify-center max-md:pb-1 max-md:rounded-sm"
                 >
                   -
                 </button>
-                <span className="w-1/3 flex items-center justify-center">
+                <span className="w-1/3 truncate flex items-center justify-center">
                   {product.productLength}
                 </span>
                 <button
@@ -121,7 +123,7 @@ const Korzinka = ({ cart, setCart }) => {
                   +
                 </button>
               </div>
-              <p className="max-mini_screen:text-xs w-1/12">
+              <p className="max-mini_screen:text-xs w-12 truncate">
                 {product.price * product.productLength}₽
               </p>
               <button

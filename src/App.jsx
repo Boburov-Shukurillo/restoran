@@ -50,7 +50,7 @@ const App = () => {
           }
         />
         <Route path="/galareya" element={<Galareya />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/kontakt" element={<Contact />} />
       </Route>
     )
   );

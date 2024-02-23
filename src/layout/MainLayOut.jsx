@@ -8,7 +8,7 @@ const MainLayOut = ({ cart, setData, data, setCart }) => {
   const [loader, setLoader] = useState(true);
   setTimeout(() => setLoader(false), 300);
   return (
-    <div>
+    <div className="overflow-hidden">
       <Header cart={cart} setData={setData} data={data} setCart={setCart} />
       {loader && (
         <div className="fixed z-50">

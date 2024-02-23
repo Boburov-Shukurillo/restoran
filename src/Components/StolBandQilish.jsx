@@ -29,18 +29,18 @@ const StolBandQilish = () => {
 
   return (
     <div className="containerb ">
-      <div className="grid grid-cols-2 gap-10  p-20 rounded-2xl bg-[#181818] max-middle_screen:grid-cols-1 max-md:text-center max-md:py-10 max-md:px-5">
+      <div className="flex items-center justify-between gap-10  p-20 rounded-2xl bg-[#181818] bg-gradient-to-br from-[#181818] to-[#2d2d2d] max-middle_screen:flex-col max-md:text-center max-middle_screen:gap-5 max-md:py-10 max-md:px-5">
         <div className="w-full h-full flex flex-col justify-between max-middle_screen:items-center">
-          <h3 className="text-[65px] font-bold text-white mb-10 max-my_screen:text-3xl">
+          <h3 className="vetirino text-[65px] font-bold text-white mb-10 max-my_screen:text-3xl">
             Stol Band Qilish
           </h3>
-          <p className="w-full text-lg font-bold text-[#999] mb-5 max-my_screen:text-base max-middle_screen:text-sm max-middle_screen:w-3/4 max-sm:w-full">
+          <p className="gothik w-2/3 text-lg font-bold text-[#999] mb-5 max-my_screen:text-base max-middle_screen:text-sm max-middle_screen:w-3/4 max-sm:w-full">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam
             possimus expedita quos illum nihil quis culpa ab dolore nemo quas?
           </p>
           <a
             href="+99899453323"
-            className="max-md:hidden text-base text-white font-bold flex items-center justify-start gap-5  max-lg:gap-1 max-middle_screen:text-base mb-5"
+            className="max-md:hidden text-xl text-white font-bold flex items-center justify-start gap-5  max-lg:gap-1 max-middle_screen:text-base mb-5"
           >
             <img
               width={32}
@@ -51,36 +51,36 @@ const StolBandQilish = () => {
             />
             +998 (99) 678 45 96
           </a>
-          <address className="max-middle_screen:hidden flex items-center justify-start gap-5 text-[#888] mb-5">
+          <address className="w-2/3 max-middle_screen:hidden flex items-center justify-start gap-5 text-[#888] mb-5">
             <img
               width={27}
               height={34}
               src={loctionPic}
               alt="location picture"
             />
-            <div className="flex flex-col">
-              <p>Lorem ipsum dolor sit amet.</p>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-            </div>
+            <span className="text-xl">
+              Lorem ipsum dolor sit amet. Lorem ipsum dolor, sit amet
+              consectetur adipisicing.
+            </span>
           </address>
-          <p className="max-md:hidden flex items-center text-[#888] gap-5 ">
+          <p className="max-md:hidden flex items-center text-xl text-[#888] gap-5 ">
             <img src={watchSvg} width={28} height={29} alt="clock svg" />
             <span>Ish Vaqti 12:00 | 00:00</span>
           </p>
         </div>
         <form
           onSubmit={StolBandQilish}
-          className="h-full flex flex-col w-full max-md:w-full items-center max-middle_screen:justify-between justify-evenly gap-7"
+          className="h-full w-2/3 flex flex-col max-md:w-full items-center max-middle_screen:justify-between justify-between gap-10"
         >
           <input
-            className="w-full rounded-2xl px-5 py-6 max-middle_screen:py-4 max-middle_screen:w-3/4 max-md:w-3/4 max-sm:w-full max-sm:py-2 max-sm:rounded-md"
+            className="w-full rounded-2xl px-5 py-6 max-middle_screen:py-4 max-middle_screen:w-3/4 max-md:w-3/4 max-sm:w-full max-sm:py-5 max-sm:rounded-2xl"
             type="text"
             required
             onChange={(e) => setName(e.target.value)}
             placeholder="Ism"
           />
           <input
-            className="w-full rounded-2xl px-5 py-6 max-middle_screen:py-4 max-middle_screen:w-3/4 max-md:w-3/4 max-sm:w-full max-sm:py-2 max-sm:rounded-md "
+            className="w-full rounded-2xl px-5 py-6 max-middle_screen:py-4 max-middle_screen:w-3/4 max-md:w-3/4 max-sm:w-full max-sm:py-5 max-sm:rounded-2xl "
             type="telefon raqamingiz"
             pattern="(\+998|8)[\- ]?\d{2}[\- ]?\d{3}[\- ]?\d{2}[\- ]?\d{2}"
             required
@@ -89,11 +89,40 @@ const StolBandQilish = () => {
           />
           <button
             type="submit"
-            className="soyalar w-full py-2.5 rounded-2xl bg-[#FD7511] text-white text-xl uppercase max-middle_screen:w-3/4 max-md:w-3/4 max-sm:w-full max-sm:text-lg max-sm:tracking-wider"
+            className="soyalar w-full py-5 rounded-2xl bg-[#FD7511] text-white text-xl uppercase max-middle_screen:w-3/4 max-md:w-3/4 max-sm:w-full max-sm:text-lg max-sm:tracking-wider"
           >
             Yuborish
           </button>
         </form>
+        <a
+            href="+99899453323"
+            className="w-3/4 max-mini_screen:w-full max-md:flex hidden text-sm text-white font-bold max-md:items-center max-md:justify-start max-md:gap-5  max-lg:gap-1 "
+          >
+            <img
+              width={32}
+              height={32}
+              src={telImg}
+              alt="Telefon svg"
+              className="max-lg:w-5"
+            />
+            +998 (99) 678 45 96
+          </a>
+          <address className="w-3/4 max-mini_screen:w-full max-middle_screen:flex hidden items-start justify-start gap-5 text-start text-[#888] ">
+            <img
+              width={27}
+              height={34}
+              src={loctionPic}
+              alt="location picture"
+            />
+            <span className="text-sm">
+              Lorem ipsum dolor sit amet. Lorem ipsum dolor, sit amet
+              consectetur adipisicing.
+            </span>
+          </address>
+          <p className="w-3/4 max-mini_screen:w-full max-md:flex hidden items-center text-sm text-[#888] gap-5 ">
+            <img src={watchSvg} width={28} height={29} alt="clock svg" />
+            <span>Ish Vaqti 12:00 | 00:00</span>
+          </p>
       </div>
     </div>
   );

@@ -6,7 +6,8 @@ import img5 from "../src/assets/foods (5).png";
 import img6 from "../src/assets/foods (6).png";
 import img7 from "../src/assets/foods (7).png";
 import img8 from "../src/assets/foods (3).png";
-
+import xola from "./assets/xola.svg";
+import chol from "./assets/chol.svg";
 // galareya uchun export rasimlar
 
 export const foods = [
@@ -419,34 +420,45 @@ export const foods = [
   },
 ];
 
+export const imgs = [
+  { title: "this is kavkaz img", img: img1 },
+  { title: "this is kavkaz img", img: img2 },
+  { title: "this is kavkaz img", img: img3 },
+  { title: "this is kavkaz img", img: img4 },
+  { title: "this is kavkaz img", img: img5 },
+  { title: "this is kavkaz img", img: img6 },
+  { title: "this is kavkaz img", img: img7 },
+  { title: "this is kavkaz img", img: img8 },
+];
+
 export const slideTitles = [
   {
-    img: img1,
+    img: xola,
     title: "bir",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
   },
   {
-    img: img2,
+    img: chol,
     title: "ikki",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
   },
   {
-    img: img3,
+    img: xola,
     title: "uch",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
   },
   {
-    img: img4,
+    img: chol,
     title: "to'rt",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
   },
   {
-    img: img5,
+    img: xola,
     title: "besh",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
   },
   {
-    img: img6,
+    img: chol,
     title: "olti",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
   },

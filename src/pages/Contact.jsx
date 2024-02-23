@@ -26,11 +26,11 @@ const Contact = () => {
             </div>
             +998 678 45 96
           </a>
-          <address className="flex items-start justify-start gap-5 text-white mb-5 max-md:hidden">
-            <div className="w-16">
+          <address className="flex items-start justify-start gap-2 text-white mb-5 max-middle_screen:hidden">
+            <div className="7">
               <img src={loctionPic} alt="location svg" />
             </div>
-            <div className="text-start">
+            <div className="text-start w-1/2">
               Lorem ipsum dolor sit amet. Lorem ipsum dolor, sit amet
               consectetur adipisicing.
             </div>
@@ -41,7 +41,7 @@ const Contact = () => {
             </span>
             <span>Ish Vaqti 12:00 | 00:00</span>
           </p>
-          <address className="flex items-start justify-start gap-5 text-white mb-5">
+          <address className="hidden max-middle_screen:flex items-start justify-start gap-5 text-white mb-5 max-middle_screen:w-1/2 max-sm:w-full">
             <div className="w-16">
               <img src={loctionPic} alt="location svg" />
             </div>

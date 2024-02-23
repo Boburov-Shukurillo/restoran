@@ -8,8 +8,25 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: vetirino;
+  src: url(./fontFamly/vetrino.otf);
+}
+ @font-face{
+  font-family: Gothik;
+  src: url(./fontFamly/Century\ Gothic.ttf);
+ }
+.vetirino {
+  font-family: vetirino;
+}
+
+.gothik{
+  font-family: Gothik; 
+}
+
 .containerb {
-  @apply w-full max-w-[1220px] px-5 mx-auto;
+  @apply w-full max-w-[1420px] px-5 mx-auto;
 }
 
 body::-webkit-scrollbar {
@@ -17,8 +34,6 @@ body::-webkit-scrollbar {
 }
 
 nav .active {
-  margin-top: 10px;
-  transition: all 100ms ease;
   color: #d9782a;
 }
 
@@ -63,7 +78,7 @@ nav .active::before {
 .mySwiper {
   width: 100%;
   padding: 0 20px;
-  height: 450px;
+  height: 500px;
   position: relative;
 }
 .swiper-wrapper {
@@ -179,6 +194,6 @@ nav .active::before {
   margin-bottom: -10px;
 }
 .soyalar {
-  box-shadow: 0 0 30px #dcdcdc inset;
+  box-shadow: 0 0 20px #ff6d05 inset;
   filter: drop-shadow(0 0 10px #fd7511);
 }
