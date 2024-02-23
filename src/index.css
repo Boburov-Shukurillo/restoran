@@ -188,10 +188,21 @@ nav .active::before {
 .swoperL2 .swiper-slide {
   width: 320px;
   padding: 20px;
-  height: 320px;
+  height: 350px;
 }
 .swoperL2 .swiper-pagination-horizontal {
   margin-bottom: -10px;
+}
+.sipererMenu2 .swiper-wrapper{
+  height: 520px;
+}
+.sipererMenu2 .swiper-slide {
+  width: 320px;
+  padding: 20px;
+  height: 500px;
+}
+.sipererMenu2 .swiper-pagination-horizontal {
+  margin-bottom: -1px;
 }
 .soyalar {
   box-shadow: 0 0 20px #ff6d05 inset;

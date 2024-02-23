@@ -341,7 +341,7 @@ const Home = ({ data, setCart }) => {
               navigation={true}
               pagination={true}
               modules={[Navigation, Pagination]}
-              className="sipererMenu hidden max-middle_screen:block max-md:mb-0 max-md:w-3/4 max-mini_screen:w-full "
+              className="sipererMenu2 hidden max-middle_screen:block max-md:mb-0 max-md:w-3/4 max-mini_screen:w-full "
             >
               {data.map((product) => {
                 if (product.id < 10) {
