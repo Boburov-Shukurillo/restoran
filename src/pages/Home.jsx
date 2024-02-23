@@ -6,7 +6,7 @@ import { imgs, slideTitles } from "../data";
 
 // rasimlar
 import Rating from "../assets/Rating.svg";
-import dumaloqXinkalin from "../assets/xinkalin500.png";
+import dumaloqXinkalin from "../assets/xinkalin.svg";
 import smXinkalin from "../assets/circleXinkalin.svg";
 import choq from "../assets/choq.svg";
 import kokat from "../assets/kokat.svg";
