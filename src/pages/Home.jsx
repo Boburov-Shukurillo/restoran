@@ -131,9 +131,9 @@ const Home = ({ data, setCart }) => {
           <div className="w-full h-40 max-sm:h-28"></div>
           <div className="w-1/2 h-full flex items-center  py-44 max-middle_screen:w-full max-md:p-0 max-middle_screen:p-0">
             <div className="text-white  h-full flex flex-col justify-between items-start max-middle_screen:items-center">
-              <h1 className="vetirino text-[130px] leading-[70px] max-middle_screen:text-[75px] max-md:leading-8 max-middle_screen:leading-10 mb-10 font-bold max-md:text-center max-mini_screen:text-3xl max-md:text-5xl  max-mini_screen:leading-5 max-md:mb-10">
+              <h1 className="vetirino text-[130px] leading-[70px] max-middle_screen:text-[75px] max-md:leading-8 max-middle_screen:leading-10 mb-10 font-bold max-md:text-center max-md:text-4xl  max-mini_screen:leading-5 max-md:mb-10">
                 Restoran <br />
-                <span className="text-[75px] max-middle_screen:text-[45px] max-md:text-3xl max-mini_screen:text-lg max-md:leading-3">
+                <span className="text-[75px] max-middle_screen:text-[45px] max-md:text-xl  max-md:leading-3">
                   kavkazniy kuxni
                 </span>
               </h1>
@@ -142,7 +142,7 @@ const Home = ({ data, setCart }) => {
                 Dolores odit, corporis adipisci incidunt esse perferendis magni
                 perspiciatis aliquid minus voluptatem!
               </p>
-              <div className="max-middle_screen:block hidden max-middle_screen:relative w-[500px] h-[500px] max-sm:w-full max-sm:h-96">
+              <div className="max-middle_screen:block hidden max-middle_screen:relative w-[500px] h-[500px] max-sm:w-full max-sm:h-3/4">
                 <img
                   src={dumaloqXinkalin}
                   className="w-full h-full "

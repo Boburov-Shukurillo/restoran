@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import arrImg from "../assets/Arrow 4.svg";
+import StolBandQilish from "../Components/StolBandQilish";
 
 const Menu = ({ data, setCart }) => {
   const [filter, setFilter] = useState("food");
@@ -238,6 +239,7 @@ const Menu = ({ data, setCart }) => {
           })}
         </ul>
       </div>
+      <StolBandQilish/>
     </div>
   );
 };

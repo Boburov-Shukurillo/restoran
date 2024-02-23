@@ -73,14 +73,14 @@ const StolBandQilish = () => {
           className="h-full w-2/3 flex flex-col max-md:w-full items-center max-middle_screen:justify-between justify-between gap-10"
         >
           <input
-            className="w-full rounded-2xl px-5 py-6 max-middle_screen:py-4 max-middle_screen:w-3/4 max-md:w-3/4 max-sm:w-full max-sm:py-5 max-sm:rounded-2xl"
+            className="w-full rounded-2xl px-5 py-6 max-middle_screen:py-4 max-middle_screen:w-3/4 max-md:w-3/4 max-sm:w-full max-sm:py-5 max-sm:rounded-2xl bg-white/25 text-white"
             type="text"
             required
             onChange={(e) => setName(e.target.value)}
             placeholder="Ism"
           />
           <input
-            className="w-full rounded-2xl px-5 py-6 max-middle_screen:py-4 max-middle_screen:w-3/4 max-md:w-3/4 max-sm:w-full max-sm:py-5 max-sm:rounded-2xl "
+            className="w-full rounded-2xl px-5 py-6 max-middle_screen:py-4 max-middle_screen:w-3/4 max-md:w-3/4 max-sm:w-full max-sm:py-5 max-sm:rounded-2xl bg-white/25 text-white "
             type="telefon raqamingiz"
             pattern="(\+998|8)[\- ]?\d{2}[\- ]?\d{3}[\- ]?\d{2}[\- ]?\d{2}"
             required
