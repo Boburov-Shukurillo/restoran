@@ -166,7 +166,7 @@ const Home = ({ data, setCart }) => {
             </div>
             <div className="max-middle_screen:hidden">
               <img
-                src={dumaloqXinkalin}
+                src={smXinkalin}
                 alt="xinkalin png"
                 height={800}
                 width={800}
