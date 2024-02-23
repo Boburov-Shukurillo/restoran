@@ -170,12 +170,12 @@ const Home = ({ data, setCart }) => {
                 alt="xinkalin png"
                 height={800}
                 width={800}
-                className="w-1/2 h-4/6 scale-[2] absolute bottom-5 -right-[27%] z-20 rounded-full max-middle_screen:hidden"
+                className="w-[700px] h-[700px] scale-[2] absolute bottom-5 -right-[27%] z-20 rounded-full max-middle_screen:hidden"
               />
               <img
                 src={choq}
                 alt="cho'g' svg"
-                className="w-10/12 h-5/6 absolute bottom-0 -right-[30%]  max-my_screen:hidden"
+                className="w-10/12 h-5/6 absolute bottom-0 -right-[20%]  max-my_screen:hidden"
               />
               <img
                 src={kokat}
