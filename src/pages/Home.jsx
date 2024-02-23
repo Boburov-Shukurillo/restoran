@@ -6,7 +6,7 @@ import { imgs, slideTitles } from "../data";
 
 // rasimlar
 import Rating from "../assets/Rating.svg";
-import dumaloqXinkalin from "../assets/xinkalin.svg";
+import dumaloqXinkalin from "../assets/xinkalin500.png";
 import smXinkalin from "../assets/circleXinkalin.svg";
 import choq from "../assets/choq.svg";
 import kokat from "../assets/kokat.svg";
@@ -170,7 +170,7 @@ const Home = ({ data, setCart }) => {
                 alt="xinkalin png"
                 height={800}
                 width={800}
-                className="w-1/2 h-4/6 scale-[2] absolute bottom-5 -right-[27%] z-20 max-middle_screen:hidden"
+                className="w-1/2 h-4/6 scale-[2] absolute bottom-5 -right-[27%] z-20 rounded-full max-middle_screen:hidden"
               />
               <img
                 src={choq}
