@@ -29,7 +29,7 @@ const StolBandQilish = () => {
 
   return (
     <div className="containerb ">
-      <div className="flex items-center justify-between gap-10  p-20 rounded-2xl bg-[#181818] bg-gradient-to-br from-[#181818] to-[#2d2d2d] max-middle_screen:flex-col max-md:text-center max-middle_screen:gap-5 max-md:py-10 max-md:px-5">
+      <div className="flex items-center  justify-between gap-10  p-20 rounded-2xl bg-[#181818] bg-gradient-to-br from-[#181818] to-[#2d2d2d] max-middle_screen:flex-col max-md:text-center max-middle_screen:gap-5 max-md:py-10 max-md:px-5">
         <div className="w-full h-full flex flex-col justify-between max-middle_screen:items-center">
           <h3 className="vetirino text-[65px] font-bold text-white mb-10 max-my_screen:text-3xl">
             Stol Band Qilish
@@ -70,7 +70,7 @@ const StolBandQilish = () => {
         </div>
         <form
           onSubmit={StolBandQilish}
-          className="h-full w-2/3 flex flex-col max-md:w-full items-center max-middle_screen:justify-between justify-between gap-10"
+          className="h-full w-2/3 flex flex-col max-md:w-full items-center max-middle_screen:justify-between justify-between gap-20 max-md:gap-10"
         >
           <input
             className="w-full rounded-2xl px-5 py-6 max-middle_screen:py-4 max-middle_screen:w-3/4 max-md:w-3/4 max-sm:w-full max-sm:py-5 max-sm:rounded-2xl bg-white/25 text-white"
@@ -103,7 +103,7 @@ const StolBandQilish = () => {
               height={32}
               src={telImg}
               alt="Telefon svg"
-              className="max-lg:w-5"
+              className="w-7"
             />
             +998 (99) 678 45 96
           </a>

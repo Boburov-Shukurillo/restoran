@@ -127,7 +127,7 @@ const Menu = ({ data, setCart }) => {
           <h1 className="vetirino text-white text-6xl font-bold uppercase font-serif max-middle_screen:text-3xl max-md:text-xl mb-20">
             bizning menu
           </h1>
-          <div className="w-full flex items-center justify-between flex-wrap max-middle_screen:grid max-middle_screen:grid-cols-1 max-middle_screen:w-1/2 ">
+          <div className="w-full flex items-center justify-between flex-wrap gap-y-5 max-middle_screen:grid max-middle_screen:grid-cols-1 max-middle_screen:w-2/3 ">
             <span
               onClick={filterFoods}
               className={`w-60 h-16 max-sm:h-10 gothik flex text-center justify-center items-center max-middle_screen:justify-between salom px-5 py-2 text-lg font-semibold rounded-full border-[1px] border-[#6D6D6E] max-middle_screen:border-[#E6783F] hover:border-[#E6783F]  text-white max-middle_screen:w-full max-middle_screen:rounded-md max-middle_screen:mb-2 max-middle_screen:text-xs max-mini_screen:text-[10px]`}

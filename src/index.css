@@ -13,16 +13,16 @@
   font-family: vetirino;
   src: url(./fontFamly/vetrino.otf);
 }
- @font-face{
+@font-face {
   font-family: Gothik;
   src: url(./fontFamly/Century\ Gothic.ttf);
- }
+}
 .vetirino {
   font-family: vetirino;
 }
 
-.gothik{
-  font-family: Gothik; 
+.gothik {
+  font-family: Gothik;
 }
 
 .containerb {
@@ -155,6 +155,7 @@ nav .active::before {
 
 .sipererMenu .swiper-wrapper {
   display: flex;
+  height: 300px;
 }
 
 .sipererMenu .swiper-slide {
@@ -193,16 +194,36 @@ nav .active::before {
 .swoperL2 .swiper-pagination-horizontal {
   margin-bottom: -10px;
 }
-.sipererMenu2 .swiper-wrapper{
-  height: 520px;
+.sipererMenu2 {
+  width: 300px;
+  padding: 0 20px;
+  height: 100%;
+  overflow: hidden;
+}
+.sipererMenu2 .swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  height: 400px;
 }
 .sipererMenu2 .swiper-slide {
-  width: 320px;
-  padding: 20px;
-  height: 500px;
+  width: 100%;
+  height: 90%;
+  background-color: #00000024;
+}
+.sipererMenu2 .swiper-button-next,
+.swiper-button-prev {
+  width: 45px;
+  height: 40px;
+  background-image: url(./assets/next.svg);
+  bottom: 50%;
+  background-size: contain;
+}
+.sipererMenu2 .swiper-button-next{
+  transform: rotate(180deg);
 }
 .sipererMenu2 .swiper-pagination-horizontal {
-  margin-bottom: -1px;
+  margin-bottom: 0px;
 }
 .soyalar {
   box-shadow: 0 0 20px #ff6d05 inset;

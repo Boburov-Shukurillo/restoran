@@ -8,7 +8,7 @@ export default {
       },
       screens: {
         my_screen: "1220px",
-        middle_screen: "850px",
+        middle_screen: "860px",
         mini_screen: "400px",
       },
     },

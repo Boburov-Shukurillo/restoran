@@ -60,7 +60,7 @@ const Header = ({ data, setCart, cart }) => {
           <div
             className={`max-middle_screen:${menu} w-full z-50 gap-10 flex justify-between items-center max-middle_screen:justify-start max-middle_screen:items-start  max-middle_screen:p-5 max-middle_screen:flex-col max-middle_screen:fixed max-middle_screen:w-1/3 max-md:w-2/3 max-md:h-full max-middle_screen:bg-white max-middle_screen:top-0 max-middle_screen:right-0`}
           >
-            <a href="#" className="flex items-center max-middle_screen:hidden gothik">
+            <a href="+998930982406" target="_blank" className="flex items-center max-middle_screen:hidden gothik">
               <img
                 src={telImg}
                 alt="tel icon"
@@ -137,7 +137,7 @@ const Header = ({ data, setCart, cart }) => {
               <span className="hidden max-middle_screen:block">korzinka</span>
             </Link>
 
-            <a href="#" className="hidden max-middle_screen:items-center max-middle_screen:flex">
+            <a href="+998930982403" className="hidden max-middle_screen:items-center max-middle_screen:flex">
               <img
                 src={telImg}
                 alt="tel icon"
@@ -148,7 +148,7 @@ const Header = ({ data, setCart, cart }) => {
               </span>
             </a>
 
-            <a href="#" className="hidden max-middle_screen:items-center max-middle_screen:flex">
+            <a href="https://restoran-site.netlify.app/" className="hidden max-middle_screen:items-center max-middle_screen:flex">
               <img
                 src={locIcon}
                 alt="tel icon"

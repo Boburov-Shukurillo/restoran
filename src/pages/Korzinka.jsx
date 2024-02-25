@@ -69,17 +69,19 @@ const Korzinka = ({ cart, setCart }) => {
   };
 
   return (
-    <div className="containerb py-20 px-2 max-md:py-10">
+    <div className="containerb py-20 px-2 max-md:py-10 flex flex-col ">
       <ToastContainer />
       <h1 className="mb-20 text-[65px] font-bold font-[cursive] text-white max-middle_screen:text-5xl max-mini_screen:text-3xl max-md:mb-10">
         Korzinka
       </h1>
-      <hr className="mb-10" />
+      <hr className="mb-10 " />
       {cart.length === 0 && (
-        <h1 className="text-center text-5xl font-bold text-white tracking-widest">
+        <h1 className="text-center text-5xl font-bold text-white tracking-widest my-20 max-sm:text-2xl">
           Cartda Hechnarsa Yo'q
         </h1>
       )}
+
+      {/* cardagi mahsulotlar */}
       <ul className={`mb-10`}>
         {cart.map((product, i) => {
           return (
@@ -97,22 +99,22 @@ const Korzinka = ({ cart, setCart }) => {
                       className=" rounded-3xl max-md:rounded-md border-2 border-orange h-full  object-cover"
                   />
                   <div className="flex flex-col items-start w-2/3 ">
-                    <h3 className="text-4xl first-letter:uppercase max-middle_screen:text-2xl max-mini_screen:text-xl ">
+                    <h3 className="text-4xl first-letter:uppercase max-middle_screen:text-2xl max-mini_screen:text-xl w-20 truncate">
                       {product.name}
                     </h3>
                     <p className="max-md:truncate text-2xl first-letter:uppercase text-gray-300 max-middle_screen:text-lg max-mini_screen:text-sm">
                       {product.massa * product.productLength} gr.
                     </p>
-                    <p className="max-mini_screen:text-xs w-12 truncate">
+                    <p className="max-mini_screen:text-xs w-12 truncate hidden max-md:block">
                 {product.price * product.productLength}₽
               </p>
                   </div>
                 </div>
               </div>
-              <div className="w-52 h-1/4 bg-white gap-1 rounded-xl text-black flex items-center justify-between p-1 max-md:w-20 max-md:h-7 max-md:rounded-sm">
+              <div className="w-52 h-1/3 bg-white gap-1 rounded-xl text-black flex items-center justify-between p-1 max-md:w-20 max-md:h-7 max-md:rounded-sm">
                 <button
                   onClick={() => removePoduct(i)}
-                  className="w-1/3 h-full bg-[#DCDDDF] rounded-lg text-gray-700 font-bold max-mini_screen:text-xl flex items-center justify-center max-md:pb-1 max-md:rounded-sm"
+                  className="w-1/3 h-full bg-[#DCDDDF] rounded-lg text-gray-700 text-4xl font-bold max-mini_screen:text-xl flex items-start justify-center max-md:rounded-sm max-md:items-end"
                 >
                   -
                 </button>
@@ -121,14 +123,14 @@ const Korzinka = ({ cart, setCart }) => {
                 </span>
                 <button
                   onClick={() => addProduct(i)}
-                  className="w-1/3 h-full bg-[#EF6602] rounded-lg text-white font-bold max-mini_screen:text-xl flex items-center justify-center max-md:pb-1 max-md:rounded-sm"
+                  className="w-1/3 h-full bg-[#EF6602] rounded-lg text-4xl text-white font-bold max-mini_screen:text-xl flex items-start justify-center max-md:rounded-sm max-md:items-end"
                 >
                   +
                 </button>
               </div>
-              {/* <p className="max-mini_screen:text-xs w-12 truncate">
+              <p className="text-3xl w-44 truncate max-md:hidden">
                 {product.price * product.productLength}₽
-              </p> */}
+              </p>
               <button
                 onClick={() => handleRemove(i)}
                 className="text-5xl font-bold font-[cursive] max-mini_screen:text-xl max-md:absolute max-md:-top-1/4 max-md:right-0 max-md:font-thin max-md:font-sans"
@@ -139,7 +141,11 @@ const Korzinka = ({ cart, setCart }) => {
           );
         })}
       </ul>
+
+      {/* chiziq */}
       <hr className="mb-5" />
+
+      {/* umumiy narhni jisoblash */}
       <div className="w-full flex items-center justify-between max-middle_screen:flex-col mb-5">
         <p className="w-1/2 text-[#DCDDDF] text-base max-middle_screen:w-full max-middle_screen:text-center max-middle_screen:mb-5 max-md:text-sm">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
@@ -154,9 +160,11 @@ const Korzinka = ({ cart, setCart }) => {
           Total Price : {cart.length > 0 ? eval(TotalPrice.join("+")) : 0} ₱
         </h1>
       </div>
+
+      {/* buyurtma berish joyi */}
       <form
         onSubmit={handleChange}
-        className="grid grid-cols-4 h-20 gap-5 max-middle_screen:grid-cols-3 max-middle_screen:h-44 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:h-64"
+        className="max-sm:w-2/3 self-center w-full  grid grid-cols-4 h-20 gap-5 max-middle_screen:grid-cols-3 max-middle_screen:h-44 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:h-64"
       >
         <input
           className="w-full h-full rounded-xl px-5 bg-white/15 text-white"

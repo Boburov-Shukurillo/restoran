@@ -27,11 +27,6 @@ import arrow from "../assets/Arrow 4.svg";
 const Home = ({ data, setCart }) => {
   // menudagi taomlarni filter qilib chiqarib beradi
   const [filter, setFilter] = useState("food");
-  const [food, setFoodstyle] = useState("salom");
-  const [salat, setSalatstyle] = useState("");
-  const [drink, setDrinkstyle] = useState("");
-  const [desert, setDesert] = useState("");
-  const [withoutOil, setWith] = useState("");
   const [show, setShow] = useState(4);
   const [slideShow, setSlideShow] = useState(3);
 
@@ -67,73 +62,36 @@ const Home = ({ data, setCart }) => {
 
   const filterFoods = () => {
     setFilter("food");
-    setFoodstyle("salom");
-    setSalatstyle("");
-    setDrinkstyle("");
-    setDesert("");
-    setWith("");
   };
   const filterDrinks = () => {
     setFilter("drink");
-    setDrinkstyle("salom");
-    setFoodstyle("");
-    setSalatstyle("");
-    setDesert("");
-    setWith("");
   };
   const filterDesert = () => {
     setFilter("desert");
-    setDesert("salom");
-    setDrinkstyle("");
-    setFoodstyle("");
-    setSalatstyle("");
-    setWith("");
   };
   const filterSalat = () => {
     setFilter("salat");
-    setSalatstyle("salom");
-    setDesert("");
-    setDrinkstyle("");
-    setFoodstyle("");
-    setWith("");
   };
   const filterWithoutOil = () => {
     setFilter("withoutOil");
-    setWith("salom");
-    setDesert("");
-    setDrinkstyle("");
-    setFoodstyle("");
-    setSalatstyle("");
   };
-
-  const [customSwiper, setCustomSwiper] = useState({});
 
   const stolBandQilish = () => {
     window.scrollTo({ left: 0, top: "4000", behavior: "smooth" });
   };
-  const toTop = () => {
-    window.scrollTo({ left: 0, top: "0", behavior: "smooth" });
-  };
-  const win = window.getComputedStyle > 500;
+
   return (
     <div className="pb-20">
       <ToastContainer />
-      {win && (
-        <button
-          onClick={toTop}
-          className="fixed right-10 bottom-10 z-50 -rotate-90 px-4 py-3.5 bg-white border-8 border-[#F49549] rounded-full "
-        >
-          <img src={arrow} alt="arrow icon" />
-        </button>
-      )}
-      <div className="hero overflow-hidden  ">
+
+      <div className="hero overflow-hidden  bg-[#141414]">
         <div className="containerb relative ">
           <div className="w-full h-40 max-sm:h-28"></div>
           <div className="w-1/2 h-full flex items-center  py-44 max-middle_screen:w-full max-md:p-0 max-middle_screen:py-5">
             <div className="text-white  h-full flex flex-col justify-between items-start max-middle_screen:items-center">
-              <h1 className="vetirino text-[130px] leading-[70px] max-middle_screen:text-[75px] max-md:leading-8 max-middle_screen:leading-10 mb-10 font-bold max-md:text-center max-md:text-4xl  max-mini_screen:leading-5 max-md:mb-10">
+              <h1 className="vetirino text-[130px] leading-[70px] max-middle_screen:text-[75px] max-md:leading-8 max-middle_screen:leading-10 mb-10 font-bold max-md:text-center max-md:text-6xl  max-mini_screen:leading-10 max-md:mb-10">
                 Restoran <br />
-                <span className="text-[75px] max-middle_screen:text-[45px] max-md:text-xl  max-md:leading-3">
+                <span className="text-[75px] max-middle_screen:text-[45px] max-md:text-4xl  max-md:leading-3">
                   kavkazniy kuxni
                 </span>
               </h1>
@@ -145,7 +103,7 @@ const Home = ({ data, setCart }) => {
               <div className="max-middle_screen:block hidden max-middle_screen:relative w-[500px] h-[500px] max-sm:w-full max-sm:h-3/4">
                 <img
                   src={smXinkalin}
-                  className="w-full h-full "
+                  className="w-full h-full"
                   width={200}
                   height={206}
                   alt="xinkalin"
@@ -159,7 +117,7 @@ const Home = ({ data, setCart }) => {
               </div>
               <button
                 onClick={stolBandQilish}
-                className="w-3/5 soyalar px-20 py-6 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-white font-bold rounded-3xl text-2xl max-sm:text-lg max-md:px-5 max-middle_screen:w-1/2 max-sm:w-2/3"
+                className="w-3/5 soyalar px-20 py-6 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-white font-bold rounded-3xl text-2xl max-sm:text-lg max-md:px-5 max-middle_screen:w-1/2 max-sm:w-2/3 max-sm:py-4 max-sm:rounded-xl mb-5"
               >
                 Stol Band Qilish
               </button>
@@ -170,7 +128,7 @@ const Home = ({ data, setCart }) => {
                 alt="xinkalin png"
                 height={800}
                 width={800}
-                className="w-[700px] h-[700px] scale-[2] absolute bottom-5 -right-[27%] z-20 rounded-full max-middle_screen:hidden"
+                className="w-[1200px] h-[1200px]  absolute -top-0 -right-1/2 z-20 rounded-full max-middle_screen:hidden"
               />
               <img
                 src={choq}
@@ -182,12 +140,14 @@ const Home = ({ data, setCart }) => {
                 alt="Ko'kat Png"
                 width={100}
                 height={100}
-                className="w-1/6 h-1/6 absolute left-3/4 z-30 bottom-10 "
+                className="w-1/6 h-1/6 absolute left-3/4 z-30 bottom-20 "
               />
             </div>
           </div>
         </div>
       </div>
+
+      {/* restoran haqida qisqacha */}
       <div className="containerb flex  gap-5 max-middle_screen:grid-cols-1 h-full py-10 justify-between">
         <div className="w-2/5 text-white max-middle_screen:items-center max-middle_screen:text-center flex flex-col justify-between space-y-5 max-middle_screen:hidden">
           <h2 className="vetirino text-[65px] max-lg:text-2xl mb-10 max-md:text-2xl uppercase">
@@ -295,6 +255,8 @@ const Home = ({ data, setCart }) => {
           })}
         </Swiper>
       </div>
+
+      {/* taom buyurtmal beriladiga joy */}
       <div className="bg bg-contain max-[1700px]:bg-cover">
         <div className="containerb  h-full py-5 bg-balck mb-20 ">
           <div className="bg-2 py-20 flex flex-col items-center max-md:py-20">
@@ -305,31 +267,31 @@ const Home = ({ data, setCart }) => {
               <div className="max-md:hidden w-full flex justify-evenly gap-5 max-middle_screen:grid-cols-4 max-md:grid-cols-3 max-sm:grid-cols-2 ">
                 <span
                   onClick={filterSalat}
-                  className={`flex flex-col items-center justify-center w-64 h-16 text-base cursor-pointer ${salat}  text-xl rounded-full border-[1px] border-[#6D6D6E]  text-white max-my_screen:text-xs text-center`}
+                  className={`flex flex-col items-center justify-center w-64 h-16 text-base cursor-pointer rounded-full border-[1px] border-[#6D6D6E]  text-white max-my_screen:text-xs text-center salom`}
                 >
                   Salatlar
                 </span>
                 <span
                   onClick={filterFoods}
-                  className={`flex flex-col items-center justify-center w-64 h-16 text-base cursor-pointer ${food}  text-xl rounded-full border-[1px] border-[#6D6D6E]  text-white max-my_screen:text-xs text-center`}
+                  className={`flex flex-col items-center justify-center w-64 h-16 text-base cursor-pointer rounded-full border-[1px] border-[#6D6D6E]  text-white max-my_screen:text-xs text-center salom`}
                 >
                   Mahsus Taomlar
                 </span>
                 <span
                   onClick={filterWithoutOil}
-                  className={`flex flex-col items-center justify-center w-64 h-16 text-base cursor-pointer ${withoutOil}  text-xl rounded-full border-[1px] border-[#6D6D6E]  text-white max-my_screen:text-xs text-center`}
+                  className={`flex flex-col items-center justify-center w-64 h-16 text-base cursor-pointer rounded-full border-[1px] border-[#6D6D6E]  text-white max-my_screen:text-xs text-center salom`}
                 >
                   Yog'siz Taomlar
                 </span>
                 <span
                   onClick={filterDrinks}
-                  className={`flex flex-col items-center justify-center w-64 h-16 text-base cursor-pointer ${drink}  text-xl rounded-full border-[1px] border-[#6D6D6E]  text-white max-my_screen:text-xs text-center`}
+                  className={`flex flex-col items-center justify-center w-64 h-16 text-base cursor-pointer rounded-full border-[1px] border-[#6D6D6E]  text-white max-my_screen:text-xs text-center salom`}
                 >
                   Ichimiklar
                 </span>
                 <span
                   onClick={filterDesert}
-                  className={`flex flex-col items-center justify-center w-64 h-16 text-base cursor-pointer ${desert}  text-xl rounded-full border-[1px] border-[#6D6D6E]  text-white max-my_screen:text-xs text-center`}
+                  className={`flex flex-col items-center justify-center w-64 h-16 text-base cursor-pointer rounded-full border-[1px] border-[#6D6D6E]  text-white max-my_screen:text-xs text-center salom`}
                 >
                   Shrinliklar
                 </span>
@@ -341,44 +303,37 @@ const Home = ({ data, setCart }) => {
               navigation={true}
               pagination={true}
               modules={[Navigation, Pagination]}
-              className="sipererMenu2 hidden max-middle_screen:block max-md:mb-0 max-md:w-3/4 max-mini_screen:w-full "
+              className="sipererMenu2 hidden max-middle_screen:flex "
             >
-              {data.map((product) => {
-                if (product.id < 10) {
+              {data.map((food) => {
+                if (food.id < 10) {
                   return (
-                    <SwiperSlide
-                      key={product.id}
-                      className="flex flex-col items-center px-3 py-3  "
-                    >
+                    <SwiperSlide className="text-white rounded-3xl pb-5">
                       <li
-                        key={product.id}
-                        className="w-3/4 max-md:w-full text-white bg-[#d9d9d91f] rounded-3xl h-full"
+                        key={food.id}
+                        className="flex flex-col items-start h-full justify-between"
                       >
                         <img
-                          src={product.img}
-                          alt={product.name + " png"}
-                          className="rounded-xl w-full object-cover"
-                          width={300}
-                          height={350}
+                          src={food.img}
+                          alt={food.name + "'s img"}
+                          className="rounded-xl w-full h-52"
                         />
-                        <div className="px-5 py-5 flex flex-col items-start">
-                          <h3 className="vetirino max-md:text-xl font-bold first-letter:uppercase truncate">
-                            {product.name}
+                        <div className="px-5">
+                          <h3 className="text-xl vetirino first-letter:uppercase">
+                            {food.name}
                           </h3>
-                          <p className="gothik max-md:text-base text-[#DCDDDF] font-medium mb-3">
-                            {product.massa}gr.
-                          </p>
-                          <div className="flex items-center justify-between w-full">
-                            <p className="gothik max-md:text-2xl font-medium">
-                              {product.price}₽
-                            </p>
-                            <button
-                              className="w-1/2 px-2 py-2 bg-[#FD7511] rounded-lg text-xl max-md:text-base active:bg-transparent active:text-orange active:border-2  active:border-orange border-2 border-orange  max-md:w-2/3 max-md:py-3"
-                              onClick={() => handleBuy(product.id)}
-                            >
-                              Buyurtma berish
-                            </button>
-                          </div>
+                          <h4 className="text-xl gothik text-gray-500">
+                            {food.massa}gr.
+                          </h4>
+                        </div>
+                        <div className="w-full h-5 flex items-center justify-between px-5">
+                          <h3 className="gothik text-xl">{food.price} ₱</h3>
+                          <button
+                            onClick={() => handleBuy(food.id)}
+                            className="px-2 py-1 bg-orange rounded-lg gothik first-letter:uppercase active:bg-transparent box-content border-2 border-orange active:text-orange"
+                          >
+                            buyurtma berish
+                          </button>
                         </div>
                       </li>
                     </SwiperSlide>
@@ -386,6 +341,7 @@ const Home = ({ data, setCart }) => {
                 }
               })}
             </Swiper>
+        
             <ul className="w-full grid grid-cols-4 max-md:grid-cols-2 gap-10 max-lg:grid-cols-3 max-sm:hidden py-10 max-middle_screen:hidden ">
               {data.map((product) => {
                 if (product.type === filter) {
@@ -413,7 +369,7 @@ const Home = ({ data, setCart }) => {
                             {product.price}₽
                           </h5>
                           <button
-                            className="gothik px-2 py-2 bg-[#FD7511] rounded-lg text-[100%] max-lg:text-xs active:bg-transparent active:text-[#EF6602] active:border-[2px]  active:border-[#EF6602] border-2 border-[#EF6602]"
+                            className="gothik px-2 py-2 bg-[#FD7511] rounded-lg text-[100%] max-lg:text-xs active:bg-transparent active:text-[#FD7511] active:border-[2px]  active:border-[#FD7511] border-2 border-[#FD7511]"
                             onClick={() => handleBuy(product.id)}
                           >
                             Buyurtma berish
@@ -427,16 +383,18 @@ const Home = ({ data, setCart }) => {
             </ul>
             <Link
               to="/menu"
-              className="w-1/4 text-white first-letter:uppercase mb-5 px-5 py-2 border-[1px] rounded-full max-md:w-full text-center mt-10"
+              className="w-1/4 text-white first-letter:uppercase mb-5 px-5 py-2 border-[1px] rounded-full max-md:w-1/3 text-center mt-10"
             >
               to'liq ko'rish
             </Link>
           </div>
         </div>
       </div>
+
+      {/*  restoran hqaida mijozlarimiznig fikirlari*/}
       <div className="containerb">
         <div className="flex w-full justify-between items-center mb-10">
-          <h2 className="vetirino text-[65px] text-white w-1/2 max-middle_screen:w-full max-sm:text-3xl max-middle_screen:text-center">
+          <h2 className="vetirino text-[65px] text-white w-1/2 max-middle_screen:w-full max-xl:text-5xl max-sm:text-3xl max-middle_screen:text-center">
             Restoran haqida mijozlarning fikri
           </h2>
           <img

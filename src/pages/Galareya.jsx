@@ -120,7 +120,7 @@ const Galareya = () => {
       </div>
       <button
         onClick={showAll}
-        className={`hidden max-middle_screen:block px-5 py-2 border-2 rounded-3xl text-white mb-5`}
+        className={`hidden w-2/3 max-middle_screen:block px-5 py-2 border-2 rounded-3xl text-white mb-5`}
       >
         {show==="hidden"?"to'liq ko'rish":"yashirish"}
       </button>
