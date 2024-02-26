@@ -90,7 +90,7 @@ const Home = ({ data, setCart }) => {
           <div className="w-1/2 h-full flex items-center  py-44 max-middle_screen:w-full max-md:p-0 max-middle_screen:py-5">
             <div className="text-white  h-full flex flex-col justify-between items-start max-middle_screen:items-center">
               <h1 className="vetirino text-[130px] leading-[70px] max-middle_screen:text-[75px] max-md:leading-8 max-middle_screen:leading-10 mb-10 font-bold max-md:text-center max-md:text-6xl  max-mini_screen:leading-10 max-md:mb-10">
-                Restoran <br />
+                Restoran <br />aslaopksa
                 <span className="text-[75px] max-middle_screen:text-[45px] max-md:text-4xl  max-md:leading-3">
                   kavkazniy kuxni
                 </span>
