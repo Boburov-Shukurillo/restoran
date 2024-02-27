@@ -6,7 +6,7 @@ import { Navigate } from "react-router-dom";
 import { Navigation, Pagination } from "swiper/modules";
 const About = () => {
   return (
-    <div className="h-[100%]  bg-[#1E1E1E] ">
+    <div className="h-[100%]  bg-[#1E1E1E] pb-20">
       <div className="nimadi w-full">
         <div className="containerb w-full py-44 text-white max-middle_screen:text-center max-middle_screen:flex max-middle_screen:flex-col max-middle_screen:items-center">
           <h1 className="text-[65px] font-semibold mb-10 max-middle_screen:text-4xl">
@@ -100,16 +100,17 @@ const About = () => {
           slidesPerView={2}
           navigation={true}
           modules={[Navigation]}
+          className="swiperAbout"
         >
           {foods.map((imgs) => {
             return (
-              <SwiperSlide key={imgs.id}>
+              <SwiperSlide key={imgs.id} >
                 <img
                   src={imgs.img}
                   width={565}
                   height={512}
                   alt={imgs.name + "ning rasmi"}
-                  className="w-full rounded-lg max-middle_screen:hidden"
+                  className="w-full h-full object-cover rounded-lg max-middle_screen:hidden"
                 />
               </SwiperSlide>
             );

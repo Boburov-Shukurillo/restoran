@@ -7,7 +7,7 @@ import img04 from "../assets/galareya (3).png";
 const Contact = () => {
   return (
     <div className="containerb py-20">
-      <div className="flex justify-between items-center gap-20 p-10 bg-[#111] rounded-2xl max-middle_screen:flex-col max-md:gap-5">
+      <div className="flex justify-between items-center gap-20 p-10 bg-[#2a2a2a] rounded-2xl max-middle_screen:flex-col max-md:gap-5">
         <div className="text-white space-y-5 flex flex-col max-middle_screen:items-center max-middle_screen:text-center">
           <h3 className="text-[65px] font-bold w-full max-my_screen:text-4xl max-md:text-2xl max-sm::text-sm">
             Biz Bilan Bog'laning

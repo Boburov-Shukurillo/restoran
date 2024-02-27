@@ -11,14 +11,14 @@ const MainLayOut = ({ cart, setData, data, setCart }) => {
     <div className="overflow-hidden">
       <Header cart={cart} setData={setData} data={data} setCart={setCart} />
       {loader && (
-        <div className="fixed z-50">
+        <div className="fixed z-50 top-0">
           <Loader />
         </div>
       )}
       <main className="bg-[#1E1E1E]">
-        <Outlet wtf="knock knock face" />
+        <Outlet />
       </main>
-      <Footer />
+        <Footer />
     </div>
   );
 };

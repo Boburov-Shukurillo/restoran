@@ -3,6 +3,8 @@ import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import iks from "../assets/whiteIks.svg";
+import CartImg from "../assets/pic (1).png";
+import { Link } from "react-router-dom";
 const Korzinka = ({ cart, setCart }) => {
   const handleRemove = (i) => {
     let removingItem = cart.slice(0, i).concat(cart.slice(i + 1, cart.length));
@@ -10,7 +12,7 @@ const Korzinka = ({ cart, setCart }) => {
     cart[i].isTrue = false;
     toast.success(`Cartdan olib tashlandi`, {
       position: "bottom-right",
-      autoClose: 1500,
+      autoClose: 100,
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
@@ -19,6 +21,8 @@ const Korzinka = ({ cart, setCart }) => {
       theme: "light",
     });
   };
+
+  const [modal, setModal] = useState(false);
 
   const [nima, setNima] = useState(0);
   const addProduct = (i) => {
@@ -62,139 +66,175 @@ const Korzinka = ({ cart, setCart }) => {
         text: telegramMessage,
       });
       alert("Malumot yuborildi");
+      setModal(true);
       setName("");
       setPhoneNumber("");
       setAdress("");
     }
   };
 
-  return (
-    <div className="containerb py-20 px-2 max-md:py-10 flex flex-col ">
-      <ToastContainer />
-      <h1 className="mb-20 text-[65px] font-bold font-[cursive] text-white max-middle_screen:text-5xl max-mini_screen:text-3xl max-md:mb-10">
-        Korzinka
-      </h1>
-      <hr className="mb-10 " />
-      {cart.length === 0 && (
-        <h1 className="text-center text-5xl font-bold text-white tracking-widest my-20 max-sm:text-2xl">
-          Cartda Hechnarsa Yo'q
-        </h1>
-      )}
+  const scrolTop = () => {
+    setModal(false);
+    window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+  };
 
-      {/* cardagi mahsulotlar */}
-      <ul className={`mb-10`}>
-        {cart.map((product, i) => {
-          return (
-            <li
-              key={product.id}
-              className="flex items-center justify-between py-2 h-44 max-md:h-20 mb-10 text-white max-middle_screen:border-b-[1px] max-md:relative max-md:mb-16"
-            >
-              <div className="h-full flex w-1/3 items-center justify-between max-middle_screen:mr-5 max-md:mr-0">
-                <div className="w-full h-full flex items-center justify-between gap-5 ">
-                  <img
-                    width={200}
-                    height={200}
-                    src={product.img}
-                    alt={product.name + " png"}
+  return (
+    <div className="relative">
+      <div className="containerb py-20 px-2 max-md:py-10  ">
+        <ToastContainer />
+        <h1 className="mb-20 text-[65px] font-bold font-[cursive] text-white max-middle_screen:text-5xl max-mini_screen:text-3xl max-md:mb-10">
+          Korzinka
+        </h1>
+
+        {modal && (
+          <div
+            onClick={() => setModal(false)}
+            className="absolute w-full h-full bg-[#00000082] top-0 z-50 left-0 flex items-center justify-center"
+          >
+            <div className="w-[1000px] h-[500px] rounded-xl bg-white flex justify-between items-center p-10">
+              <div className="w-1/2 h-full flex flex-col items-start justify-evenly">
+                <h1 className="text-6xl font-bold vetirino">
+                  Xaridingiz uchun rahmat
+                </h1>
+                <p className="text-xl font-semibold vetirino">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Itaque velit mollitia provident ipsam explicabo assumenda!
+                </p>
+                <Link
+                  to="/"
+                  onClick={scrolTop}
+                  className="px-8 py-4 bg-orange rounded-xl shadow-lg shadow-yellow-700 font-bold text-white"
+                >
+                  Bosh sahifaga
+                </Link>
+              </div>
+              <img src={CartImg} className="w-1/2 h-full rounded-xl" alt="" />
+            </div>
+          </div>
+        )}
+
+        <hr className="mb-10 " />
+        {cart.length === 0 && (
+          <h1 className="text-center text-5xl font-bold text-white tracking-widest my-20 max-sm:text-2xl">
+            Savatda Hechnarsa Yo'q
+          </h1>
+        )}
+
+        {/* cardagi mahsulotlar */}
+        <ul className={`mb-10`}>
+          {cart.map((product, i) => {
+            return (
+              <li
+                key={product.id}
+                className="flex items-center justify-between py-2 h-44 max-md:h-20 mb-10 text-white max-middle_screen:border-b-[1px] max-md:relative max-md:mb-16"
+              >
+                <div className="h-full flex w-1/3 items-center justify-between max-middle_screen:mr-5 max-md:mr-0">
+                  <div className="w-full h-full flex items-center justify-between gap-5 ">
+                    <img
+                      width={200}
+                      height={200}
+                      src={product.img}
+                      alt={product.name + " png"}
                       className=" rounded-3xl max-md:rounded-md border-2 border-orange h-full  object-cover"
-                  />
-                  <div className="flex flex-col items-start w-2/3 ">
-                    <h3 className="text-4xl first-letter:uppercase max-middle_screen:text-2xl max-mini_screen:text-xl w-20 truncate">
-                      {product.name}
-                    </h3>
-                    <p className="max-md:truncate text-2xl first-letter:uppercase text-gray-300 max-middle_screen:text-lg max-mini_screen:text-sm">
-                      {product.massa * product.productLength} gr.
-                    </p>
-                    <p className="max-mini_screen:text-xs w-12 truncate hidden max-md:block">
-                {product.price * product.productLength}₽
-              </p>
+                    />
+                    <div className="flex flex-col items-start w-2/3 ">
+                      <h3 className="text-4xl first-letter:uppercase max-middle_screen:text-2xl max-mini_screen:text-xl max-middle_screen:w-20 truncate">
+                        {product.name}
+                      </h3>
+                      <p className="max-md:truncate text-2xl first-letter:uppercase text-gray-300 max-middle_screen:text-lg max-mini_screen:text-sm">
+                        {product.massa * product.productLength} gr.
+                      </p>
+                      <p className="max-mini_screen:text-xs w-12 truncate hidden max-md:block">
+                        {product.price * product.productLength}₽
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="w-52 h-1/3 bg-white gap-1 rounded-xl text-black flex items-center justify-between p-1 max-md:w-20 max-md:h-7 max-md:rounded-sm">
+                <div className="w-52 h-1/3 bg-white gap-1 rounded-xl text-black flex items-center justify-between p-1 max-md:w-20 max-md:h-7 max-md:rounded-sm">
+                  <button
+                    onClick={() => removePoduct(i)}
+                    className="w-1/3 h-full bg-[#DCDDDF] rounded-lg text-gray-700 text-4xl font-bold max-mini_screen:text-xl flex items-start justify-center max-md:rounded-sm max-md:items-end"
+                  >
+                    -
+                  </button>
+                  <span className="w-1/3 truncate flex items-center justify-center">
+                    {product.productLength}
+                  </span>
+                  <button
+                    onClick={() => addProduct(i)}
+                    className="w-1/3 h-full bg-[#EF6602] rounded-lg text-4xl text-white font-bold max-mini_screen:text-xl flex items-start justify-center max-md:rounded-sm max-md:items-end"
+                  >
+                    +
+                  </button>
+                </div>
+                <p className="text-3xl w-44 truncate max-md:hidden">
+                  {product.price * product.productLength}₽
+                </p>
                 <button
-                  onClick={() => removePoduct(i)}
-                  className="w-1/3 h-full bg-[#DCDDDF] rounded-lg text-gray-700 text-4xl font-bold max-mini_screen:text-xl flex items-start justify-center max-md:rounded-sm max-md:items-end"
+                  onClick={() => handleRemove(i)}
+                  className="text-5xl font-bold font-[cursive] max-mini_screen:text-xl max-md:absolute max-md:-top-1/4 max-md:right-0 max-md:font-thin max-md:font-sans"
                 >
-                  -
+                  <img src={iks} alt="" />
                 </button>
-                <span className="w-1/3 truncate flex items-center justify-center">
-                  {product.productLength}
-                </span>
-                <button
-                  onClick={() => addProduct(i)}
-                  className="w-1/3 h-full bg-[#EF6602] rounded-lg text-4xl text-white font-bold max-mini_screen:text-xl flex items-start justify-center max-md:rounded-sm max-md:items-end"
-                >
-                  +
-                </button>
-              </div>
-              <p className="text-3xl w-44 truncate max-md:hidden">
-                {product.price * product.productLength}₽
-              </p>
-              <button
-                onClick={() => handleRemove(i)}
-                className="text-5xl font-bold font-[cursive] max-mini_screen:text-xl max-md:absolute max-md:-top-1/4 max-md:right-0 max-md:font-thin max-md:font-sans"
-              >
-                <img src={iks} alt="" />
-              </button>
-            </li>
-          );
-        })}
-      </ul>
+              </li>
+            );
+          })}
+        </ul>
 
-      {/* chiziq */}
-      <hr className="mb-5" />
+        {/* chiziq */}
+        <hr className="mb-5" />
 
-      {/* umumiy narhni jisoblash */}
-      <div className="w-full flex items-center justify-between max-middle_screen:flex-col mb-5">
-        <p className="w-1/2 text-[#DCDDDF] text-base max-middle_screen:w-full max-middle_screen:text-center max-middle_screen:mb-5 max-md:text-sm">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
-          minima <br />
-          <span className="font-bold italic">
-            {" "}
-            soluta sapiente beatae harum delectus architecto in illum quia
-            nulla?
-          </span>
-        </p>
-        <h1 className="text-3xl font-semibold text-white font-[cursive] max-md:text-xl">
-          Total Price : {cart.length > 0 ? eval(TotalPrice.join("+")) : 0} ₱
-        </h1>
+        {/* umumiy narhni jisoblash */}
+        <div className="w-full flex items-center justify-between max-middle_screen:flex-col mb-5">
+          <p className="w-1/2 text-[#DCDDDF] text-base max-middle_screen:w-full max-middle_screen:text-center max-middle_screen:mb-5 max-md:text-sm">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
+            minima <br />
+            <span className="font-bold italic">
+              {" "}
+              soluta sapiente beatae harum delectus architecto in illum quia
+              nulla?
+            </span>
+          </p>
+          <h1 className="text-3xl font-semibold text-white font-[cursive] max-md:text-xl">
+            Total Price : {cart.length > 0 ? eval(TotalPrice.join("+")) : 0} ₱
+          </h1>
+        </div>
+
+        {/* buyurtma berish joyi */}
+        <form
+          onSubmit={handleChange}
+          className="max-sm:w-2/3 self-center w-full  grid grid-cols-4 h-20 gap-5 max-middle_screen:grid-cols-3 max-middle_screen:h-44 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:h-64"
+        >
+          <input
+            className="w-full h-full rounded-xl px-5 bg-white/15 text-white transition-all focus-within:outline-orange focus:shadow-xl focus:shadow-orange/30"
+            placeholder="Ism"
+            type="text"
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+            required
+          />
+          <input
+            className="w-full h-full rounded-xl px-5 bg-white/15 text-white transition-all focus-within:outline-orange focus:shadow-xl focus:shadow-orange/30"
+            placeholder="Telefon Raqam"
+            type="tel"
+            pattern="(\+998|8)[\- ]?\d{2}[\- ]?\d{3}[\- ]?\d{2}[\- ]?\d{2}"
+            onChange={(e) => setPhoneNumber(e.target.value)}
+            value={phoneNumber}
+            required
+          />
+          <input
+            className="w-full h-full rounded-xl px-5 bg-white/15 text-white transition-all focus-within:outline-orange focus:shadow-xl focus:shadow-orange/30"
+            type="text"
+            placeholder="Manzil"
+            onChange={(e) => setAdress(e.target.value)}
+            value={adress}
+            required
+          />
+          <button className="w-full h-full rounded-2xl bg-[#FD7511] text-white soyalar text-lg font-bold focus:outline-dashed focus:outline-2 focus:outline-white">
+            Buyurtma Berish
+          </button>
+        </form>
       </div>
-
-      {/* buyurtma berish joyi */}
-      <form
-        onSubmit={handleChange}
-        className="max-sm:w-2/3 self-center w-full  grid grid-cols-4 h-20 gap-5 max-middle_screen:grid-cols-3 max-middle_screen:h-44 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:h-64"
-      >
-        <input
-          className="w-full h-full rounded-xl px-5 bg-white/15 text-white"
-          placeholder="Ism"
-          type="text"
-          onChange={(e) => setName(e.target.value)}
-          value={name}
-          required
-        />
-        <input
-          className="w-full h-full rounded-xl px-5 bg-white/15 text-white"
-          placeholder="Telefon Raqam"
-          type="tel"
-          pattern="(\+998|8)[\- ]?\d{2}[\- ]?\d{3}[\- ]?\d{2}[\- ]?\d{2}"
-          onChange={(e) => setPhoneNumber(e.target.value)}
-          value={phoneNumber}
-          required
-        />
-        <input
-          className="w-full h-full rounded-xl px-5 bg-white/15 text-white"
-          type="text"
-          placeholder="Manzil"
-          onChange={(e) => setAdress(e.target.value)}
-          value={adress}
-          required
-        />
-        <button className="w-full h-full rounded-2xl bg-[#FD7511] text-white soyalar text-lg font-bold">
-          Buyurtma Berish
-        </button>
-      </form>
     </div>
   );
 };

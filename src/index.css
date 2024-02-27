@@ -13,9 +13,19 @@
   font-family: vetirino;
   src: url(./fontFamly/vetrino.otf);
 }
+
 @font-face {
   font-family: Gothik;
   src: url(./fontFamly/Century\ Gothic.ttf);
+}
+
+@font-face {
+  font-family: inter;
+  src: url(./fontFamly/Inter-Medium.otf);
+}
+
+.inter {
+  font-family: inter;
 }
 .vetirino {
   font-family: vetirino;
@@ -37,21 +47,6 @@ nav .active {
   color: #d9782a;
 }
 
-nav .active::after {
-  content: "";
-  width: 17px;
-  height: 17px;
-  background-color: #d9782a;
-  border-radius: 50%;
-}
-
-nav .active::before {
-  content: "";
-  width: 17px;
-  height: 17px;
-  background-color: #d9782a;
-  border-radius: 50%;
-}
 .bg {
   background-position: center;
   background-image: url(./assets/orqaFonBg.svg);
@@ -209,8 +204,9 @@ nav .active::before {
 .sipererMenu2 .swiper-slide {
   width: 100%;
   height: 90%;
-  background-color: #00000024;
+  background-color: #d9d9d930;
 }
+
 .sipererMenu2 .swiper-button-next,
 .swiper-button-prev {
   width: 45px;
@@ -228,4 +224,27 @@ nav .active::before {
 .soyalar {
   box-shadow: 0 0 20px #ff6d05 inset;
   filter: drop-shadow(0 0 10px #fd7511);
+}
+
+.swiperAbout{
+  width: 100%;
+  padding: 0 40px;
+  height: 400px;
+}
+.swiperAbout .swiper-wrapper{
+  width: 90%;
+}
+.swiperAbout .swiper-slide{
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+  border-color: rebeccapurple;
+}
+
+.swiperAbout .swiper-button-next{
+  transform: rotate(180deg);
+  background-image: url(./assets/next.svg);
+}
+.swiperAbout .swiper-button-prev{
+  background-image: url(./assets/next.svg);
 }

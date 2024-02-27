@@ -55,8 +55,8 @@ const Home = ({ data, setCart }) => {
         theme: "light",
       });
       data[i].isTrue = true;
-      const sdfghj = data.filter((e) => e.isTrue === true);
-      setCart(sdfghj);
+      const beTrust = data.filter((e) => e.isTrue === true);
+      setCart(beTrust);
     }
   };
 
@@ -79,6 +79,9 @@ const Home = ({ data, setCart }) => {
   const stolBandQilish = () => {
     window.scrollTo({ left: 0, top: "4000", behavior: "smooth" });
   };
+  const toTop = () => {
+    window.scrollTo({ left: 0, top: "0", behavior: "smooth" });
+  };
 
   return (
     <div className="pb-20">
@@ -86,16 +89,16 @@ const Home = ({ data, setCart }) => {
 
       <div className="hero overflow-hidden  bg-[#141414]">
         <div className="containerb relative ">
-          <div className="w-full h-40 max-sm:h-28"></div>
+          <div className="w-full h-28 max-sm:h-28"></div>
           <div className="w-1/2 h-full flex items-center  py-44 max-middle_screen:w-full max-md:p-0 max-middle_screen:py-5">
             <div className="text-white  h-full flex flex-col justify-between items-start max-middle_screen:items-center">
-              <h1 className="vetirino text-[130px] leading-[70px] max-middle_screen:text-[75px] max-md:leading-8 max-middle_screen:leading-10 mb-10 font-bold max-md:text-center max-md:text-6xl  max-mini_screen:leading-10 max-md:mb-10">
+              <h1 className="vetirino transition-all text-[130px] leading-[70px] max-middle_screen:text-[75px] max-md:leading-8 max-middle_screen:leading-10 mb-10 font-bold max-md:text-center max-md:text-6xl  max-mini_screen:leading-10 max-md:mb-10">
                 Restoran <br />
-                <span className="text-[75px] max-middle_screen:text-[45px] max-md:text-4xl  max-md:leading-3">
+                <span className="text-[75px] max-middle_screen:text-[45px] max-md:text-3xl  max-md:leading-3">
                   kavkazniy kuxni
                 </span>
               </h1>
-              <p className="w-9/12 text-2xl gothik font-medium max-middle_screen:text-lg max-md:w-9/12 max-middle_screen:text-center max-md:mb-0 max-mini_screen:text-base mb-20 max-md:leading-2">
+              <p className="w-9/12 text-2xl gothik font-medium max-middle_screen:text-lg max-md:w-10/12 max-middle_screen:text-center max-md:mb-0 max-mini_screen:text-base mb-20 max-md:leading-2">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Dolores odit, corporis adipisci incidunt esse perferendis magni
                 perspiciatis aliquid minus voluptatem!
@@ -103,7 +106,7 @@ const Home = ({ data, setCart }) => {
               <div className="max-middle_screen:block hidden max-middle_screen:relative w-[500px] h-[500px] max-sm:w-full max-sm:h-3/4">
                 <img
                   src={smXinkalin}
-                  className="w-full h-full"
+                  className="w-full h-full transition-all"
                   width={200}
                   height={206}
                   alt="xinkalin"
@@ -111,7 +114,7 @@ const Home = ({ data, setCart }) => {
                 <img
                   src={kokat}
                   width={30}
-                  className="w-20 absolute bottom-1/4 left-1/4"
+                  className="w-20 absolute bottom-1/4 left-1/4 transition-all"
                   alt="ko'kat"
                 />
               </div>
@@ -123,24 +126,26 @@ const Home = ({ data, setCart }) => {
               </button>
             </div>
             <div className="max-middle_screen:hidden">
-              <img
-                src={dumaloqXinkalin}
-                alt="xinkalin png"
-                height={800}
-                width={800}
-                className="w-[1200px] h-[1200px]  absolute -top-0 -right-1/2 z-20 rounded-full max-middle_screen:hidden"
-              />
+              <div className="w-[1000px] h-[900px] absolute bottom-0 -right-1/3 z-20 max-middle_screen:hidden ">
+                <img
+                  src={dumaloqXinkalin}
+                  alt="xinkalin png"
+                  height={800}
+                  width={800}
+                  className="transition-all object-cover w-full h-full"
+                />
+              </div>
               <img
                 src={choq}
                 alt="cho'g' svg"
-                className="w-10/12 h-5/6 absolute bottom-0 -right-[20%]  max-my_screen:hidden"
+                className="transition-all w-9/12 h-5/6 absolute bottom-0 -right-[20%]  max-my_screen:hidden"
               />
               <img
                 src={kokat}
                 alt="Ko'kat Png"
                 width={100}
                 height={100}
-                className="w-1/6 h-1/6 absolute left-3/4 z-30 bottom-20 "
+                className="transition-all w-32 absolute left-3/4 z-30 bottom-1/3 "
               />
             </div>
           </div>
@@ -308,7 +313,7 @@ const Home = ({ data, setCart }) => {
               {data.map((food) => {
                 if (food.id < 10) {
                   return (
-                    <SwiperSlide className="text-white rounded-3xl pb-5">
+                    <SwiperSlide className="text-white bg-[#d9d9d91f] rounded-3xl pb-5">
                       <li
                         key={food.id}
                         className="flex flex-col items-start h-full justify-between"
@@ -322,7 +327,7 @@ const Home = ({ data, setCart }) => {
                           <h3 className="text-xl vetirino first-letter:uppercase">
                             {food.name}
                           </h3>
-                          <h4 className="text-xl gothik text-gray-500">
+                          <h4 className="text-xl gothik text-gray-400">
                             {food.massa}gr.
                           </h4>
                         </div>
@@ -341,7 +346,7 @@ const Home = ({ data, setCart }) => {
                 }
               })}
             </Swiper>
-        
+
             <ul className="w-full grid grid-cols-4 max-md:grid-cols-2 gap-10 max-lg:grid-cols-3 max-sm:hidden py-10 max-middle_screen:hidden ">
               {data.map((product) => {
                 if (product.type === filter) {
@@ -369,7 +374,7 @@ const Home = ({ data, setCart }) => {
                             {product.price}₽
                           </h5>
                           <button
-                            className="gothik px-2 py-2 bg-[#FD7511] rounded-lg text-[100%] max-lg:text-xs active:bg-transparent active:text-[#FD7511] active:border-[2px]  active:border-[#FD7511] border-2 border-[#FD7511]"
+                            className="gothik transition-all px-2 py-2 bg-[#FD7511] rounded-lg text-[100%] max-lg:text-xs active:bg-transparent active:text-[#FD7511] active:border-[2px]  active:border-[#FD7511] border-2 border-[#FD7511]"
                             onClick={() => handleBuy(product.id)}
                           >
                             Buyurtma berish
@@ -383,7 +388,8 @@ const Home = ({ data, setCart }) => {
             </ul>
             <Link
               to="/menu"
-              className="w-1/4 text-white first-letter:uppercase mb-5 px-5 py-2 border-[1px] rounded-full max-md:w-1/3 text-center mt-10"
+              onClick={toTop}
+              className="w-1/4 text-white first-letter:uppercase mb-5 px-5 py-2 border-[1px] rounded-full max-md:w-1/2 text-center mt-10"
             >
               to'liq ko'rish
             </Link>

@@ -7,6 +7,9 @@ import telImg from "../assets/TelLogoSvg.svg";
 import locationImg from "../assets/Vectorlocation.svg";
 
 const Footer = () => {
+  const toTop = () => {
+    window.scrollTo({ left: 0, top: "0", behavior: "smooth" });
+  };
   return (
     <footer className="bg-[#292828]  border-t-2 border-orange py-5">
       <div className="containerb flex items-center justify-between h-22 max-middle_screen:flex-col max-middle_screen:items-start max-middle_screen:space-y-1">
@@ -26,40 +29,45 @@ const Footer = () => {
           <ul className="w-full flex items-center justify-between gap-5 text-white h-20 max-md:h-full max-middle_screen:hidden">
             <li>
               <NavLink
+              onClick={toTop}
                 to="/"
-                className="text-base font-medium hover:opacity-75 max-my_screen:text-sm max-md:text-black max-lg:text-[10px]"
+                className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm max-md:text-black max-lg:text-[10px]"
               >
                 Bosh sahifa
               </NavLink>
             </li>
             <li>
               <NavLink
+              onClick={toTop}
                 to="/menu"
-                className="text-base font-medium hover:opacity-75 max-my_screen:text-sm max-md:text-black max-lg:text-[10px]"
+                className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm max-md:text-black max-lg:text-[10px]"
               >
                 Menyu
               </NavLink>
             </li>
             <li>
               <NavLink
+              onClick={toTop}
                 to="/about"
-                className="text-base font-medium hover:opacity-75 max-my_screen:text-sm max-md:text-black max-lg:text-[10px]"
+                className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm max-md:text-black max-lg:text-[10px]"
               >
                 Restoran Haqida
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/pic"
-                className="text-base font-medium hover:opacity-75 max-my_screen:text-sm max-md:text-black max-lg:text-[10px]"
+              onClick={toTop}
+                to="/galareya"
+                className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm max-md:text-black max-lg:text-[10px]"
               >
-                Galaeya
+                Galareya
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/kontact"
-                className="text-base font-medium hover:opacity-75 max-my_screen:text-sm max-md:text-black max-lg:text-[10px]"
+              onClick={toTop}
+                to="/kontakt"
+                className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm max-md:text-black max-lg:text-[10px]"
               >
                 Kontakt
               </NavLink>
@@ -71,7 +79,7 @@ const Footer = () => {
           {/* Qo'ngiroq hizmati adminga qo;ng;iroq qilish */}
           <a
             href="+99899453323"
-            className="text-base text-white font-semibold flex items-center justify-center gap-5  max-lg:gap-1 max-my_screen:text-sm  max-lg:text-sm"
+            className="inter text-base text-white font-semibold flex items-center justify-center gap-5  max-lg:gap-1 max-my_screen:text-sm  max-lg:text-sm"
           >
             <img
               src={telImg}
@@ -85,7 +93,7 @@ const Footer = () => {
           <a
             href="https://www.google.com/maps/@41.3106176,69.2518912,12z?entry=ttu"
             target="_blank"
-            className="text-base text-white font-semibold flex items-center justify-between gap-5  max-lg:gap-1 max-my_screen:text-sm  max-lg:text-xs"
+            className="inter text-base text-white font-semibold flex items-center justify-between gap-5  max-lg:gap-1 max-my_screen:text-sm  max-lg:text-xs"
           >
             <img
               src={locationImg}
