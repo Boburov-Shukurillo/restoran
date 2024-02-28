@@ -76,7 +76,7 @@ const Header = ({ data, setCart, cart }) => {
                 <li className="hidden max-middle_screen:block self-end"><button onClick={closeMenu}><img src={Iks} alt="cross iconf" /></button></li>
                 <li>
                   <NavLink
-                    className="inter cursor-pointer text-xl font-bold text-white flex flex-col items-center before:hidden max-middle_screen:flex-row max-middle_screen:gap-3 max-middle_screen:h-5 max-middle_screen:before:block max-middle_screen:after:hidden max-my_screen:text-sm max-middle_screen:text-xs max-middle_screen:text-black"
+                    className="inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
                     to="/"
                   >
                     Bosh Sahifa
@@ -84,7 +84,7 @@ const Header = ({ data, setCart, cart }) => {
                 </li>
                 <li>
                   <NavLink
-                    className="inter cursor-pointer text-xl font-bold text-white flex flex-col items-center before:hidden max-middle_screen:flex-row max-middle_screen:gap-3 max-middle_screen:h-5 max-middle_screen:before:block max-middle_screen:after:hidden max-my_screen:text-sm max-middle_screen:text-xs max-middle_screen:text-black"
+                    className="inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
                     to="/menu"
                   >
                     Menu
@@ -92,7 +92,7 @@ const Header = ({ data, setCart, cart }) => {
                 </li>
                 <li>
                   <NavLink
-                    className="inter cursor-pointer text-xl font-bold text-white flex flex-col items-center before:hidden max-middle_screen:flex-row max-middle_screen:gap-3 max-middle_screen:h-5 max-middle_screen:before:block max-middle_screen:after:hidden max-my_screen:text-sm max-middle_screen:text-xs max-middle_screen:text-black"
+                    className="inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
                     to="/about"
                   >
                     Restoran Haqida
@@ -100,7 +100,7 @@ const Header = ({ data, setCart, cart }) => {
                 </li>
                 <li>
                   <NavLink
-                    className="inter cursor-pointer text-xl font-bold text-white flex flex-col items-center before:hidden max-middle_screen:flex-row max-middle_screen:gap-3 max-middle_screen:h-5 max-middle_screen:before:block max-middle_screen:after:hidden max-my_screen:text-sm max-middle_screen:text-xs max-middle_screen:text-black"
+                    className="inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
                     to="/galareya"
                   >
                     Galareya
@@ -108,7 +108,7 @@ const Header = ({ data, setCart, cart }) => {
                 </li>
                 <li>
                   <NavLink
-                    className="inter cursor-pointer text-xl font-bold text-white flex flex-col items-center before:hidden max-middle_screen:flex-row max-middle_screen:gap-3 max-middle_screen:h-5 max-middle_screen:before:block max-middle_screen:after:hidden max-my_screen:text-sm max-middle_screen:text-xs max-middle_screen:text-black"
+                    className="inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
                     to="/kontakt"
                   >
                     Kontakt
@@ -119,7 +119,7 @@ const Header = ({ data, setCart, cart }) => {
 
             <Link
               to="/korzinka"
-              className={`${headerHome||headerT?"bg-[#4f4e4e]":"middle_screen:bg-[#ffffff3e]"} max-middle_screen:bg-transparent p-3 max-middle_screen:flex max-middle_screen:items-center max-middle_screen:gap-4 rounded-xl bg-[#ffffff3e] relative cursor-pointer max-my_screen:scale max-middle_screen:w-7 max-middle_screen:p-0 `}
+              className={`${headerHome||headerT?"bg-[#5c5b5b]":"middle_screen:bg-[#ffffff3e]"} max-middle_screen:bg-transparent p-3 max-middle_screen:flex max-middle_screen:items-center max-middle_screen:gap-4 rounded-xl bg-[#ffffff3e] relative cursor-pointer max-my_screen:scale max-middle_screen:w-7 max-middle_screen:p-0 `}
             >
               <img
                 src={savatchaImg}

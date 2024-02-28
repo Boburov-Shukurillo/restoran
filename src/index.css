@@ -72,10 +72,15 @@ nav .active {
 
 .mySwiper {
   width: 100%;
-  padding: 0 20px;
+  padding: 0 30px;
   height: 500px;
   position: relative;
 }
+
+.mySwiper .swiper-button-prev{
+  background-image: url(./assets/next.svg);
+}
+
 .swiper-wrapper {
   display: flex;
 }
@@ -119,7 +124,8 @@ nav .active {
   right: 0;
   bottom: 40%;
   z-index: 20;
-  background-image: url(./assets/prev.svg);
+  transform: rotate(180deg);
+  background-image: url(./assets/next.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }

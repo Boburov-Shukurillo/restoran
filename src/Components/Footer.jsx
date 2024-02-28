@@ -18,7 +18,7 @@ const Footer = () => {
           <img
             src={headerLogo}
             alt="Main Logo"
-            className="w-44 max-md:w-20"
+            className="w-44 max-md:w-32 mb-4"
             width={88}
             height={46}
           />

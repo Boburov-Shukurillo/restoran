@@ -115,7 +115,7 @@ const StolBandQilish = () => {
           />
           +998 (99) 678 45 96
         </a>
-        <a href="https:/google.napc">
+        <a href="https:/google.napc" className="hidden w-full max-middle_screen:flex items-center justify-center">
           <address className="w-3/4 max-mini_screen:w-full max-middle_screen:flex hidden items-start justify-start gap-5 text-start text-[#888] ">
             <img
               width={27}

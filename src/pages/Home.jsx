@@ -6,7 +6,7 @@ import { imgs, slideTitles } from "../data";
 
 // rasimlar
 import Rating from "../assets/Rating.svg";
-import dumaloqXinkalin from "../assets/xinkalin.svg";
+import dumaloqXinkalin from "../assets/xinkalin.png";
 import smXinkalin from "../assets/xinkalin500.png";
 import choq from "../assets/choq.svg";
 import kokat from "../assets/kokat.svg";
@@ -126,13 +126,13 @@ const Home = ({ data, setCart }) => {
               </button>
             </div>
             <div className="max-middle_screen:hidden">
-              <div className="w-[1000px] h-[900px] absolute bottom-0 -right-1/3 z-20 max-middle_screen:hidden ">
+              <div className="w-[700] h-[800px] absolute bottom-0 -right-1/3 z-20 max-middle_screen:hidden ">
                 <img
                   src={dumaloqXinkalin}
                   alt="xinkalin png"
                   height={800}
                   width={800}
-                  className="transition-all object-cover w-full h-full"
+                  className="transition-all -cover w-full h-full"
                 />
               </div>
               <img
@@ -145,7 +145,7 @@ const Home = ({ data, setCart }) => {
                 alt="Ko'kat Png"
                 width={100}
                 height={100}
-                className="transition-all w-32 absolute left-3/4 z-30 bottom-1/3 "
+                className="transition-all w-52 absolute left-3/4 z-30 bottom-[10%] "
               />
             </div>
           </div>
@@ -154,7 +154,7 @@ const Home = ({ data, setCart }) => {
 
       {/* restoran haqida qisqacha */}
       <div className="containerb flex  gap-5 max-middle_screen:grid-cols-1 h-full py-10 justify-between">
-        <div className="w-2/5 text-white max-middle_screen:items-center max-middle_screen:text-center flex flex-col justify-between space-y-5 max-middle_screen:hidden">
+        <div className="w-2/5 text-white max-middle_screen:items-center max-middle_screen:text-center flex flex-col justify-between max-middle_screen:hidden">
           <h2 className="vetirino text-[65px] max-lg:text-2xl mb-10 max-md:text-2xl uppercase">
             Lorem, ipsum
           </h2>
@@ -205,14 +205,14 @@ const Home = ({ data, setCart }) => {
           <div className="space-y-5 mt-20">
             <img
               src={pic1}
-              className="rounded-xl shadow-2xl shadow-orange"
+              className="rounded-xl shadow-2xl shadow-orange w-full"
               alt="grid pictures"
               width={280}
               height={303}
             />
             <img
               src={pic2}
-              className="rounded-xl shadow-2xl shadow-orange "
+              className="rounded-xl shadow-2xl shadow-orange w-full"
               alt="grid pictures"
               width={280}
               height={303}
@@ -221,14 +221,14 @@ const Home = ({ data, setCart }) => {
           <div className="space-y-5">
             <img
               src={pic3}
-              className="rounded-xl shadow-2xl shadow-orange "
+              className="rounded-xl shadow-2xl shadow-orange w-full "
               alt="grid pictures"
               width={280}
               height={303}
             />
             <img
               src={pic4}
-              className="rounded-xl shadow-2xl shadow-orange"
+              className="rounded-xl shadow-2xl shadow-orange w-full"
               alt="grid pictures"
               width={280}
               height={303}
@@ -403,11 +403,13 @@ const Home = ({ data, setCart }) => {
           <h2 className="vetirino text-[65px] text-white w-1/2 max-middle_screen:w-full max-xl:text-5xl max-sm:text-3xl max-middle_screen:text-center">
             Restoran haqida mijozlarning fikri
           </h2>
-          <img
-            src={Rating}
-            alt="Rating icon"
-            className="max-middle_screen:hidden"
-          />
+          <a target="_blank" href="https://www.ya.ru/?win=629&clid=2337911-381&from=dist_bookmark">
+            <img
+              src={Rating}
+              alt="Rating icon"
+              className="max-middle_screen:hidden"
+            />
+          </a>
         </div>
         <Swiper
           spaceBetween={50}
@@ -442,7 +444,7 @@ const Home = ({ data, setCart }) => {
           })}
         </Swiper>
         <Swiper
-          spaceBetween={20}
+          spaceBetween={30}
           slidesPerView={3}
           navigation={true}
           modules={[Navigation]}

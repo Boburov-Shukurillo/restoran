@@ -26,15 +26,17 @@ const Contact = () => {
             </div>
             +998 678 45 96
           </a>
-          <address className="flex items-start justify-start gap-2 text-white mb-5 max-middle_screen:hidden">
-            <div className="7">
-              <img src={loctionPic} alt="location svg" />
-            </div>
-            <div className="text-start w-1/2">
-              Lorem ipsum dolor sit amet. Lorem ipsum dolor, sit amet
-              consectetur adipisicing.
-            </div>
-          </address>
+          <a  target="_blank" href="https://google.map/">
+            <address className="flex items-start justify-start gap-2 text-white mb-5 max-middle_screen:hidden">
+              <div className="7">
+                <img src={loctionPic} alt="location svg" />
+              </div>
+              <div className="text-start w-1/2">
+                Lorem ipsum dolor sit amet. Lorem ipsum dolor, sit amet
+                consectetur adipisicing.
+              </div>
+            </address>
+          </a>
           <p className="flex items-center text-white gap-5 max-md:text-[10px]">
             <span className="w-5">
               <img src={watchSvg} alt="soat svg" />

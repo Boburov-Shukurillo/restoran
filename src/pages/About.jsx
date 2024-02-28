@@ -8,7 +8,8 @@ const About = () => {
   return (
     <div className="h-[100%]  bg-[#1E1E1E] pb-20">
       <div className="nimadi w-full">
-        <div className="containerb w-full py-44 text-white max-middle_screen:text-center max-middle_screen:flex max-middle_screen:flex-col max-middle_screen:items-center">
+      <div className="w-full h-24"></div>
+        <div className="containerb w-full py-12  text-white max-middle_screen:text-center max-middle_screen:flex max-middle_screen:flex-col max-middle_screen:items-center">
           <h1 className="text-[65px] font-semibold mb-10 max-middle_screen:text-4xl">
             Restoran Haqida
           </h1>

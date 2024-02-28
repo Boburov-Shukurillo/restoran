@@ -80,9 +80,9 @@ const Korzinka = ({ cart, setCart }) => {
 
   return (
     <div className="relative">
-      <div className="containerb py-20 px-2 max-md:py-10  ">
+      <div className="containerb py-20 px-2 max-md:py-10 flex flex-col">
         <ToastContainer />
-        <h1 className="mb-20 text-[65px] font-bold font-[cursive] text-white max-middle_screen:text-5xl max-mini_screen:text-3xl max-md:mb-10">
+        <h1 className="mb-20 self-start text-[65px] font-bold font-[cursive] text-white max-middle_screen:text-5xl max-mini_screen:text-3xl max-md:mb-10">
           Korzinka
         </h1>
 
@@ -185,7 +185,7 @@ const Korzinka = ({ cart, setCart }) => {
         <hr className="mb-5" />
 
         {/* umumiy narhni jisoblash */}
-        <div className="w-full flex items-center justify-between max-middle_screen:flex-col mb-5">
+        <div className="w-full flex items-center justify-between max-middle_screen:flex-col mb-5 py-10">
           <p className="w-1/2 text-[#DCDDDF] text-base max-middle_screen:w-full max-middle_screen:text-center max-middle_screen:mb-5 max-md:text-sm">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
             minima <br />
@@ -203,7 +203,7 @@ const Korzinka = ({ cart, setCart }) => {
         {/* buyurtma berish joyi */}
         <form
           onSubmit={handleChange}
-          className="max-sm:w-2/3 self-center w-full  grid grid-cols-4 h-20 gap-5 max-middle_screen:grid-cols-3 max-middle_screen:h-44 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:h-64"
+          className="max-sm:w-2/3 w-full self-center  grid grid-cols-4 h-20 gap-5 max-middle_screen:grid-cols-3 max-middle_screen:h-44 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:h-64"
         >
           <input
             className="w-full h-full rounded-xl px-5 bg-white/15 text-white transition-all focus-within:outline-orange focus:shadow-xl focus:shadow-orange/30"
