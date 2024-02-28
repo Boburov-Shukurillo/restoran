@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { foods } from "../data";
 import { Navigate } from "react-router-dom";
 import { Navigation, Pagination } from "swiper/modules";
+
+
 const About = () => {
   return (
     <div className="h-[100%]  bg-[#1E1E1E] pb-20">

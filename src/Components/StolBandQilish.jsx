@@ -5,7 +5,8 @@ import loctionPic from "../assets/Vectorlocation.svg";
 import watchSvg from "../assets/watchSvg.svg";
 import telImg from "../assets/TelLogoSvg.svg";
 import axios from "axios";
-import choq from "../assets/choqs.svg";
+
+
 const StolBandQilish = () => {
   const [name, setName] = useState("");
   const [tel, setNumber] = useState("");

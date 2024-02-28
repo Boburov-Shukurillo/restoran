@@ -24,6 +24,7 @@ import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import arrow from "../assets/Arrow 4.svg";
+
 const Home = ({ data, setCart }) => {
   // menudagi taomlarni filter qilib chiqarib beradi
   const [filter, setFilter] = useState("food");
@@ -262,7 +263,7 @@ const Home = ({ data, setCart }) => {
       </div>
 
       {/* taom buyurtmal beriladiga joy */}
-      <div className="bg bg-contain max-[1700px]:bg-cover">
+      <div className="bg py-10 max-2xl:bg-cover">
         <div className="containerb  h-full py-5 bg-balck mb-20 ">
           <div className="bg-2 py-20 flex flex-col items-center max-md:py-20">
             <div className="w-full flex flex-col items-center justify-between mb-10 h-44 max-md:h-10 max-md:mb-0 max-md:justify-end">

@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+*:focus{
+  outline: 3px double #ef6602;
+}
+
 @font-face {
   font-family: vetirino;
   src: url(./fontFamly/vetrino.otf);
@@ -27,6 +31,7 @@
 .inter {
   font-family: inter;
 }
+
 .vetirino {
   font-family: vetirino;
 }
@@ -55,6 +60,7 @@ nav .active {
 .bg-2::-webkit-scrollbar {
   display: none;
 }
+
 .salom:hover {
   border: 2px solid #ff6a00;
   box-shadow: 0 0 15px #ef6602, 0 0 15px #ef6602 inset;
@@ -84,6 +90,7 @@ nav .active {
 .swiper-wrapper {
   display: flex;
 }
+
 .swiper-slide {
   width: 100%;
   height: 100%;
@@ -106,6 +113,7 @@ nav .active {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .swiper-button-prev {
   width: 40px;
   height: 40px;
@@ -117,6 +125,7 @@ nav .active {
   background-size: cover;
   background-image: url(./assets/next.svg);
 }
+
 .mySwiper .swiper-button-next {
   width: 40px;
   height: 40px;
@@ -129,6 +138,7 @@ nav .active {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .mySwiper .swiper-button-prev {
   width: 40px;
   height: 40px;
@@ -176,37 +186,45 @@ nav .active {
 .Swiperonce .swiper-button-next {
   bottom: 40%;
 }
+
 .Swiperonce .swiper-button-prev {
   bottom: 40%;
 }
+
 .swoperL2 {
   width: 100%;
   height: 100%;
 }
+
 .swoperL2 .swiper-wrapper {
   width: 100%;
   height: 100%;
 }
+
 .swoperL2 .swiper-slide {
   width: 320px;
   padding: 20px;
   height: 350px;
 }
+
 .swoperL2 .swiper-pagination-horizontal {
   margin-bottom: -10px;
 }
+
 .sipererMenu2 {
   width: 300px;
   padding: 0 20px;
   height: 100%;
   overflow: hidden;
 }
+
 .sipererMenu2 .swiper-wrapper {
   display: flex;
   justify-content: space-between;
   width: 200px;
   height: 400px;
 }
+
 .sipererMenu2 .swiper-slide {
   width: 100%;
   height: 90%;
@@ -221,12 +239,15 @@ nav .active {
   bottom: 50%;
   background-size: contain;
 }
+
 .sipererMenu2 .swiper-button-next{
   transform: rotate(180deg);
 }
+
 .sipererMenu2 .swiper-pagination-horizontal {
   margin-bottom: 0px;
 }
+
 .soyalar {
   box-shadow: 0 0 20px #ff6d05 inset;
   filter: drop-shadow(0 0 10px #fd7511);
@@ -237,9 +258,11 @@ nav .active {
   padding: 0 40px;
   height: 400px;
 }
+
 .swiperAbout .swiper-wrapper{
   width: 90%;
 }
+
 .swiperAbout .swiper-slide{
   height: 400px;
   object-fit: cover;
@@ -251,6 +274,7 @@ nav .active {
   transform: rotate(180deg);
   background-image: url(./assets/next.svg);
 }
+
 .swiperAbout .swiper-button-prev{
   background-image: url(./assets/next.svg);
 }

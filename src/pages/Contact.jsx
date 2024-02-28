@@ -4,6 +4,7 @@ import loctionPic from "../assets/Vectorlocation.svg";
 import watchSvg from "../assets/watchSvg.svg";
 import telImg from "../assets/TelLogoSvg.svg";
 import img04 from "../assets/galareya (3).png";
+
 const Contact = () => {
   return (
     <div className="containerb py-20">

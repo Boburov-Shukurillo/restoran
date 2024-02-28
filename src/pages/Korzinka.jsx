@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import iks from "../assets/whiteIks.svg";
 import CartImg from "../assets/pic (1).png";
 import { Link } from "react-router-dom";
+
 const Korzinka = ({ cart, setCart }) => {
   const handleRemove = (i) => {
     let removingItem = cart.slice(0, i).concat(cart.slice(i + 1, cart.length));
