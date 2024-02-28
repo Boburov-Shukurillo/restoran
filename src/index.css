@@ -9,9 +9,6 @@
   box-sizing: border-box;
 }
 
-*:focus{
-  outline: 3px double #ef6602;
-}
 
 @font-face {
   font-family: vetirino;
