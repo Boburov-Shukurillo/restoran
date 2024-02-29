@@ -9,7 +9,6 @@
   box-sizing: border-box;
 }
 
-
 @font-face {
   font-family: vetirino;
   src: url(./fontFamly/vetrino.otf);
@@ -80,7 +79,7 @@ nav .active {
   position: relative;
 }
 
-.mySwiper .swiper-button-prev{
+.mySwiper .swiper-button-prev {
   background-image: url(./assets/next.svg);
 }
 
@@ -237,7 +236,7 @@ nav .active {
   background-size: contain;
 }
 
-.sipererMenu2 .swiper-button-next{
+.sipererMenu2 .swiper-button-next {
   transform: rotate(180deg);
 }
 
@@ -250,28 +249,42 @@ nav .active {
   filter: drop-shadow(0 0 10px #fd7511);
 }
 
-.swiperAbout{
+.swiperAbout {
   width: 100%;
   padding: 0 40px;
   height: 400px;
 }
 
-.swiperAbout .swiper-wrapper{
+.swiperAbout .swiper-wrapper {
   width: 90%;
 }
 
-.swiperAbout .swiper-slide{
+.swiperAbout .swiper-slide {
   height: 400px;
   object-fit: cover;
   width: 100%;
   border-color: rebeccapurple;
 }
 
-.swiperAbout .swiper-button-next{
+.swiperAbout .swiper-button-next {
   transform: rotate(180deg);
   background-image: url(./assets/next.svg);
 }
 
-.swiperAbout .swiper-button-prev{
+.swiperAbout .swiper-button-prev {
   background-image: url(./assets/next.svg);
+}
+
+.misus{
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: center;
+  background-image: url(./assets/minus.webp);
+}
+
+.plus{
+  background-repeat: no-repeat;
+  background-size: 80% 70%;
+  background-position: center;
+  background-image: url(./assets/plus.webp);
 }

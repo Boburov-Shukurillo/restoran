@@ -154,19 +154,15 @@ const Korzinka = ({ cart, setCart }) => {
                 <div className="w-52 h-1/3 bg-white gap-1 rounded-xl text-black flex items-center justify-between p-1 max-md:w-20 max-md:h-7 max-md:rounded-sm">
                   <button
                     onClick={() => removePoduct(i)}
-                    className="w-1/3 h-full bg-[#DCDDDF] rounded-lg text-gray-700 text-4xl font-bold max-mini_screen:text-xl flex items-start justify-center max-md:rounded-sm max-md:items-end"
-                  >
-                    -
-                  </button>
+                    className="w-1/3 h-full bg-[#DCDDDF] misus rounded-lg text-gray-700 text-4xl font-bold max-mini_screen:text-xl max-md:h-5 max-md:rounded"
+                  ></button>
                   <span className="w-1/3 truncate flex items-center justify-center">
                     {product.productLength}
                   </span>
                   <button
                     onClick={() => addProduct(i)}
-                    className="w-1/3 h-full bg-[#EF6602] rounded-lg text-4xl text-white font-bold max-mini_screen:text-xl flex items-start justify-center max-md:rounded-sm max-md:items-end"
-                  >
-                    +
-                  </button>
+                    className="w-1/3 h-full bg-[#EF6602] plus rounded-lg text-4xl text-white font-bold max-mini_screen:text-xl max-md:h-5 max-md:rounded-sm"
+                  ></button>
                 </div>
                 <p className="text-3xl w-44 truncate max-md:hidden">
                   {product.price * product.productLength}₽

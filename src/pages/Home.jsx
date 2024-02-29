@@ -90,7 +90,7 @@ const Home = ({ data, setCart }) => {
 
       <div className="hero overflow-hidden  bg-[#141414]">
         <div className="containerb relative ">
-          <div className="w-full h-28 max-sm:h-28"></div>
+          <div className="w-full h-28 max-sm:h-20 max-md:mb-20"></div>
           <div className="w-1/2 h-full flex items-center  py-44 max-middle_screen:w-full max-md:p-0 max-middle_screen:py-5">
             <div className="text-white  h-full flex flex-col justify-between items-start max-middle_screen:items-center">
               <h1 className="vetirino transition-all text-[130px] leading-[70px] max-middle_screen:text-[75px] max-md:leading-8 max-middle_screen:leading-10 mb-10 font-bold max-md:text-center max-md:text-6xl  max-mini_screen:leading-10 max-md:mb-10">
@@ -156,7 +156,7 @@ const Home = ({ data, setCart }) => {
       {/* restoran haqida qisqacha */}
       <div className="containerb flex  gap-5 max-middle_screen:grid-cols-1 h-full py-10 justify-between">
         <div className="w-2/5 text-white max-middle_screen:items-center max-middle_screen:text-center flex flex-col justify-between max-middle_screen:hidden">
-          <h2 className="vetirino text-[65px] max-lg:text-2xl mb-10 max-md:text-2xl uppercase">
+          <h2 className="vetirino text-[65px] max-lg:text-2xl max-md:text-2xl uppercase">
             Lorem, ipsum
           </h2>
           <p className="gothik text-lg fon-normal max-lg:w-full max-middle_screen:w-3/4 max-md:w-full  max-md:text-sm max-lg:text-base max-mini_screen:text-xs max-mini_screen:leading-3">

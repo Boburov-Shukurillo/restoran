@@ -26,12 +26,12 @@ const Footer = () => {
 
         {/* navbar qismi bo'limlar bo'ylab tezkor o'tish */}
         <nav className="w-1/2">
-          <ul className="w-full flex items-center justify-between gap-5 text-white h-20 max-md:h-full max-middle_screen:hidden">
+          <ul className="w-full mb-5 flex items-center justify-between gap-2.5 text-white h-20 max-md:h-full max-middle_screen:flex-col max-middle_screen:items-start">
             <li>
               <NavLink
               onClick={toTop}
                 to="/"
-                className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm max-md:text-black max-lg:text-[10px]"
+                className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm max-lg:text-[10px]"
               >
                 Bosh sahifa
               </NavLink>
@@ -40,7 +40,7 @@ const Footer = () => {
               <NavLink
               onClick={toTop}
                 to="/menu"
-                className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm max-md:text-black max-lg:text-[10px]"
+                className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm max-lg:text-[10px]"
               >
                 Menyu
               </NavLink>
@@ -49,7 +49,7 @@ const Footer = () => {
               <NavLink
               onClick={toTop}
                 to="/about"
-                className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm max-md:text-black max-lg:text-[10px]"
+                className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm max-lg:text-[10px]"
               >
                 Restoran Haqida
               </NavLink>
@@ -58,7 +58,7 @@ const Footer = () => {
               <NavLink
               onClick={toTop}
                 to="/galareya"
-                className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm max-md:text-black max-lg:text-[10px]"
+                className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm max-lg:text-[10px]"
               >
                 Galareya
               </NavLink>
@@ -67,7 +67,7 @@ const Footer = () => {
               <NavLink
               onClick={toTop}
                 to="/kontakt"
-                className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm max-md:text-black max-lg:text-[10px]"
+                className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm max-lg:text-[10px]"
               >
                 Kontakt
               </NavLink>

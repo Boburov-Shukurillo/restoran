@@ -15,116 +15,118 @@ const Galareya = () => {
   const [show, setShow] = useState("hidden");
   const showAll = () => {
     setShow("flex");
-    setShow(show==="hidden"?"flex":"hidden")
+    setShow(show === "hidden" ? "flex" : "hidden");
   };
   return (
-    <div className="containerb py-20 flex flex-col items-center justify-center">
-      <div className="grid grid-cols-3 gap-10 mb-10 max-middle_screen:grid-cols-1">
-        <div
-          className={`flex flex-col gap-10 items-center max-middle_screen:${show} max-middle_screen:space-y-10`}
+    <div>
+      <div className="containerb py-20 flex flex-col items-center justify-center">
+        <h1 className="mb-10 text-5xl font-bold font-serif text-white text-center max-md:hidden">Galareya</h1>
+        <div className="grid grid-cols-3 gap-10 mb-10 max-middle_screen:grid-cols-2 max-md:grid-cols-1">
+          <div
+            className={`flex flex-col gap-10 items-center max-middle_screen:${show} max-middle_screen:space-y-10`}
+          >
+            <img
+              src={img01}
+              alt="galareya imgs"
+              width={367}
+              height={400}
+              className="bg-white/30 rounded-2xl"
+            />
+            <img
+              src={img02}
+              alt="galareya imgs"
+              width={367}
+              height={400}
+              className="bg-white/30 rounded-2xl"
+            />
+            <img
+              src={img03}
+              alt="galareya imgs"
+              width={367}
+              height={400}
+              className="bg-white/30 rounded-2xl"
+            />
+            <img
+              src={img04}
+              alt="galareya imgs"
+              width={367}
+              height={400}
+              className="bg-white/30 rounded-2xl"
+            />
+          </div>
+          <div className="flex flex-col gap-10 max-middle_screen:row-start-1 max-middle_screen:row-end-2 items-center">
+            <h1 className="mb-10 text-5xl font-bold font-serif text-white text-center max-middle_screen:hidden max-md:block">
+              Galareya
+            </h1>
+            <img
+              src={img05}
+              alt="galareya imgs"
+              width={367}
+              height={400}
+              className="bg-white/30 rounded-2xl"
+            />
+            <img
+              src={img06}
+              alt="galareya imgs"
+              width={367}
+              height={400}
+              className="bg-white/30 rounded-2xl"
+            />
+            <img
+              src={img07}
+              alt="galareya imgs"
+              width={367}
+              height={400}
+              className="bg-white/30 rounded-2xl"
+            />
+            <img
+              src={img08}
+              alt="galareya imgs"
+              width={367}
+              height={400}
+              className="bg-white/30 rounded-2xl"
+            />
+          </div>
+          <div
+            className={`flex flex-col gap-10 max-md:${show} max-middle_screen:space-y-10 `}
+          >
+            <img
+              src={img09}
+              alt="galareya imgs"
+              width={367}
+              height={400}
+              className="bg-white/30 rounded-2xl"
+            />
+            <img
+              src={img11}
+              alt="galareya imgs"
+              width={367}
+              height={400}
+              className="bg-white/30 rounded-2xl"
+            />
+            <img
+              src={img10}
+              alt="galareya imgs"
+              width={367}
+              height={400}
+              className="bg-white/30 rounded-2xl"
+            />
+            <img
+              src={img11}
+              alt="galareya imgs"
+              width={367}
+              height={400}
+              className="bg-white/30 rounded-2xl"
+            />
+          </div>
+        </div>
+        <button
+          onClick={showAll}
+          className={`hidden w-2/3 max-middle_screen:block px-5 py-2 border-2 rounded-3xl text-white mb-5`}
         >
-          <img
-            src={img01}
-            alt="galareya imgs"
-            width={367}
-            height={400}
-            className="bg-white/30 rounded-2xl"
-          />
-          <img
-            src={img02}
-            alt="galareya imgs"
-            width={367}
-            height={400}
-            className="bg-white/30 rounded-2xl"
-          />
-          <img
-            src={img03}
-            alt="galareya imgs"
-            width={367}
-            height={400}
-            className="bg-white/30 rounded-2xl"
-          />
-          <img
-            src={img04}
-            alt="galareya imgs"
-            width={367}
-            height={400}
-            className="bg-white/30 rounded-2xl"
-          />
-        </div>
-        <div className="flex flex-col gap-10 max-middle_screen:row-start-1 max-middle_screen:row-end-2 items-center">
-          <h1 className="mb-10 text-5xl font-bold font-serif text-white text-center">
-            Galareya
-          </h1>
-          <img
-            src={img05}
-            alt="galareya imgs"
-            width={367}
-            height={400}
-            className="bg-white/30 rounded-2xl"
-          />
-          <img
-            src={img06}
-            alt="galareya imgs"
-            width={367}
-            height={400}
-            className="bg-white/30 rounded-2xl"
-          />
-          <img
-            src={img07}
-            alt="galareya imgs"
-            width={367}
-            height={400}
-            className="bg-white/30 rounded-2xl"
-          />
-          <img
-            src={img08}
-            alt="galareya imgs"
-            width={367}
-            height={400}
-            className="bg-white/30 rounded-2xl"
-          />
-        </div>
-        <div
-          className={`flex flex-col gap-10 max-middle_screen:${show} max-middle_screen:space-y-10 `}
-        >
-          <img
-            src={img09}
-            alt="galareya imgs"
-            width={367}
-            height={400}
-            className="bg-white/30 rounded-2xl"
-          />
-          <img
-            src={img11}
-            alt="galareya imgs"
-            width={367}
-            height={400}
-            className="bg-white/30 rounded-2xl"
-          />
-          <img
-            src={img10}
-            alt="galareya imgs"
-            width={367}
-            height={400}
-            className="bg-white/30 rounded-2xl"
-          />
-          <img
-            src={img11}
-            alt="galareya imgs"
-            width={367}
-            height={400}
-            className="bg-white/30 rounded-2xl"
-          />
-        </div>
+          {show === "hidden" ? "to'liq ko'rish" : "yashirish"}
+        </button>
       </div>
-      <button
-        onClick={showAll}
-        className={`hidden w-2/3 max-middle_screen:block px-5 py-2 border-2 rounded-3xl text-white mb-5`}
-      >
-        {show==="hidden"?"to'liq ko'rish":"yashirish"}
-      </button>
-
       <StolBandQilish />
     </div>
   );

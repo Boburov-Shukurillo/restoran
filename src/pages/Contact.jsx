@@ -44,11 +44,11 @@ const Contact = () => {
             </span>
             <span>Ish Vaqti 12:00 | 00:00</span>
           </p>
-          <address className="hidden max-middle_screen:flex items-start justify-start gap-5 text-white mb-5 max-middle_screen:w-1/2 max-sm:w-full">
+          <address className="w-2/3 hidden max-middle_screen:flex items-start justify-start gap-5 text-white mb-5 max-middle_screen:w-1/2 max-sm:w-full">
             <div className="w-16">
               <img src={loctionPic} alt="location svg" />
             </div>
-            <div className="text-start">
+            <div className="text-start ">
               Lorem ipsum dolor sit amet. Lorem ipsum dolor, sit amet
               consectetur adipisicing.
             </div>

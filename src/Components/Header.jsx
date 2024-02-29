@@ -21,26 +21,26 @@ const Header = ({ data, setCart, cart }) => {
     setCart(nimadir);
   }, []);
 
-  const [menu, setMenu] = useState("hidden");
+  const [menu, setMenu] = useState("left-0");
   const [jpg, setJpg] = useState(false);
   const openMenu = () => {
     setMenu("flex");
     setJpg(true);
     setJpg(jpg === false ? true : false);
-    setMenu(menu === "hidden" ? "flex" : "hidden");
+    setMenu(menu === "-left-[100%]" ? "left-0" : "-left-[100%]");
   };
   const closeMenu = () => {
     setMenu("flex");
     setJpg(true);
     setJpg(jpg === false ? true : false);
-    setMenu(menu === "hidden" ? "flex" : "hidden");
+    setMenu(menu === "-left-[100%]" ? "left-0" : "-left-[100%]");
   };
 
   return (
     <header
       className={` ${
         headerHome || headerT ? "bg-transparent absolute" : "bg-[#1E1E1E]"
-      } w-full py-5 z-30 max-middle_screen:py-0`}
+      } w-full py-5 z-30 max-middle_screen:py-0 `}
     >
       <div className="containerb flex items-center justify-between gap-5">
 
@@ -56,9 +56,9 @@ const Header = ({ data, setCart, cart }) => {
           <img src={MenuBtn} alt="menu icon" />
         </button>
 
-        <div onClick={closeMenu} className={`w-4/5 z-40 max-middle_screen:${menu} max-middle_screen:fixed max-middle_screen:w-full max-middle_screen:h-full max-middle_screen:bg-[#202221aa] max-middle_screen:top-0 max-middle_screen:left-0`}>
+        <div onClick={closeMenu} className={`w-4/5 z-40 transition-all ${menu} max-middle_screen:fixed max-middle_screen:w-full max-middle_screen:h-full max-middle_screen:bg-[#202221aa] max-middle_screen:top-0 `}>
           <div
-            className={`max-middle_screen:${menu} w-full z-50 gap-10 flex justify-between items-center max-middle_screen:justify-start max-middle_screen:items-start  max-middle_screen:p-5 max-middle_screen:flex-col max-middle_screen:fixed max-middle_screen:w-1/3 max-md:w-2/3 max-md:h-full max-middle_screen:bg-white max-middle_screen:top-0 max-middle_screen:right-0`}
+            className={`${menu} surilChap transition-all w-full z-50 gap-10 flex justify-between items-center max-middle_screen:justify-start max-middle_screen:items-start  max-middle_screen:p-5 max-middle_screen:flex-col max-middle_screen:fixed max-middle_screen:w-full max-middle_screen:bg-white max-middle_screen:top-0 `}
           >
             <a href="+998930982406" target="_blank" className="flex items-center max-middle_screen:hidden inter">
               <img
@@ -74,41 +74,41 @@ const Header = ({ data, setCart, cart }) => {
             <nav className="max-middle_screen:w-full">
               <ul className="w-full flex items-center justify-between gap-5 max-middle_screen:flex-col max-middle_screen:items-start relative py-2">
                 <li className="hidden max-middle_screen:block self-end"><button onClick={closeMenu}><img src={Iks} alt="cross iconf" /></button></li>
-                <li>
+                <li className="max-middle_screen:w-full">
                   <NavLink
-                    className="inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
+                    className="max-middle_screen:w-full max-middle_screen:inline-block inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
                     to="/"
                   >
                     Bosh Sahifa
                   </NavLink>
                 </li>
-                <li>
+                <li className="max-middle_screen:w-full">
                   <NavLink
-                    className="inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
+                    className="max-middle_screen:w-full max-middle_screen:inline-block inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
                     to="/menu"
                   >
                     Menu
                   </NavLink>
                 </li>
-                <li>
+                <li className="max-middle_screen:w-full">
                   <NavLink
-                    className="inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
+                    className="max-middle_screen:w-full max-middle_screen:inline-block inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
                     to="/about"
                   >
                     Restoran Haqida
                   </NavLink>
                 </li>
-                <li>
+                <li className="max-middle_screen:w-full">
                   <NavLink
-                    className="inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
+                    className="max-middle_screen:w-full max-middle_screen:inline-block inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
                     to="/galareya"
                   >
                     Galareya
                   </NavLink>
                 </li>
-                <li>
+                <li className="max-middle_screen:w-full">
                   <NavLink
-                    className="inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
+                    className="max-middle_screen:w-full max-middle_screen:inline-block inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
                     to="/kontakt"
                   >
                     Kontakt
@@ -119,7 +119,7 @@ const Header = ({ data, setCart, cart }) => {
 
             <Link
               to="/korzinka"
-              className={`${headerHome||headerT?"bg-[#5c5b5b]":"middle_screen:bg-[#ffffff3e]"} max-middle_screen:bg-transparent p-3 max-middle_screen:flex max-middle_screen:items-center max-middle_screen:gap-4 rounded-xl bg-[#ffffff3e] relative cursor-pointer max-my_screen:scale max-middle_screen:w-7 max-middle_screen:p-0 `}
+              className={`${headerHome||headerT?"bg-[#3f3f3f]":"middle_screen:bg-[#ffffff3e]"} max-middle_screen:bg-transparent p-3 max-middle_screen:flex max-middle_screen:items-center max-middle_screen:gap-4 rounded-xl bg-[#ffffff3e] relative cursor-pointer max-my_screen:scale max-middle_screen:w-7 max-middle_screen:p-0 `}
             >
               <img
                 src={savatchaImg}

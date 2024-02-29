@@ -37,14 +37,14 @@ const StolBandQilish = () => {
           <h3 className="vetirino text-[65px] font-bold text-white mb-10 max-my_screen:text-3xl">
             Stol Band Qilish
           </h3>
-          <p className="gothik w-2/3 text-lg font-bold text-[#999] mb-5 max-my_screen:text-base max-middle_screen:text-sm max-middle_screen:w-3/4 max-sm:w-full">
+          <p className="gothik w-2/3 text-lg font-bold text-[#999] mb-5 max-my_screen:text-base max-middle_screen:text-sm max-middle_screen:w-3/4 max-sm:w-full max-lg:text-xs">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam
             possimus expedita quos illum nihil quis culpa ab dolore nemo quas?
           </p>
           <a
             target="_blank"
             href="https://t.me/BoburovSH"
-            className="max-md:hidden text-xl text-white font-bold flex items-center justify-start gap-5  max-lg:gap-1 max-middle_screen:text-base mb-5"
+            className="max-md:hidden text-xl text-white font-bold flex items-center justify-start gap-5  max-lg:gap-1 max-middle_screen:text-base mb-5 max-xl:text-sm"
           >
             <img
               width={32}
@@ -56,14 +56,14 @@ const StolBandQilish = () => {
             +998 (99) 678 45 96
           </a>
           <a href="https:/google.map.com" target="_blank">
-            <address className="w-2/3 max-middle_screen:hidden flex items-center justify-start gap-5 text-[#888] mb-5">
+            <address className="w-2/3 max-middle_screen:hidden flex items-center justify-start gap-5 text-[#888] mb-5 " >
               <img
                 width={27}
                 height={34}
                 src={loctionPic}
                 alt="location picture"
               />
-              <span className="text-xl">
+              <span className="text-xl max-xl:text-sm">
                 Lorem ipsum dolor sit amet. Lorem ipsum dolor, sit amet
                 consectetur adipisicing.
               </span>
@@ -116,7 +116,7 @@ const StolBandQilish = () => {
           />
           +998 (99) 678 45 96
         </a>
-        <a href="https:/google.napc" className="hidden w-full max-middle_screen:flex items-center justify-center">
+        <a href="https:/google.napc" className="hidden w-full max-md:flex items-center justify-center max-middle_screen:hidden">
           <address className="w-3/4 max-mini_screen:w-full max-middle_screen:flex hidden items-start justify-start gap-5 text-start text-[#888] ">
             <img
               width={27}
