@@ -88,46 +88,46 @@ const Home = ({ data, setCart }) => {
     <div className="pb-20">
       <ToastContainer />
 
-      <div className="hero overflow-hidden  bg-[#141414]">
+      <div className="hero overflow-hidden pb-5  bg-[#141414]">
         <div className="containerb relative ">
-          <div className="w-full h-28 max-sm:h-20 max-md:mb-20"></div>
+          <div className="w-full h-28 max-sm:h-20 max-md:mb-5"></div>
           <div className="w-1/2 h-full flex items-center  py-44 max-middle_screen:w-full max-md:p-0 max-middle_screen:py-5">
-            <div className="text-white  h-full flex flex-col justify-between items-start max-middle_screen:items-center">
-              <h1 className="vetirino transition-all text-[130px] leading-[70px] max-middle_screen:text-[75px] max-md:leading-8 max-middle_screen:leading-10 mb-10 font-bold max-md:text-center max-md:text-6xl  max-mini_screen:leading-10 max-md:mb-10">
+            <div className="text-white  h-full flex flex-col justify-between items-start max-middle_screen:items-center gap-y-10 max-md:gap-y-4">
+              <h1 className="vetirino transition-all text-[130px] leading-[70px] max-middle_screen:text-[75px] max-md:leading-8 max-middle_screen:leading-10 font-bold max-md:text-center max-md:text-6xl max-md:mb-5 max-mini_screen:leading-10">
                 Restoran <br />
                 <span className="text-[75px] max-middle_screen:text-[45px] max-md:text-3xl  max-md:leading-3">
                   kavkazniy kuxni
                 </span>
               </h1>
-              <p className="w-9/12 text-2xl gothik font-medium max-middle_screen:text-lg max-md:w-10/12 max-middle_screen:text-center max-md:mb-0 max-mini_screen:text-base mb-20 max-md:leading-2">
+              <p className="w-9/12 text-2xl gothik font-medium max-middle_screen:text-lg max-md:w-10/12 max-middle_screen:text-center max-mini_screen:text-base max-md:leading-2">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Dolores odit, corporis adipisci incidunt esse perferendis magni
                 perspiciatis aliquid minus voluptatem!
               </p>
-              <div className="max-middle_screen:block hidden max-middle_screen:relative w-[500px] h-[500px] max-sm:w-full max-sm:h-3/4">
+              <div className="max-middle_screen:flex items-end justify-center hidden max-middle_screen:relative w-full max-sm:w-2/3 max-sm:h-3/4">
+                <img
+                  src={kokat}
+                  width={30}
+                  className="w-24 absolute left-1/4 max-sm:left-0 transition-all"
+                  alt="ko'kat"
+                />
                 <img
                   src={smXinkalin}
-                  className="w-full h-full transition-all"
+                  className="w-1/2 h-1/2 max-sm:w-full transition-all"
                   width={200}
                   height={206}
                   alt="xinkalin"
                 />
-                <img
-                  src={kokat}
-                  width={30}
-                  className="w-20 absolute bottom-1/4 left-1/4 transition-all"
-                  alt="ko'kat"
-                />
               </div>
               <button
                 onClick={stolBandQilish}
-                className="w-3/5 soyalar px-20 py-6 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-white font-bold rounded-3xl text-2xl max-sm:text-lg max-md:px-5 max-middle_screen:w-1/2 max-sm:w-2/3 max-sm:py-4 max-sm:rounded-xl mb-5"
+                className="w-3/5 soyalar px-20 py-6 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-white font-bold rounded-3xl text-2xl max-sm:text-lg max-md:px-5 max-middle_screen:w-1/2 max-sm:w-2/3 max-sm:py-4 max-sm:rounded-xl"
               >
                 Stol Band Qilish
               </button>
             </div>
-            <div className="max-middle_screen:hidden">
-              <div className="w-[700] h-[800px] absolute bottom-0 -right-1/3 z-20 max-middle_screen:hidden ">
+            <div className="max-lg:hidden">
+              <div className="w-[700] h-[780px] absolute bottom-0 -right-1/3 z-20 max-middle_screen:hidden ">
                 <img
                   src={dumaloqXinkalin}
                   alt="xinkalin png"
@@ -154,7 +154,7 @@ const Home = ({ data, setCart }) => {
       </div>
 
       {/* restoran haqida qisqacha */}
-      <div className="containerb flex  gap-5 max-middle_screen:grid-cols-1 h-full py-10 justify-between">
+      <div className="containerb flex gap-5 max-middle_screen:grid-cols-1 h-full py-10 justify-between">
         <div className="w-2/5 text-white max-middle_screen:items-center max-middle_screen:text-center flex flex-col justify-between max-middle_screen:hidden">
           <h2 className="vetirino text-[65px] max-lg:text-2xl max-md:text-2xl uppercase">
             Lorem, ipsum
@@ -241,13 +241,13 @@ const Home = ({ data, setCart }) => {
           slidesPerView={1}
           pagination={true}
           modules={[Pagination]}
-          className="w-full swoperL2 mb-20 hidden max-middle_screen:block max-md:mb-0"
+          className="swoperL2 mb-20 hidden max-middle_screen:block max-md:mb-0 w-96 h-96"
         >
           {imgs.map((slideTitle, i) => {
             return (
               <SwiperSlide
                 key={i}
-                className="w-full flex flex-col items-center justify-end max-md:p-0"
+                className="w-full flex flex-col items-center justify-end "
               >
                 <img
                   src={slideTitle.img}
@@ -263,11 +263,11 @@ const Home = ({ data, setCart }) => {
       </div>
 
       {/* taom buyurtmal beriladiga joy */}
-      <div className="bg py-10 max-2xl:bg-cover">
-        <div className="containerb  h-full py-5 bg-balck mb-20 ">
-          <div className="bg-2 py-20 flex flex-col items-center max-md:py-20">
-            <div className="w-full flex flex-col items-center justify-between mb-10 h-44 max-md:h-10 max-md:mb-0 max-md:justify-end">
-              <h1 className="vetirino mb-10 text-white text-6xl font-bold uppercase font-serif max-md:text-2xl">
+      <div className="bg max-2xl:bg-cover">
+        <div className="containerb  h-full bg-balck mb-20 py-24 max-middle_screen:p-0">
+          <div className="bg-2 flex flex-col items-center py-20 gap-y-10">
+            <div className="w-full flex flex-col items-center justify-between h-44 max-md:h-10 max-md:mb-0 max-md:justify-end">
+              <h1 className="vetirino text-white text-6xl font-bold uppercase font-serif max-md:text-2xl">
                 bizning menu
               </h1>
               <div className="max-md:hidden w-full flex justify-evenly gap-5 max-middle_screen:grid-cols-4 max-md:grid-cols-3 max-sm:grid-cols-2 ">
@@ -314,7 +314,10 @@ const Home = ({ data, setCart }) => {
               {data.map((food) => {
                 if (food.id < 10) {
                   return (
-                    <SwiperSlide className="text-white bg-[#d9d9d91f] rounded-3xl pb-5">
+                    <SwiperSlide
+                      key={food.id}
+                      className="text-white bg-[#d9d9d91f] rounded-3xl pb-5"
+                    >
                       <li
                         key={food.id}
                         className="flex flex-col items-start h-full justify-between"
@@ -390,7 +393,7 @@ const Home = ({ data, setCart }) => {
             <Link
               to="/menu"
               onClick={toTop}
-              className="w-1/4 text-white first-letter:uppercase mb-5 px-5 py-2 border-[1px] rounded-full max-md:w-1/2 text-center mt-10"
+              className="w-1/4 text-white first-letter:uppercase px-5 py-2 border-[1px] rounded-full max-md:w-1/2 text-center "
             >
               to'liq ko'rish
             </Link>
@@ -404,7 +407,10 @@ const Home = ({ data, setCart }) => {
           <h2 className="vetirino text-[65px] text-white w-1/2 max-middle_screen:w-full max-xl:text-5xl max-sm:text-3xl max-middle_screen:text-center">
             Restoran haqida mijozlarning fikri
           </h2>
-          <a target="_blank" href="https://www.ya.ru/?win=629&clid=2337911-381&from=dist_bookmark">
+          <a
+            target="_blank"
+            href="https://www.ya.ru/?win=629&clid=2337911-381&from=dist_bookmark"
+          >
             <img
               src={Rating}
               alt="Rating icon"

@@ -23,8 +23,6 @@ const Korzinka = ({ cart, setCart }) => {
     });
   };
 
-  const [modal, setModal] = useState(false);
-
   const [nima, setNima] = useState(0);
   const addProduct = (i) => {
     setNima(cart[i].productLength++);
@@ -81,39 +79,13 @@ const Korzinka = ({ cart, setCart }) => {
 
   return (
     <div className="relative">
-      <div className="containerb py-20 px-2 max-md:py-10 flex flex-col">
+      <div className="containerb py-20 px-2 max-md:py-10 flex flex-col gap-y-10">
         <ToastContainer />
-        <h1 className="mb-20 self-start text-[65px] font-bold font-[cursive] text-white max-middle_screen:text-5xl max-mini_screen:text-3xl max-md:mb-10">
+        <h1 className="self-start text-[65px] font-bold font-[cursive] text-white max-middle_screen:text-5xl max-mini_screen:text-3xl max-md:mb-10">
           Korzinka
         </h1>
 
-        {modal && (
-          <div
-            onClick={() => setModal(false)}
-            className="absolute w-full h-full bg-[#00000082] top-0 z-50 left-0 flex items-center justify-center"
-          >
-            <div className="w-[1000px] h-[500px] rounded-xl bg-white flex justify-between items-center p-10">
-              <div className="w-1/2 h-full flex flex-col items-start justify-evenly">
-                <h1 className="text-6xl font-bold vetirino">
-                  Xaridingiz uchun rahmat
-                </h1>
-                <p className="text-xl font-semibold vetirino">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Itaque velit mollitia provident ipsam explicabo assumenda!
-                </p>
-                <Link
-                  to="/"
-                  onClick={scrolTop}
-                  className="px-8 py-4 bg-orange rounded-xl shadow-lg shadow-yellow-700 font-bold text-white"
-                >
-                  Bosh sahifaga
-                </Link>
-              </div>
-              <img src={CartImg} className="w-1/2 h-full rounded-xl" alt="" />
-            </div>
-          </div>
-        )}
-
+      
         <hr className="mb-10 " />
         {cart.length === 0 && (
           <h1 className="text-center text-5xl font-bold text-white tracking-widest my-20 max-sm:text-2xl">
@@ -122,12 +94,12 @@ const Korzinka = ({ cart, setCart }) => {
         )}
 
         {/* cardagi mahsulotlar */}
-        <ul className={`mb-10`}>
+        <ul className="flex flex-col gap-10">
           {cart.map((product, i) => {
             return (
               <li
                 key={product.id}
-                className="flex items-center justify-between py-2 h-44 max-md:h-20 mb-10 text-white max-middle_screen:border-b-[1px] max-md:relative max-md:mb-16"
+                className="flex items-center justify-between py-2 h-44 max-md:h-32 max-mini_screen:h-24 text-white max-middle_screen:border-b-[1px] max-md:relative"
               >
                 <div className="h-full flex w-1/3 items-center justify-between max-middle_screen:mr-5 max-md:mr-0">
                   <div className="w-full h-full flex items-center justify-between gap-5 ">
@@ -151,19 +123,20 @@ const Korzinka = ({ cart, setCart }) => {
                     </div>
                   </div>
                 </div>
-                <div className="w-52 h-1/3 bg-white gap-1 rounded-xl text-black flex items-center justify-between p-1 max-md:w-20 max-md:h-7 max-md:rounded-sm">
+                <div className="w-52 h-1/3 bg-white gap-1 rounded-xl text-black flex items-center justify-between p-1 max-md:w-32 max-md:h-10 max-mini_screen:w-20 max-mini_screen:h-7 max-md:rounded-sm">
                   <button
                     onClick={() => removePoduct(i)}
-                    className="w-1/3 h-full bg-[#DCDDDF] misus rounded-lg text-gray-700 text-4xl font-bold max-mini_screen:text-xl max-md:h-5 max-md:rounded"
+                    className="w-1/3 h-full bg-[#DCDDDF] misus rounded-lg text-gray-700 text-4xl font-bold max-mini_screen:text-xl max-md:h-full max-md:rounded"
                   ></button>
                   <span className="w-1/3 truncate flex items-center justify-center">
                     {product.productLength}
                   </span>
                   <button
                     onClick={() => addProduct(i)}
-                    className="w-1/3 h-full bg-[#EF6602] plus rounded-lg text-4xl text-white font-bold max-mini_screen:text-xl max-md:h-5 max-md:rounded-sm"
+                    className="w-1/3 h-full bg-[#EF6602] plus rounded-lg text-4xl text-white font-bold max-mini_screen:text-xl max-md:h-full max-md:rounded-sm"
                   ></button>
                 </div>
+
                 <p className="text-3xl w-44 truncate max-md:hidden">
                   {product.price * product.productLength}₽
                 </p>
@@ -182,7 +155,7 @@ const Korzinka = ({ cart, setCart }) => {
         <hr className="mb-5" />
 
         {/* umumiy narhni jisoblash */}
-        <div className="w-full flex items-center justify-between max-middle_screen:flex-col mb-5 py-10">
+        <div className="w-full flex items-center justify-between max-middle_screen:flex-col py-10">
           <p className="w-1/2 text-[#DCDDDF] text-base max-middle_screen:w-full max-middle_screen:text-center max-middle_screen:mb-5 max-md:text-sm">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
             minima <br />

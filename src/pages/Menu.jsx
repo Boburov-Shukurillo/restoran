@@ -110,7 +110,7 @@ const Menu = ({ data, setCart }) => {
     setGoBack("hidden");
   };
   return (
-    <div className="bg-[#1E1E1E] py-20">
+    <div className="bg-[#1E1E1E] py-20 max-md:pt-0">
       <ToastContainer />
       {/* <Header /> */}
       <div className="containerb  max-middle_screen:p-5">
@@ -122,15 +122,15 @@ const Menu = ({ data, setCart }) => {
           Go Back
         </button>
         <div
-          className={`max-middle_screen:${chageDisplay} w-full flex flex-col items-center justify-between `}
+          className={`max-middle_screen:${chageDisplay} w-full flex flex-col items-center justify-between gap-y-10`}
         >
-          <h1 className="vetirino text-white text-6xl font-bold uppercase font-serif max-middle_screen:text-3xl max-md:text-xl mb-20">
+          <h1 className="vetirino text-white text-6xl font-bold uppercase font-serif max-middle_screen:text-3xl max-md:text-xl">
             bizning menu
           </h1>
           <div className="w-full flex items-center justify-between flex-wrap gap-y-5 max-middle_screen:grid max-middle_screen:grid-cols-1 max-middle_screen:w-2/3 ">
-            <span
+            <button
               onClick={filterFoods}
-              className={`w-60 h-16 max-sm:h-10 gothik flex text-center justify-center items-center max-middle_screen:justify-between salom px-5 py-2 text-lg font-semibold rounded-full border-[1px] border-[#6D6D6E] max-middle_screen:border-[#E6783F] hover:border-[#E6783F]  text-white max-middle_screen:w-full max-middle_screen:rounded-md max-middle_screen:mb-2 max-middle_screen:text-xs max-mini_screen:text-[10px] transition-all`}
+              className={`w-60 h-16 max-sm:h-10 gothik flex text-center justify-center items-center max-middle_screen:justify-between salom px-5 py-2 text-lg font-semibold rounded-full border-[1px] border-[#6D6D6E] max-middle_screen:border-[#E6783F] hover:border-[#E6783F]  text-white max-middle_screen:w-full max-middle_screen:rounded-md max-middle_screen:text-xs max-mini_screen:text-[10px] transition-all`}
             >
               Mahsus Taomlar
               <img
@@ -138,10 +138,11 @@ const Menu = ({ data, setCart }) => {
                 className="hidden max-middle_screen:block"
                 alt="arrow svg"
               />
-            </span>
-            <span
+            </button>
+            {/* salatlar */}
+            <button
               onClick={filterSalat}
-              className={`w-60 h-16 max-sm:h-10 gothik flex text-center justify-center items-center max-middle_screen:justify-between salom px-5 py-2 text-lg font-semibold rounded-full border-[1px] border-[#6D6D6E] max-middle_screen:border-[#E6783F] hover:border-[#E6783F]  text-white max-middle_screen:w-full max-middle_screen:rounded-md max-middle_screen:mb-2 max-middle_screen:text-xs max-mini_screen:text-[10px] transition-all`}
+              className={`w-60 h-16 max-sm:h-10 gothik flex text-center justify-center items-center max-middle_screen:justify-between salom px-5 py-2 text-lg font-semibold rounded-full border-[1px] border-[#6D6D6E] max-middle_screen:border-[#E6783F] hover:border-[#E6783F]  text-white max-middle_screen:w-full max-middle_screen:rounded-md max-middle_screen:text-xs max-mini_screen:text-[10px] transition-all`}
             >
               Salatlar
               <img
@@ -149,10 +150,11 @@ const Menu = ({ data, setCart }) => {
                 className="hidden max-middle_screen:block"
                 alt="arrow svg"
               />
-            </span>
-            <span
+            </button>
+            {/* mahsus taomlar */}
+            <button
               onClick={filterWithoutOil}
-              className={`w-60 h-16 max-sm:h-10 gothik flex text-center justify-center items-center max-middle_screen:justify-between salom px-5 py-2 text-lg font-semibold rounded-full border-[1px] border-[#6D6D6E] max-middle_screen:border-[#E6783F] hover:border-[#E6783F]  text-white max-middle_screen:w-full max-middle_screen:rounded-md max-middle_screen:mb-2 max-middle_screen:text-xs max-mini_screen:text-[10px] transition-all`}
+              className={`w-60 h-16 max-sm:h-10 gothik flex text-center justify-center items-center max-middle_screen:justify-between salom px-5 py-2 text-lg font-semibold rounded-full border-[1px] border-[#6D6D6E] max-middle_screen:border-[#E6783F] hover:border-[#E6783F]  text-white max-middle_screen:w-full max-middle_screen:rounded-md max-middle_screen:text-xs max-mini_screen:text-[10px] transition-all`}
             >
               Yog'siz Taomlar
               <img
@@ -160,10 +162,11 @@ const Menu = ({ data, setCart }) => {
                 className="hidden max-middle_screen:block"
                 alt="arrow svg"
               />
-            </span>
-            <span
+            </button>
+            {/* og'siz taomlar */}
+            <button
               onClick={filterDrinks}
-              className={`w-60 h-16 max-sm:h-10 gothik flex text-center justify-center items-center max-middle_screen:justify-between salom px-5 py-2 text-lg font-semibold rounded-full border-[1px] border-[#6D6D6E] max-middle_screen:border-[#E6783F] hover:border-[#E6783F]  text-white max-middle_screen:w-full max-middle_screen:rounded-md max-middle_screen:mb-2 max-middle_screen:text-xs max-mini_screen:text-[10px] transition-all`}
+              className={`w-60 h-16 max-sm:h-10 gothik flex text-center justify-center items-center max-middle_screen:justify-between salom px-5 py-2 text-lg font-semibold rounded-full border-[1px] border-[#6D6D6E] max-middle_screen:border-[#E6783F] hover:border-[#E6783F]  text-white max-middle_screen:w-full max-middle_screen:rounded-md max-middle_screen:text-xs max-mini_screen:text-[10px] transition-all`}
             >
               Ichimiklar
               <img
@@ -171,10 +174,11 @@ const Menu = ({ data, setCart }) => {
                 className="hidden max-middle_screen:block"
                 alt="arrow svg"
               />
-            </span>
-            <span
+            </button>
+            {/* shrinliklar */}
+            <button
               onClick={filterDesert}
-              className={`w-60 h-16 max-sm:h-10 gothik flex text-center justify-center items-center max-middle_screen:justify-between salom px-5 py-2 text-lg font-semibold rounded-full border-[1px] border-[#6D6D6E] max-middle_screen:border-[#E6783F] hover:border-[#E6783F]  text-white max-middle_screen:w-full max-middle_screen:rounded-md max-middle_screen:mb-2 max-middle_screen:text-xs max-mini_screen:text-[10px] transition-all`}
+              className={`w-60 h-16 max-sm:h-10 gothik flex text-center justify-center items-center max-middle_screen:justify-between salom px-5 py-2 text-lg font-semibold rounded-full border-[1px] border-[#6D6D6E] max-middle_screen:border-[#E6783F] hover:border-[#E6783F]  text-white max-middle_screen:w-full max-middle_screen:rounded-md max-middle_screen:text-xs max-mini_screen:text-[10px] transition-all`}
             >
               Shrinliklar
               <img
@@ -182,7 +186,7 @@ const Menu = ({ data, setCart }) => {
                 className="hidden max-middle_screen:block"
                 alt="arrow svg"
               />
-            </span>
+            </button>
           </div>
         </div>
 
@@ -239,7 +243,7 @@ const Menu = ({ data, setCart }) => {
           })}
         </ul>
       </div>
-      <StolBandQilish/>
+      <StolBandQilish />
     </div>
   );
 };

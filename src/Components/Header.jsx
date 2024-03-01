@@ -10,7 +10,7 @@ import telImg from "../assets/TelLogoSvg.svg";
 import MenuBtn from "../assets/hamburgerBtn.svg";
 import Iks from "../assets/iks.svg";
 
-const Header = ({ data, setCart, cart }) => {
+const Header = ({ data, setCart, cart }) => {                            
   const name = useLocation();
   const headerT = name.pathname === "/about";
   const headerHome = name.pathname === "/";
@@ -21,10 +21,12 @@ const Header = ({ data, setCart, cart }) => {
     setCart(nimadir);
   }, []);
 
-  const [menu, setMenu] = useState("left-0");
+  const [menu, setMenu] = useState("-left-[100%]");
+  const [display,setDispaly]=useState("hidden")
   const [jpg, setJpg] = useState(false);
   const openMenu = () => {
-    setMenu("flex");
+    setMenu("left-0");
+    setDispaly("flex")
     setJpg(true);
     setJpg(jpg === false ? true : false);
     setMenu(menu === "-left-[100%]" ? "left-0" : "-left-[100%]");
@@ -40,7 +42,7 @@ const Header = ({ data, setCart, cart }) => {
     <header
       className={` ${
         headerHome || headerT ? "bg-transparent absolute" : "bg-[#1E1E1E]"
-      } w-full py-5 z-30 max-middle_screen:py-0 `}
+      } w-full py-5 z-50 max-middle_screen:py-0 `}
     >
       <div className="containerb flex items-center justify-between gap-5">
 
@@ -56,9 +58,9 @@ const Header = ({ data, setCart, cart }) => {
           <img src={MenuBtn} alt="menu icon" />
         </button>
 
-        <div onClick={closeMenu} className={`w-4/5 z-40 transition-all ${menu} max-middle_screen:fixed max-middle_screen:w-full max-middle_screen:h-full max-middle_screen:bg-[#202221aa] max-middle_screen:top-0 `}>
+        <div onClick={closeMenu} className={`max-middle_screen:${display} w-4/5 z-50 transition-all ${menu} max-middle_screen:fixed max-middle_screen:w-full max-middle_screen:h-full max-middle_screen:bg-[#202221aa] max-middle_screen:top-0`}>
           <div
-            className={`${menu} surilChap transition-all w-full z-50 gap-10 flex justify-between items-center max-middle_screen:justify-start max-middle_screen:items-start  max-middle_screen:p-5 max-middle_screen:flex-col max-middle_screen:fixed max-middle_screen:w-full max-middle_screen:bg-white max-middle_screen:top-0 `}
+            className={`${menu} surilChap h-full transition-all w-full z-50 gap-10 flex justify-between items-center max-middle_screen:justify-start max-middle_screen:items-start  max-middle_screen:p-5 max-middle_screen:flex-col max-middle_screen:fixed max-middle_screen:w-full max-middle_screen:bg-white max-middle_screen:top-0 `}
           >
             <a href="+998930982406" target="_blank" className="flex items-center max-middle_screen:hidden inter">
               <img
@@ -119,7 +121,7 @@ const Header = ({ data, setCart, cart }) => {
 
             <Link
               to="/korzinka"
-              className={`${headerHome||headerT?"bg-[#3f3f3f]":"middle_screen:bg-[#ffffff3e]"} max-middle_screen:bg-transparent p-3 max-middle_screen:flex max-middle_screen:items-center max-middle_screen:gap-4 rounded-xl bg-[#ffffff3e] relative cursor-pointer max-my_screen:scale max-middle_screen:w-7 max-middle_screen:p-0 `}
+              className={`${headerHome||headerT?"bg-[#5a5a5a]":"middle_screen:bg-[#ffffff3e]"} max-middle_screen:bg-transparent p-3 max-middle_screen:flex max-middle_screen:items-center max-middle_screen:gap-4 rounded-lg relative cursor-pointer max-my_screen:scale max-middle_screen:w-7 max-middle_screen:p-0 `}
             >
               <img
                 src={savatchaImg}
