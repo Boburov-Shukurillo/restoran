@@ -44,12 +44,12 @@ const Header = ({ data, setCart, cart }) => {
         headerHome || headerT ? "bg-transparent absolute" : "bg-[#1E1E1E]"
       } w-full py-5 z-50 max-middle_screen:py-0 `}
     >
-      <div className="containerb flex items-center justify-between gap-5">
+      <div className="containerb flex items-center justify-between  gap-5">
 
         <Link t0="/">
           <img
             src={headerLogo}
-            className="w-40 h-20 max-my_screen:w-40 max-sm:h-20 max-sm:w-20 max-lg:w-32"
+            className="w-40 h-20 max-my_screen:w-40 max-sm:h-20 max-mini_screen:w-20 max-lg:w-32"
             alt="Hader logo"
           />
         </Link>
@@ -58,11 +58,11 @@ const Header = ({ data, setCart, cart }) => {
           <img src={MenuBtn} alt="menu icon" />
         </button>
 
-        <div onClick={closeMenu} className={`max-middle_screen:${display} w-4/5 z-50 transition-all ${menu} max-middle_screen:fixed max-middle_screen:w-full max-middle_screen:h-full max-middle_screen:bg-[#202221aa] max-middle_screen:top-0`}>
+        <div onClick={closeMenu} className={` w-4/5 z-50 transition-all ${menu} max-middle_screen:fixed max-middle_screen:w-full max-middle_screen:h-full max-middle_screen:bg-[#202221aa] max-middle_screen:top-0`}>
           <div
-            className={`${menu} surilChap h-full transition-all w-full z-50 gap-10 flex justify-between items-center max-middle_screen:justify-start max-middle_screen:items-start  max-middle_screen:p-5 max-middle_screen:flex-col max-middle_screen:fixed max-middle_screen:w-full max-middle_screen:bg-white max-middle_screen:top-0 `}
+            className={`${menu} surilChap h-full transition-all w-full z-50 gap-10 flex justify-between max-my_screen:justify-evenly items-center max-middle_screen:justify-start max-middle_screen:items-start  max-middle_screen:p-5 max-middle_screen:flex-col max-middle_screen:fixed max-middle_screen:w-full max-middle_screen:bg-white max-middle_screen:top-0 `}
           >
-            <a href="+998930982406" target="_blank" className="flex items-center max-middle_screen:hidden inter">
+            <a href="https://w.w.w/t.me/@BoburovSh" target="_blank" className="flex items-center max-my_screen:hidden inter">
               <img
                 src={telImg}
                 alt="tel icon"
@@ -78,7 +78,7 @@ const Header = ({ data, setCart, cart }) => {
                 <li className="hidden max-middle_screen:block self-end"><button onClick={closeMenu}><img src={Iks} alt="cross iconf" /></button></li>
                 <li className="max-middle_screen:w-full">
                   <NavLink
-                    className="max-middle_screen:w-full max-middle_screen:inline-block inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
+                    className="max-middle_screen:w-full max-middle_screen:inline-block inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-base max-middle_screen:text-xs max-middle_screen:text-black"
                     to="/"
                   >
                     Bosh Sahifa
@@ -86,7 +86,7 @@ const Header = ({ data, setCart, cart }) => {
                 </li>
                 <li className="max-middle_screen:w-full">
                   <NavLink
-                    className="max-middle_screen:w-full max-middle_screen:inline-block inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
+                    className="max-middle_screen:w-full max-middle_screen:inline-block inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-base max-middle_screen:text-xs max-middle_screen:text-black"
                     to="/menu"
                   >
                     Menu
@@ -94,7 +94,7 @@ const Header = ({ data, setCart, cart }) => {
                 </li>
                 <li className="max-middle_screen:w-full">
                   <NavLink
-                    className="max-middle_screen:w-full max-middle_screen:inline-block inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
+                    className="max-middle_screen:w-full max-middle_screen:inline-block inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-base max-middle_screen:text-xs max-middle_screen:text-black"
                     to="/about"
                   >
                     Restoran Haqida
@@ -102,7 +102,7 @@ const Header = ({ data, setCart, cart }) => {
                 </li>
                 <li className="max-middle_screen:w-full">
                   <NavLink
-                    className="max-middle_screen:w-full max-middle_screen:inline-block inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
+                    className="max-middle_screen:w-full max-middle_screen:inline-block inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-base max-middle_screen:text-xs max-middle_screen:text-black"
                     to="/galareya"
                   >
                     Galareya
@@ -110,7 +110,7 @@ const Header = ({ data, setCart, cart }) => {
                 </li>
                 <li className="max-middle_screen:w-full">
                   <NavLink
-                    className="max-middle_screen:w-full max-middle_screen:inline-block inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-xs max-middle_screen:text-xs max-middle_screen:text-black"
+                    className="max-middle_screen:w-full max-middle_screen:inline-block inter cursor-pointer text-xl font-bold text-white  max-middle_screen:h-5  max-my_screen:text-base max-middle_screen:text-xs max-middle_screen:text-black"
                     to="/kontakt"
                   >
                     Kontakt
@@ -139,7 +139,7 @@ const Header = ({ data, setCart, cart }) => {
               <span className="hidden max-middle_screen:block">korzinka</span>
             </Link>
 
-            <a href="+998930982403" className="hidden max-middle_screen:items-center max-middle_screen:flex">
+            <a href="https://www/t.me/@BoburovSh" target="_blank" className="hidden max-middle_screen:items-center max-middle_screen:flex">
               <img
                 src={telImg}
                 alt="tel icon"
@@ -150,7 +150,7 @@ const Header = ({ data, setCart, cart }) => {
               </span>
             </a>
 
-            <a href="https://restoran-site.netlify.app/" className="hidden max-middle_screen:items-center max-middle_screen:flex">
+            <a href="https://www.google.com/google.maps" className="hidden max-middle_screen:items-center max-middle_screen:flex">
               <img
                 src={locIcon}
                 alt="tel icon"

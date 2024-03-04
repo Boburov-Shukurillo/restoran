@@ -5,11 +5,23 @@ import Footer from "../Components/Footer";
 import Loader from "../Components/Loader";
 
 const MainLayOut = ({ cart, setData, data, setCart }) => {
+  const location = useLocation();
+  let LocationWeb = [
+    "/",
+    "/about",
+    "/menu",
+    "/galareya",
+    "/kontakt",
+    "/korzinka",
+  ];
+  let sd = LocationWeb.includes(location.pathname);
   const [loader, setLoader] = useState(true);
   setTimeout(() => setLoader(false), 300);
   return (
     <div className="overflow-hidden">
-      <Header cart={cart} setData={setData} data={data} setCart={setCart} />
+      {sd&&
+        <Header cart={cart} setData={setData} data={data} setCart={setCart} />
+      }
       {loader && (
         <div className="fixed z-50 top-0">
           <Loader />
@@ -18,7 +30,7 @@ const MainLayOut = ({ cart, setData, data, setCart }) => {
       <main className="bg-[#1E1E1E]">
         <Outlet />
       </main>
-        <Footer />
+      {sd && <Footer />}
     </div>
   );
 };

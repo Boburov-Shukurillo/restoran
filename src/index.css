@@ -63,11 +63,13 @@ nav .active {
 }
 
 .nimadi {
+  background-repeat: no-repeat;
   background-position: center;
   background-image: url(./assets/menubg.svg);
 }
 
 .hero {
+  background-repeat: no-repeat;
   background-position: center;
   background-image: url(./assets/heroBg.png);
 }

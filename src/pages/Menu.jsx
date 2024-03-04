@@ -207,25 +207,25 @@ const Menu = ({ data, setCart }) => {
                     width={260}
                     height={236}
                   />
-                  <div className="px-5 py-3 flex flex-col justify-between w-full max-middle_screen:flex-row items-start max-middle_screen:items-center max-middle_screen:justify-between">
-                    <div className="">
+                  <div className="px-5 py-3 flex flex-col justify-between w-full h-full max-middle_screen:flex-row items-start max-middle_screen:items-center max-middle_screen:justify-between">
+                    <div className="flex flex-col items-start justify-between max-middle_screen:flex-row max-middle_screen:items-center w-9/12 max-sm:flex-col max-sm:items-start">
                       {" "}
-                      <h3 className="gothik text-xl tracking-wide max-lg:text-lg max-md:text-base font-bold first-letter:uppercase mb-1 truncate max-md:w-20">
+                      <h3 className="gothik text-xl tracking-wide max-lg:text-3xl max-md:text-base font-bold first-letter:uppercase mb-1 truncate max-md:w-20">
                         {product.name}
                       </h3>
-                      <h4 className="gothik text-xl max-lg:text-base max-md:text-xs text-gray-400 font-medium mb-3 max-middle_screen:mb-0">
+                      <h4 className="gothik text-xl max-lg:text-2xl max-md:text-xs text-gray-400 font-medium mb-3 max-middle_screen:mb-0">
                         {product.massa}gr
                       </h4>
-                      <h5 className="gothik text-lg max-middle_screen:block hidden">
+                      <h5 className="gothik text-2xl max-middle_screen:block max-sm:text-lg hidden">
                         {product.price}₱
                       </h5>
                     </div>
-                    <div className="w-full flex items-center justify-end middle_screen:flex middle_screen:justify-between middle_screen:gap-3">
-                      <p className="gothik text-3xl max-lg:text-base  max-md:hidden font-medium ">
+                    <div className="w-full h-full max-middle_screen:w-2/6  flex items-center justify-end middle_screen:flex middle_screen:justify-between middle_screen:gap-3">
+                      <p className="gothik text-3xl max-lg:text-base  max-middle_screen:hidden font-medium ">
                         {product.price}₱
                       </p>
                       <button
-                        className="gothik max-middle_screen:w-10 max-middle_screen:h-10 middle_screen:px-2 middle_screen:py-2.5 bg-[#ff722b] rounded-lg text-lg max-lg:text-xs active:bg-transparent active:text-orange active:border-[2px]  active:border-[#ff722b] border-2 border-[#ff722b] max-middle_screen:bg-transparent truncate transition-all"
+                        className="gothik max-middle_screen:w-20 max-middle_screen:h-20 max-sm:w-14 max-sm:h-14 max-mini_screen:h-10 max-mini_screen:w-10 middle_screen:px-2 middle_screen:py-2.5 bg-[#ff722b] rounded-lg text-lg max-lg:text-xs active:bg-transparent active:text-orange active:border-2  active:border-[#ff722b] border-2 border-[#ff722b] max-middle_screen:bg-transparent truncate transition-all"
                         onClick={() => handleBuy(product.id)}
                       >
                         <span className="text-3xl font-bold text-orange max-middle_screen:block hidden">

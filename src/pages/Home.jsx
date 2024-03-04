@@ -93,22 +93,23 @@ const Home = ({ data, setCart }) => {
           <div className="w-full h-28 max-sm:h-20 max-md:mb-5"></div>
           <div className="w-1/2 h-full flex items-center  py-44 max-middle_screen:w-full max-md:p-0 max-middle_screen:py-5">
             <div className="text-white  h-full flex flex-col justify-between items-start max-middle_screen:items-center gap-y-10 max-md:gap-y-4">
-              <h1 className="vetirino transition-all text-[130px] leading-[70px] max-middle_screen:text-[75px] max-md:leading-8 max-middle_screen:leading-10 font-bold max-md:text-center max-md:text-6xl max-md:mb-5 max-mini_screen:leading-10">
+              <h1 className="vetirino transition-all text-[130px]  max-middle_screen:text-[75px]  font-bold max-md:text-center max-md:text-6xl max-sm:text-5xl leading-[90px] max-middle_screen:leading-10 max-md:leading-8 max-sm:leading-6">
                 Restoran <br />
-                <span className="text-[75px] max-middle_screen:text-[45px] max-md:text-3xl  max-md:leading-3">
+                <span className="text-[75px] max-middle_screen:text-[45px] max-md:text-3xl max-sm:text-2xl">
                   kavkazniy kuxni
                 </span>
               </h1>
-              <p className="w-9/12 text-2xl gothik font-medium max-middle_screen:text-lg max-md:w-10/12 max-middle_screen:text-center max-mini_screen:text-base max-md:leading-2">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dolores odit, corporis adipisci incidunt esse perferendis magni
-                perspiciatis aliquid minus voluptatem!
+              <p className="w-full text-2xl gothik 
+              max-middle_screen:text-lg max-md:w-full max-middle_screen:text-center max-mini_screen:text-base max-md:leading-2">
+                bizning restoranda har hil taomlar mavjud bo'lib bu tomlar
+                mijozlar tomonidan maqulanadi va dunyodagi eng yaxshi
+                shifokorlar tomonidan tavsiya etiladi va bizda har chorshanba kuni 50% gacha chegirma mavjud. 
               </p>
               <div className="max-middle_screen:flex items-end justify-center hidden max-middle_screen:relative w-full max-sm:w-2/3 max-sm:h-3/4">
                 <img
                   src={kokat}
                   width={30}
-                  className="w-24 absolute left-1/4 max-sm:left-0 transition-all"
+                  className="w-20 absolute left-1/4 max-sm:left-0 transition-all"
                   alt="ko'kat"
                 />
                 <img
@@ -121,7 +122,7 @@ const Home = ({ data, setCart }) => {
               </div>
               <button
                 onClick={stolBandQilish}
-                className="w-3/5 soyalar px-20 py-6 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-white font-bold rounded-3xl text-2xl max-sm:text-lg max-md:px-5 max-middle_screen:w-1/2 max-sm:w-2/3 max-sm:py-4 max-sm:rounded-xl"
+                className="w-3/5 soyalar px-20 py-6 bg-gradient-to-tl from-[#D9782A] to-[#F49549] text-white font-bold rounded-3xl text-2xl max-sm:text-lg max-md:px-5 max-middle_screen:w-1/2 max-sm:w-2/3 max-sm:py-3 max-sm:rounded-xl"
               >
                 Stol Band Qilish
               </button>
@@ -154,49 +155,49 @@ const Home = ({ data, setCart }) => {
       </div>
 
       {/* restoran haqida qisqacha */}
-      <div className="containerb flex gap-5 max-middle_screen:grid-cols-1 h-full py-10 justify-between">
-        <div className="w-2/5 text-white max-middle_screen:items-center max-middle_screen:text-center flex flex-col justify-between max-middle_screen:hidden">
+      <div className="containerb flex gap-5 max-middle_screen:flex-col h-full py-10 justify-between max-middle_screen:gap-y-10 items-center">
+        <div className="w-2/5 text-white max-middle_screen:items-center max-middle_screen:text-center flex flex-col justify-between max-middle_screen:w-3/4 max-md:w-full max-middle_screen:gap-y-5 gap-y-10">
           <h2 className="vetirino text-[65px] max-lg:text-2xl max-md:text-2xl uppercase">
-            Lorem, ipsum
+            Restoran Haqida
           </h2>
-          <p className="gothik text-lg fon-normal max-lg:w-full max-middle_screen:w-3/4 max-md:w-full  max-md:text-sm max-lg:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo enim
-            itaque, atque, quia sit officiis explicabo laboriosam rem voluptatum
-            eveniet est repellendus recusandae mollitia deserunt.
+          <p className="gothik text-lg fon-normal max-lg:w-full max-middle_screen:w-3/4 max-md:w-full  max-md:text-sm max-lg:text-base max-mini_screen:text-xs max-mini_screen:leading-4">
+            bizning restoranda har hil taomlar mavjud bo'lib bu tomlar mijozlar
+            tomonidan maqulanadi va dunyodagi eng yaxshi shifokorlar tomonidan
+            tavsiya etiladi.
           </p>
-          <p className="gothik text-lg fon-normal max-lg:w-full max-middle_screen:w-3/4 max-md:w-full  max-md:text-sm max-lg:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-            dignissimos et dolorem, voluptates alias veritatis id dolorum
-            dolores delectus maiores deserunt excepturi magni atque consequuntur
-            eum fugit voluptatem reprehenderit consequatur labore quam
-            doloremque, reiciendis aperiam?
+          <p className="gothik text-lg fon-normal max-lg:w-full max-middle_screen:w-3/4 max-md:w-full  max-md:text-sm max-lg:text-base max-mini_screen:text-xs max-mini_screen:leading-4">
+            Agar restoranimiz sizga maqul bo'lgan bo'lsa oilangiz bilan yoki
+            o'zinggiz kelib dam olib ketishingiz mumkun bizning restoranda har
+            hil taomlar mavjud bo'lib bu tomlar mijozlar tomonidan maqulanadi va
+            dunyodagi eng yaxshi shifokorlar tomonidan tavsiya etiladi
           </p>
-          <p className="gothik text-lg fon-normal max-lg:w-full max-middle_screen:w-3/4 max-md:w-full  max-md:text-sm max-lg:text-base max-mini_screen:text-xs max-mini_screen:leading-3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Accusantium, ratione recusandae molestias iusto voluptatee minus.
+          <p className="gothik text-lg fon-normal max-lg:w-full max-middle_screen:w-3/4 max-md:w-full  max-md:text-sm max-lg:text-base max-mini_screen:text-xs max-mini_screen:leading-4">
+            bizning restoranda har hil taomlar mavjud bo'lib bu tomlar mijozlar
+            tomonidan maqulanadi va dunyodagi eng yaxshi shifokorlar tomonidan
+            tavsiya etiladi`
           </p>
           <div className="grid grid-cols-2  gap-2 max-md:gap-0">
-            <div className="flex items-center mb-0 gap-5 max-md:gap-2 max-md:flex-col">
+            <div className="flex items-center mb-0 gap-5 max-middle_screen:gap-2 max-middle_screen:flex-col max-middle_screen:w-full max-sm:w-full justify-center">
               <img src={star} alt="satar svg" className="w-1/6" />
-              <p className="text-base leading-5 max-lg:text-sm max-lg:font-light max-md:text-xs max-md:w-4/5 font-bold ">
+              <p className="w-3/4 text-base leading-5 max-lg:text-sm max-lg:font-light max-md:text-xs max-md:w-4/5 font-bold ">
                 Lorem ipsum dolor sit amet consectetur.
               </p>
             </div>
-            <div className="flex items-center mb-0 gap-5 max-md:gap-2 max-md:flex-col">
+            <div className="flex items-center mb-0 gap-5 max-middle_screen:gap-2 max-middle_screen:flex-col max-middle_screen:w-full max-sm:w-full">
               <img src={star} alt="satar svg" className="w-1/6" />
-              <p className="text-base leading-5 max-lg:text-sm max-lg:font-light max-md:text-xs max-md:w-4/5 font-bold ">
+              <p className="w-3/4 text-base leading-5 max-lg:text-sm max-lg:font-light max-md:text-xs max-md:w-4/5 font-bold ">
                 Lorem ipsum dolor sit amet consectetur.
               </p>
             </div>
-            <div className="flex items-center mb-0 gap-5 max-md:gap-2 max-md:flex-col">
+            <div className="flex items-center mb-0 gap-5 max-middle_screen:gap-2 max-middle_screen:flex-col max-middle_screen:w-full max-sm:w-full">
               <img src={star} alt="satar svg" className="w-1/6" />
-              <p className="text-base leading-5 max-lg:text-sm max-lg:font-light max-md:text-xs max-md:w-4/5 font-bold ">
+              <p className="w-3/4 text-base leading-5 max-lg:text-sm max-lg:font-light max-md:text-xs max-md:w-4/5 font-bold ">
                 Lorem ipsum dolor sit amet consectetur.
               </p>
             </div>
-            <div className="flex items-center mb-0 gap-5 max-md:gap-2 max-md:flex-col">
+            <div className="flex items-center mb-0 gap-5 max-middle_screen:gap-2 max-middle_screen:flex-col max-middle_screen:w-full max-sm:w-full">
               <img src={star} alt="satar svg" className="w-1/6" />
-              <p className="text-base leading-5 max-lg:text-sm max-lg:font-light max-md:text-xs max-md:w-4/5 font-bold ">
+              <p className="w-3/4 text-base leading-5 max-lg:text-sm max-lg:font-light max-md:text-xs max-md:w-4/5 font-bold ">
                 Lorem ipsum dolor sit amet consectetur.
               </p>
             </div>
@@ -241,13 +242,13 @@ const Home = ({ data, setCart }) => {
           slidesPerView={1}
           pagination={true}
           modules={[Pagination]}
-          className="swoperL2 mb-20 hidden max-middle_screen:block max-md:mb-0 w-96 h-96"
+          className="swoperL2 mb-20 hidden max-middle_screen:block max-md:mb-0 w-96 h-96 max-sm:h-52 max-sm:w-full"
         >
           {imgs.map((slideTitle, i) => {
             return (
               <SwiperSlide
                 key={i}
-                className="w-full flex flex-col items-center justify-end "
+                className="w-full flex flex-col items-center justify-end"
               >
                 <img
                   src={slideTitle.img}
@@ -263,7 +264,7 @@ const Home = ({ data, setCart }) => {
       </div>
 
       {/* taom buyurtmal beriladiga joy */}
-      <div className="bg max-2xl:bg-cover">
+      <div className="bg max-max4k:bg-cover bg-contain">
         <div className="containerb  h-full bg-balck mb-20 py-24 max-middle_screen:p-0">
           <div className="bg-2 flex flex-col items-center py-20 gap-y-10">
             <div className="w-full flex flex-col items-center justify-between h-44 max-md:h-10 max-md:mb-0 max-md:justify-end">
@@ -403,8 +404,8 @@ const Home = ({ data, setCart }) => {
 
       {/*  restoran hqaida mijozlarimiznig fikirlari*/}
       <div className="containerb">
-        <div className="flex w-full justify-between items-center mb-10">
-          <h2 className="vetirino text-[65px] text-white w-1/2 max-middle_screen:w-full max-xl:text-5xl max-sm:text-3xl max-middle_screen:text-center">
+        <div className="flex w-full justify-between items-center mb-10 max-middle_screen:justify-center">
+          <h2 className="vetirino text-[65px] text-white w-1/2 max-middle_screen:w-3/4 max-xl:text-5xl max-sm:text-3xl max-middle_screen:text-center max-sm:w-full">
             Restoran haqida mijozlarning fikri
           </h2>
           <a
@@ -429,9 +430,9 @@ const Home = ({ data, setCart }) => {
             return (
               <SwiperSlide
                 key={i}
-                className="rounded-xl relative flex flex-col items-center justify-end pt-16 max-md:h-full "
+                className="rounded-xl relative pt-16"
               >
-                <div className="relative w-2/3 max-mini_screen:w-full h-[100%]  bg-[#dcdddf20] rounded-xl p-10 flex flex-col items-center justify-center">
+                <div className="relative w-full max-mini_screen:w-full h-full  bg-[#dcdddf20] rounded-xl p-10 flex flex-col items-center justify-center">
                   <img
                     src={slideTitle.img}
                     width={100}
@@ -439,8 +440,8 @@ const Home = ({ data, setCart }) => {
                     className="w-1/3 rounded-full absolute -top-[15%] left-1/5 border-2 border-[#dcdddf10]"
                     alt={slideTitle.title + " png"}
                   />
-                  <div className="w-full h-1/2 flex flex-col items-center justify-between">
-                    <h3 className="text-3xl font-bold text-white uppercase">
+                  <div className="w-full h-1/2 flex flex-col items-center justify-between gap-y-5">
+                    <h3 className="text-3xl font-bold text-white uppercase text-center">
                       {slideTitle.title}
                     </h3>
                     <p className="text-center text-white">{slideTitle.text}</p>

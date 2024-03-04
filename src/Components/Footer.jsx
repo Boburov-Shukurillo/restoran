@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // rasimla
 import headerLogo from "../assets/RestaranLogo.svg";
@@ -28,49 +28,49 @@ const Footer = () => {
         <nav className="w-full text-center">
           <ul className="w-full flex items-center justify-evenly max-middle_screen:flex-col max-middle_screen:w-1/2 max-middle_screen:justify-start max-middle_screen:items-start flex-wrap gap-2.5 text-white h-20 max-md:h-full ">
             <li>
-              <NavLink
+              <Link
                 onClick={toTop}
                 to="/"
                 className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm"
               >
                 Bosh sahifa
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
                 onClick={toTop}
                 to="/menu"
                 className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm"
               >
                 Menyu
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
                 onClick={toTop}
                 to="/about"
                 className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm"
               >
                 Restoran Haqida
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
                 onClick={toTop}
                 to="/galareya"
                 className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm"
               >
                 Galareya
-              </NavLink>
+              </Link>
             </li>
             <li className=" max-mini_screen:col-start-1 max-mini_screen:col-end-3">
-              <NavLink
+              <Link
                 onClick={toTop}
                 to="/kontakt"
                 className="inter text-base font-medium hover:opacity-75 max-my_screen:text-sm"
               >
                 Kontakt
-              </NavLink>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -78,7 +78,8 @@ const Footer = () => {
         <div className="flex flex-col items-start max-middle_screen:items-start max-middle_screen:justify-start max-md:gap-x-5 gap-y-2">
           {/* Qo'ngiroq hizmati adminga qo;ng;iroq qilish */}
           <a
-            href="+99899453323"
+            href="https://www.telegram.com/t.me/@BoburovSh"
+            target="_blank"
             className="inter text-base text-white font-semibold flex items-center justify-center gap-5 max-lg:gap-1 max-my_screen:text-sm  max-lg:text-sm max-mini_screen:w-full max-middle_screen:justify-start"
           >
             <img

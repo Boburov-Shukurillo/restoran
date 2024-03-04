@@ -13,6 +13,7 @@ import { foods } from "./data";
 import Menu from "./pages/Menu";
 import Galareya from "./pages/Galareya";
 import Contact from "./pages/Contact";
+import PageNotFoun from "./pages/PageNotFoun";
 
 const App = () => {
   const [data, setData] = useState([...foods]);
@@ -51,6 +52,7 @@ const App = () => {
         />
         <Route path="/galareya" element={<Galareya />} />
         <Route path="/kontakt" element={<Contact />} />
+        <Route path="/*" element={<PageNotFoun />} />
       </Route>
     )
   );

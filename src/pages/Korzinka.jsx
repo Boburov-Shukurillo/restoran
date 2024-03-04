@@ -64,18 +64,22 @@ const Korzinka = ({ cart, setCart }) => {
         chat_id,
         text: telegramMessage,
       });
-      alert("Malumot yuborildi");
-      setModal(true);
+      toast.info(`Malumot yuborildi`, {
+        position: "bottom-right",
+        autoClose: 100,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       setName("");
       setPhoneNumber("");
       setAdress("");
     }
   };
 
-  const scrolTop = () => {
-    setModal(false);
-    window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
-  };
 
   return (
     <div className="relative">
@@ -85,7 +89,6 @@ const Korzinka = ({ cart, setCart }) => {
           Korzinka
         </h1>
 
-      
         <hr className="mb-10 " />
         {cart.length === 0 && (
           <h1 className="text-center text-5xl font-bold text-white tracking-widest my-20 max-sm:text-2xl">
@@ -123,7 +126,7 @@ const Korzinka = ({ cart, setCart }) => {
                     </div>
                   </div>
                 </div>
-                <div className="w-52 h-1/3 bg-white gap-1 rounded-xl text-black flex items-center justify-between p-1 max-md:w-32 max-md:h-10 max-mini_screen:w-20 max-mini_screen:h-7 max-md:rounded-sm">
+                <div className="w-1/5 h-1/2 max-lg:h-1/3 bg-white gap-1 rounded-xl text-black flex items-center justify-between p-1 max-md:w-32 max-md:h-10 max-mini_screen:w-20 max-mini_screen:h-7 max-md:rounded-sm">
                   <button
                     onClick={() => removePoduct(i)}
                     className="w-1/3 h-full bg-[#DCDDDF] misus rounded-lg text-gray-700 text-4xl font-bold max-mini_screen:text-xl max-md:h-full max-md:rounded"
@@ -173,7 +176,7 @@ const Korzinka = ({ cart, setCart }) => {
         {/* buyurtma berish joyi */}
         <form
           onSubmit={handleChange}
-          className="max-sm:w-2/3 w-full self-center  grid grid-cols-4 h-20 gap-5 max-middle_screen:grid-cols-3 max-middle_screen:h-44 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:h-64"
+          className=" w-full self-center max-xl:w-2/3 grid grid-cols-4 h-20 gap-5 max-middle_screen:grid-cols-3 max-middle_screen:h-44 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:h-64"
         >
           <input
             className="w-full h-full rounded-xl px-5 bg-white/15 text-white transition-all focus-within:outline-orange focus:shadow-xl focus:shadow-orange/30"
@@ -200,7 +203,7 @@ const Korzinka = ({ cart, setCart }) => {
             value={adress}
             required
           />
-          <button className="w-full h-full rounded-2xl bg-[#FD7511] text-white soyalar text-lg font-bold focus:outline-dashed focus:outline-2 focus:outline-white">
+          <button className="w-full h-full rounded-2xl bg-[#FD7511] text-white soyalar text-lg font-bold focus:outline-dashed focus:outline-2 focus:outline-white max-md:rounded-lg">
             Buyurtma Berish
           </button>
         </form>

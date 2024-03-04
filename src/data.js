@@ -433,33 +433,45 @@ export const imgs = [
 
 export const slideTitles = [
   {
-    img: xola,
-    title: "bir",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
-  },
-  {
+    id: 1,
     img: chol,
-    title: "ikki",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
+    title: "Andrew Garfled",
+    text: "Agar restoranimiz sizga maqul bo'lgan bo'lsa oilangiz bilan yoki o'zinggiz kelib dam olib ketishingiz mumkun",
   },
   {
+    id: 2,
     img: xola,
-    title: "uch",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
+    title: "Elithabeth",
+    text: ` bizning restoranda har hil taomlar mavjud bo'lib bu tomlar mijozlar
+    tomonidan maqulanadi va dunyodagi eng yaxshi shifokorlar tomonidan
+    tavsiya etiladi`,
   },
   {
+    id: 3,
     img: chol,
-    title: "to'rt",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
+    title: "Robert Jr",
+    text: "Agar restoranimiz sizga maqul bo'lgan bo'lsa oilangiz bilan yoki o'zinggiz kelib dam olib ketishingiz mumkun",
   },
   {
-    img: xola,
-    title: "besh",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
-  },
-  {
+    id: 4,
     img: chol,
-    title: "olti",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa dicta aspernatur totam dignissimos consequuntur, veniam ab ea sit officia!",
+    title: "Chris",
+    text: ` bizning restoranda har hil taomlar mavjud bo'lib bu tomlar mijozlar
+    tomonidan maqulanadi va dunyodagi eng yaxshi shifokorlar tomonidan
+    tavsiya etiladi`,
+  },
+  {
+    id: 5,
+    img: chol,
+    title: "Tobey Maguire",
+    text: "Agar restoranimiz sizga maqul bo'lgan bo'lsa oilangiz bilan yoki o'zinggiz kelib dam olib ketishingiz mumkun",
+  },
+  {
+    id: 6,
+    img: chol,
+    title: "Harry",
+    text: ` bizning restoranda har hil taomlar mavjud bo'lib bu tomlar mijozlar
+    tomonidan maqulanadi va dunyodagi eng yaxshi shifokorlar tomonidan
+    tavsiya etiladi`,
   },
 ];
